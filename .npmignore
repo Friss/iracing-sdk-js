@@ -20,3 +20,5 @@ doc/
 .eslintrc
 npm-debug.log
 .vscode
+prettier.config.js
+
