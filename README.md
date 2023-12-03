@@ -4,13 +4,12 @@
 
 **iracing-sdk-js** provides data access (live telemetry and session info) and most of the available commands. You can find some usage examples in the [examples](https://github.com/friss/iracing-sdk-js/tree/main/examples) directory, and there are some [data samples](https://github.com/friss/iracing-sdk-js/tree/main/sample-data) too.
 
-Originally based on [node-irsdk](https://github.com/apihlaja/node-irsdk) by [apihlaja](https://github.com/apihlaja).
-
 ## Installing
 
 Make sure you are running [Node.js](https://nodejs.org/) v21 x64 or later. (Currently requires Node 21 for latest node test runner implementation, but should work with Node 20 too.)
 
 `npm install --save iracing-sdk-js`
+
 `yarn add iracing-sdk-js --save`
 
 
@@ -690,5 +689,6 @@ Released under the [MIT License](https://github.com/friss/iracing-sdk-js/blob/ma
 
 
 ## Credits
+Originally based on [node-irsdk](https://github.com/apihlaja/node-irsdk) by [apihlaja](https://github.com/apihlaja).
 
 Parts of original irsdk used, license available here: https://github.com/friss/iracing-sdk-js/blob/main/src/cpp/irsdk/irsdk_defines.h (BSD-3-Clause)
