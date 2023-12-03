@@ -17,7 +17,7 @@ const mock = {
     return false;
   },
   getTelemetryDescription() {
-    return { telemetry: "is telemetry" };
+    return { telemetry: 'is telemetry' };
   },
   getTelemetry() {
     return {};

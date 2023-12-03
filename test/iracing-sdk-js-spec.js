@@ -1,20 +1,20 @@
-const sandboxed = require("sandboxed-module");
-const { describe, it } = require("node:test");
-const assert = require("node:assert");
+const sandboxed = require('sandboxed-module');
+const { describe, it } = require('node:test');
+const assert = require('node:assert');
 
-describe("iracing-sdk-js", function () {
-  describe("#init", function () {
-    it("instantiates JsIrSdk once", function (context) {
+describe('iracing-sdk-js', function () {
+  describe('#init', function () {
+    it('instantiates JsIrSdk once', function (context) {
       const jsIrSdkSpy = context.mock.fn();
       const nodeWrapperMock = {};
       const opts = {
         telemetryUpdateInterval: 1,
         sessionInfoUpdateInterval: 2,
       };
-      const nodeIrSdk = sandboxed.require("../src/iracing-sdk-js", {
+      const nodeIrSdk = sandboxed.require('../src/iracing-sdk-js', {
         requires: {
-          "../build/Release/IrSdkNodeBindings.node": nodeWrapperMock,
-          "./JsIrSdk": jsIrSdkSpy,
+          '../build/Release/IrSdkNodeBindings.node': nodeWrapperMock,
+          './JsIrSdk': jsIrSdkSpy,
         },
       });
       nodeIrSdk.init(opts);
@@ -34,9 +34,9 @@ describe("iracing-sdk-js", function () {
       );
     });
   });
-  describe("#getInstance", function () {
-    it("gives JsIrSdk singleton", function () {
-      const nodeIrSdk = require("../src/iracing-sdk-js");
+  describe('#getInstance', function () {
+    it('gives JsIrSdk singleton', function () {
+      const nodeIrSdk = require('../src/iracing-sdk-js');
       const instance1 = nodeIrSdk.getInstance();
       const instance2 = nodeIrSdk.getInstance();
       assert.strictEqual(instance1, instance2);

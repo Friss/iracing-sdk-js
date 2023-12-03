@@ -1,8 +1,8 @@
-const EventEmitter = require("node:events");
-const stringToEnum = require("./utils/stringToEnum");
-const createSessionInfoParser = require("./utils/createSessionInfoParser");
-const padCarNum = require("./utils/padCarNum");
-const IrSdkConsts = require("./consts/IrSdkConsts");
+const EventEmitter = require('node:events');
+const stringToEnum = require('./utils/stringToEnum');
+const createSessionInfoParser = require('./utils/createSessionInfoParser');
+const padCarNum = require('./utils/padCarNum');
+const IrSdkConsts = require('./consts/IrSdkConsts');
 const BroadcastMsg = IrSdkConsts.BroadcastMsg;
 
 /**
@@ -93,8 +93,8 @@ class JsIrSdk extends EventEmitter {
             *   console.log(evt)
             * })
           */
-            this.emit("update", {
-              type: "TelemetryDescription",
+            this.emit('update', {
+              type: 'TelemetryDescription',
               data: this.telemetryDescription,
               timestamp: now,
             });
@@ -108,8 +108,8 @@ class JsIrSdk extends EventEmitter {
           *   console.log(evt)
           * })
         */
-          this.emit("update", {
-            type: "Telemetry",
+          this.emit('update', {
+            type: 'Telemetry',
             data: this.telemetry.values,
             timestamp: now,
           });
@@ -128,7 +128,7 @@ class JsIrSdk extends EventEmitter {
             doc = this.sessionInfoParser(sessionInfo);
           } catch (ex) {
             // TODO: log faulty yaml
-            console.error("js-irsdk: yaml error: \n" + ex);
+            console.error('js-irsdk: yaml error: \n' + ex);
           }
 
           if (doc) {
@@ -142,8 +142,8 @@ class JsIrSdk extends EventEmitter {
             *   console.log(evt)
             * })
           */
-            this.emit("update", {
-              type: "SessionInfo",
+            this.emit('update', {
+              type: 'SessionInfo',
               data: this.sessionInfo.data,
               timestamp: now,
             });
@@ -161,27 +161,27 @@ class JsIrSdk extends EventEmitter {
     *   console.log(evt)
     * })
     */
-    this.on("update", (evt) => {
+    this.on('update', (evt) => {
       // fire old events as well.
       const timestamp = evt.timestamp;
       const data = evt.data;
       const type = evt.type;
 
       switch (type) {
-        case "SessionInfo":
-          this.emit("SessionInfo", { timestamp, data });
+        case 'SessionInfo':
+          this.emit('SessionInfo', { timestamp, data });
           break;
-        case "Telemetry":
-          this.emit("Telemetry", { timestamp, values: data });
+        case 'Telemetry':
+          this.emit('Telemetry', { timestamp, values: data });
           break;
-        case "TelemetryDescription":
-          this.emit("TelemetryDescription", data);
+        case 'TelemetryDescription':
+          this.emit('TelemetryDescription', data);
           break;
-        case "Connected":
-          this.emit("Connected");
+        case 'Connected':
+          this.emit('Connected');
           break;
-        case "Disconnected":
-          this.emit("Disconnected");
+        case 'Disconnected':
+          this.emit('Disconnected');
           break;
         default:
           break;
@@ -201,7 +201,7 @@ class JsIrSdk extends EventEmitter {
         *   console.log(evt)
         * })
       */
-        this.emit("update", { type: "Connected", timestamp: new Date() });
+        this.emit('update', { type: 'Connected', timestamp: new Date() });
       }
     } else {
       if (this.connected) {
@@ -214,7 +214,7 @@ class JsIrSdk extends EventEmitter {
         *   console.log(evt)
         * })
       */
-        this.emit("update", { type: "Disconnected", timestamp: new Date() });
+        this.emit('update', { type: 'Disconnected', timestamp: new Date() });
 
         this.IrSdkWrapper.shutdown();
         this.telemetryDescription = null;
@@ -267,7 +267,7 @@ class JsIrSdk extends EventEmitter {
       camGroupNum = camGroupNum | 0;
       camNum = camNum | 0;
 
-      if (typeof carNum === "string") {
+      if (typeof carNum === 'string') {
         if (isNaN(parseInt(carNum))) {
           carNum = stringToEnum(carNum, IrSdkConsts.CamFocusAt);
         } else {
@@ -290,7 +290,7 @@ class JsIrSdk extends EventEmitter {
       camGroupNum = camGroupNum | 0;
       camNum = camNum | 0;
 
-      if (typeof position === "string") {
+      if (typeof position === 'string') {
         position = stringToEnum(position, IrSdkConsts.CamFocusAt);
       }
       if (Number.isInteger(position)) {
@@ -361,7 +361,7 @@ class JsIrSdk extends EventEmitter {
       @example iracing.playbackControls.search('nextIncident')
     */
     search: (searchMode) => {
-      if (typeof searchMode === "string") {
+      if (typeof searchMode === 'string') {
         searchMode = stringToEnum(searchMode, IrSdkConsts.RpySrchMode);
       }
       if (Number.isInteger(searchMode)) {
@@ -390,7 +390,7 @@ class JsIrSdk extends EventEmitter {
       @example iracing.playbackControls.searchFrame(1, 'current') // go to 1 frame forward
     */
     searchFrame: (frameNum, rpyPosMode) => {
-      if (typeof rpyPosMode === "string") {
+      if (typeof rpyPosMode === 'string') {
         rpyPosMode = stringToEnum(rpyPosMode, IrSdkConsts.RpyPosMode);
       }
       if (Number.isInteger(rpyPosMode)) {
@@ -430,7 +430,7 @@ class JsIrSdk extends EventEmitter {
   */
   execChatCmd(cmd, arg) {
     arg = arg || 0;
-    if (typeof cmd === "string") {
+    if (typeof cmd === 'string') {
       cmd = stringToEnum(cmd, IrSdkConsts.ChatCommand);
     }
     if (Number.isInteger(cmd)) {
@@ -443,7 +443,7 @@ class JsIrSdk extends EventEmitter {
     @example iracing.execChatMacro(1) // macro 1
   */
   execChatMacro(num) {
-    this.execChatCmd("macro", num);
+    this.execChatCmd('macro', num);
   }
 
   /** Execute pit command
@@ -458,7 +458,7 @@ class JsIrSdk extends EventEmitter {
   */
   execPitCmd(cmd, arg) {
     arg = arg || 0;
-    if (typeof cmd === "string") {
+    if (typeof cmd === 'string') {
       cmd = stringToEnum(cmd, IrSdkConsts.PitCommand);
     }
     if (Number.isInteger(cmd)) {
@@ -471,7 +471,7 @@ class JsIrSdk extends EventEmitter {
     @example iracing.execTelemetryCmd('restart')
   */
   execTelemetryCmd(cmd) {
-    if (typeof cmd === "string") {
+    if (typeof cmd === 'string') {
       cmd = stringToEnum(cmd, IrSdkConsts.TelemCommand);
     }
     if (Number.isInteger(cmd)) {

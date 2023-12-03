@@ -1,5 +1,5 @@
-const IrSdkNodeWrapper = require("../build/Release/IrSdkNodeBindings.node");
-const JsIrSdk = require("./JsIrSdk");
+const IrSdkNodeWrapper = require('../build/Release/IrSdkNodeBindings.node');
+const JsIrSdk = require('./JsIrSdk');
 
 /**
   @module irsdk
