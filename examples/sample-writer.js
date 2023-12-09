@@ -1,12 +1,24 @@
 const irsdk = require('../');
 const fs = require('fs');
 
-// enable access to raw yaml sessioninfo
-process.env.NODE_ENV = 'development';
+// kill the process when enough is done..
+const done = (function () {
+  var tasks = [];
+  var totalTasks = 3;
+
+  return function (taskName) {
+    tasks.push(taskName);
+    if (tasks.length >= totalTasks) {
+      console.log();
+      console.log('checks done', new Date());
+      process.exit();
+    }
+  };
+})();
 
 irsdk.init({
-  telemetryUpdateInterval: 5000,
-  sessionInfoUpdateInterval: 5000,
+  telemetryUpdateInterval: 100,
+  sessionInfoUpdateInterval: 100,
 });
 
 const iracing = irsdk.getInstance();
@@ -27,6 +39,7 @@ iracing.once('TelemetryDescription', function (data) {
 
   fs.writeFile(fileName, JSON.stringify(data, null, 2), function (err) {
     if (err) throw err;
+    done('TelemetryDescription');
   });
 });
 
@@ -36,21 +49,16 @@ iracing.once('Telemetry', function (data) {
 
   fs.writeFile(fileName, JSON.stringify(data, null, 2), function (err) {
     if (err) throw err;
+    done('Telemetry');
   });
 });
 
 iracing.once('SessionInfo', function (data) {
   console.log('got SessionInfo');
   const jsonFileName = './sample-data/sessioninfo.json';
-  const yamlFileName = './sample-data/sessioninfo.yaml';
 
   fs.writeFile(jsonFileName, JSON.stringify(data, null, 2), function (err) {
     if (err) throw err;
+    done('SessionInfo');
   });
-
-  if (data.yaml) {
-    fs.writeFile(yamlFileName, data.yaml, function (err) {
-      if (err) throw err;
-    });
-  }
 });
