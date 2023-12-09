@@ -8,7 +8,7 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
-      - name: Use Node.js
+      - name: Use Node.js 21.x
         uses: actions/setup-node@v3
         with:
           node-version: '21.x'
@@ -24,5 +24,4 @@ jobs:
           echo 'GYP_MSVS_VERSION=2015' >> $Env:GITHUB_ENV
           echo 'GYP_MSVS_OVERRIDE_PATH=C:\\Dummy' >> $Env:GITHUB_ENV
       - run: yarn --frozen-lockfile
-      - run: yarn rebuild
       - run: yarn test
