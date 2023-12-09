@@ -1,0 +1,27 @@
+name: Node.js CI
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      - name: Use Node.js 21.x
+        uses: actions/setup-node@v3
+        with:
+          node-version: '21.x'
+      - name: Use Python 3.12
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.12
+        env:
+          PYTHON_VERSION: 3.12
+      - name: Set Windows Env
+        if: runner.os == 'Windows'
+        run: |
+          echo 'GYP_MSVS_VERSION=2015' >> $Env:GITHUB_ENV
+          echo 'GYP_MSVS_OVERRIDE_PATH=C:\\Dummy' >> $Env:GITHUB_ENV
+      - run: yarn --frozen-lockfile
+      - run: yarn test

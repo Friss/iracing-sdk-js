@@ -2,6 +2,8 @@
 
 (Another) Unofficial [iRacing](http://www.iracing.com/) SDK implementation for Node.js.
 
+[![npm version](https://img.shields.io/npm/v/iracing-sdk-js.svg)](https://www.npmjs.com/package/iracing-sdk-js)
+
 **iracing-sdk-js** provides data access (live telemetry and session info) and most of the available commands. You can find some usage examples in the [examples](https://github.com/friss/iracing-sdk-js/tree/main/examples) directory, and there are some [data samples](https://github.com/friss/iracing-sdk-js/tree/main/sample-data) too.
 
 ## Installing
