@@ -7,9 +7,10 @@
     "install": "yarn rebuild",
     "rebuild": "node-gyp rebuild",
     "smoke-test": "node test/smoke-test.js",
+    "write-samples": "node examples/sample-writer.js",
     "test": "node --test test/**/*-spec.js",
     "doc": "jsdoc2md -d 3 -t doc/README.hbs --partial doc/examples.hbs -m none -g none src/iracing-sdk-js.js src/JsIrSdk.js src/consts/IrSdkConsts.js > README.md",
-    "ready": "yarn test && yarn smoke-test && yarn doc"
+    "ready": "yarn rebuild && yarn test && yarn smoke-test && yarn write-samples && yarn doc"
   },
   "keywords": [
     "iracing"
@@ -25,12 +26,12 @@
   },
   "dependencies": {
     "js-yaml": "4.1.0",
-    "nan": "2.18.0",
-    "prettier": "3.1.0"
+    "nan": "2.18.0"
   },
   "devDependencies": {
     "jsdoc-to-markdown": "8.0.0",
     "node-gyp": "10.0.1",
+    "prettier": "3.1.0",
     "sandboxed-module": "2.0.4"
   }
 }
