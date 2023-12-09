@@ -15,8 +15,8 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 21
-      - run: npm ci
-      - run: npm test
+      - run: yarn --frozen-lockfile
+      - run: yarn test
 
   publish-npm:
     needs: build
@@ -27,7 +27,7 @@ jobs:
         with:
           node-version: 21
           registry-url: https://registry.npmjs.org/
-      - run: npm ci
+      - run: yarn --frozen-lockfile
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
