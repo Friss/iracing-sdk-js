@@ -29,7 +29,7 @@ function validateValue(val, desc) {
       assert.strictEqual(
         typeof val,
         'string',
-        'enums should be converted to strings'
+        `enums should be converted to strings ${JSON.stringify(desc)}`
       );
     } else {
       if (desc.type === 'bool') {

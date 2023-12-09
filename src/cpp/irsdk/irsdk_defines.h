@@ -307,6 +307,34 @@ enum irsdk_PaceFlags
 	irsdk_PaceFlagsWavedAround = 0x04,
 };
 
+enum irsdk_WeatherDynamics
+{
+	irsdk_WeatherTypePlaceholder0 = 0,
+	irsdk_WeatherTypePlaceholder1,
+	irsdk_WeatherTypePlaceholder2,
+	irsdk_WeatherTypePlaceholder3,
+	irsdk_WeatherTypePlaceholder4,
+	irsdk_WeatherTypePlaceholder5,
+	irsdk_WeatherTypePlaceholder6,
+	irsdk_WeatherTypePlaceholder7,
+	irsdk_WeatherTypePlaceholder8,
+	irsdk_WeatherTypePlaceholder9,
+};
+
+enum irsdk_WeatherVersion
+{
+	irsdk_WeatherVersionPlaceholder0 = 0,
+	irsdk_WeatherVersionPlaceholder1,
+	irsdk_WeatherVersionPlaceholder2,
+	irsdk_WeatherVersionPlaceholder3,
+	irsdk_WeatherVersionPlaceholder4,
+	irsdk_WeatherVersionPlaceholder5,
+	irsdk_WeatherVersionPlaceholder6,
+	irsdk_WeatherVersionPlaceholder7,
+	irsdk_WeatherVersionPlaceholder8,
+	irsdk_WeatherVersionPlaceholder9,
+};
+
 //----
 //
 

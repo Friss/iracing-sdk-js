@@ -175,4 +175,31 @@ namespace NodeIrSdk
         MaskName((int)irsdk_PaceFlagsFreePass, "PaceFlagsFreePass"),
         MaskName((int)irsdk_PaceFlagsFreePass, "PaceFlagsFreePass"),
     };
+
+    const std::vector<MaskName> WEATHER_DYNAMICS = {
+        MaskName((int)irsdk_WeatherTypePlaceholder0, "WeatherTypePlaceholder0"),
+        MaskName((int)irsdk_WeatherTypePlaceholder1, "WeatherTypePlaceholder1"),
+        MaskName((int)irsdk_WeatherTypePlaceholder2, "WeatherTypePlaceholder2"),
+        MaskName((int)irsdk_WeatherTypePlaceholder3, "WeatherTypePlaceholder3"),
+        MaskName((int)irsdk_WeatherTypePlaceholder4, "WeatherTypePlaceholder4"),
+        MaskName((int)irsdk_WeatherTypePlaceholder5, "WeatherTypePlaceholder5"),
+        MaskName((int)irsdk_WeatherTypePlaceholder6, "WeatherTypePlaceholder6"),
+        MaskName((int)irsdk_WeatherTypePlaceholder7, "WeatherTypePlaceholder7"),
+        MaskName((int)irsdk_WeatherTypePlaceholder8, "WeatherTypePlaceholder8"),
+        MaskName((int)irsdk_WeatherTypePlaceholder9, "WeatherTypePlaceholder9"),
+    };
+
+    const std::vector<MaskName> WEATHER_VERSION = {
+        MaskName((int)irsdk_WeatherVersionPlaceholder0, "WeatherVersionPlaceholder0"),
+        MaskName((int)irsdk_WeatherVersionPlaceholder1, "WeatherVersionPlaceholder1"),
+        MaskName((int)irsdk_WeatherVersionPlaceholder2, "WeatherVersionPlaceholder2"),
+        MaskName((int)irsdk_WeatherVersionPlaceholder3, "WeatherVersionPlaceholder3"),
+        MaskName((int)irsdk_WeatherVersionPlaceholder4, "WeatherVersionPlaceholder4"),
+        MaskName((int)irsdk_WeatherVersionPlaceholder5, "WeatherVersionPlaceholder5"),
+        MaskName((int)irsdk_WeatherVersionPlaceholder6, "WeatherVersionPlaceholder6"),
+        MaskName((int)irsdk_WeatherVersionPlaceholder7, "WeatherVersionPlaceholder7"),
+        MaskName((int)irsdk_WeatherVersionPlaceholder8, "WeatherVersionPlaceholder8"),
+        MaskName((int)irsdk_WeatherVersionPlaceholder9, "WeatherVersionPlaceholder9"),
+    };
+
 }; // namespace NodeIrSdk

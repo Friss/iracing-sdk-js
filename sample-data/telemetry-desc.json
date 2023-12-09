@@ -629,6 +629,34 @@
     "count": 1,
     "type": "float"
   },
+  "PlayerCarSLFirstRPM": {
+    "name": "PlayerCarSLFirstRPM",
+    "desc": "Shift light first light rpm",
+    "unit": "revs/min",
+    "count": 1,
+    "type": "float"
+  },
+  "PlayerCarSLShiftRPM": {
+    "name": "PlayerCarSLShiftRPM",
+    "desc": "Shift light shift rpm",
+    "unit": "revs/min",
+    "count": 1,
+    "type": "float"
+  },
+  "PlayerCarSLLastRPM": {
+    "name": "PlayerCarSLLastRPM",
+    "desc": "Shift light last light rpm",
+    "unit": "revs/min",
+    "count": 1,
+    "type": "float"
+  },
+  "PlayerCarSLBlinkRPM": {
+    "name": "PlayerCarSLBlinkRPM",
+    "desc": "Shift light blink rpm",
+    "unit": "revs/min",
+    "count": 1,
+    "type": "float"
+  },
   "Lap": {
     "name": "Lap",
     "desc": "Laps started count",
@@ -890,8 +918,15 @@
   },
   "WeatherType": {
     "name": "WeatherType",
-    "desc": "Weather type (0=constant  1=dynamic)",
-    "unit": "",
+    "desc": "Weather dynamics type",
+    "unit": "irsdk_WeatherDynamics",
+    "count": 1,
+    "type": "int"
+  },
+  "WeatherVersion": {
+    "name": "WeatherVersion",
+    "desc": "Weather version",
+    "unit": "irsdk_WeatherVersion",
     "count": 1,
     "type": "int"
   },
@@ -932,14 +967,21 @@
   },
   "RelativeHumidity": {
     "name": "RelativeHumidity",
-    "desc": "Relative Humidity",
+    "desc": "Relative Humidity at start/finish line",
     "unit": "%",
     "count": 1,
     "type": "float"
   },
   "FogLevel": {
     "name": "FogLevel",
-    "desc": "Fog level",
+    "desc": "Fog level at start/finish line",
+    "unit": "%",
+    "count": 1,
+    "type": "float"
+  },
+  "Precipitation": {
+    "name": "Precipitation",
+    "desc": "Precipitation at start/finish line",
     "unit": "%",
     "count": 1,
     "type": "float"
@@ -1644,6 +1686,20 @@
     "count": 1,
     "type": "bool"
   },
+  "dcTractionControlToggle": {
+    "name": "dcTractionControlToggle",
+    "desc": "In car traction control active",
+    "unit": "",
+    "count": 1,
+    "type": "bool"
+  },
+  "dcHeadlightFlash": {
+    "name": "dcHeadlightFlash",
+    "desc": "In car headlight flash control active",
+    "unit": "",
+    "count": 1,
+    "type": "bool"
+  },
   "dpRFTireChange": {
     "name": "dpRFTireChange",
     "desc": "Pitstop rf tire change request",
@@ -1679,6 +1735,20 @@
     "count": 1,
     "type": "float"
   },
+  "dpFuelAutoFillEnabled": {
+    "name": "dpFuelAutoFillEnabled",
+    "desc": "Pitstop auto fill fuel system enabled",
+    "unit": "",
+    "count": 1,
+    "type": "float"
+  },
+  "dpFuelAutoFillActive": {
+    "name": "dpFuelAutoFillActive",
+    "desc": "Pitstop auto fill fuel next stop flag",
+    "unit": "",
+    "count": 1,
+    "type": "float"
+  },
   "dpWindshieldTearoff": {
     "name": "dpWindshieldTearoff",
     "desc": "Pitstop windshield tearoff",
@@ -1696,6 +1766,20 @@
   "dpFastRepair": {
     "name": "dpFastRepair",
     "desc": "Pitstop fast repair set",
+    "unit": "",
+    "count": 1,
+    "type": "float"
+  },
+  "dcDashPage": {
+    "name": "dcDashPage",
+    "desc": "In car dash display page adjustment",
+    "unit": "",
+    "count": 1,
+    "type": "float"
+  },
+  "dcBrakeBias": {
+    "name": "dcBrakeBias",
+    "desc": "In car brake bias adjustment",
     "unit": "",
     "count": 1,
     "type": "float"
@@ -1728,80 +1812,24 @@
     "count": 1,
     "type": "float"
   },
-  "FuelUsePerHour": {
-    "name": "FuelUsePerHour",
-    "desc": "Engine fuel used instantaneous",
-    "unit": "kg/h",
+  "dcTractionControl": {
+    "name": "dcTractionControl",
+    "desc": "In car traction control adjustment",
+    "unit": "",
     "count": 1,
     "type": "float"
   },
-  "Voltage": {
-    "name": "Voltage",
-    "desc": "Engine voltage",
-    "unit": "V",
+  "dcABS": {
+    "name": "dcABS",
+    "desc": "In car abs adjustment",
+    "unit": "",
     "count": 1,
     "type": "float"
   },
-  "WaterTemp": {
-    "name": "WaterTemp",
-    "desc": "Engine coolant temp",
-    "unit": "C",
-    "count": 1,
-    "type": "float"
-  },
-  "WaterLevel": {
-    "name": "WaterLevel",
-    "desc": "Engine coolant level",
-    "unit": "l",
-    "count": 1,
-    "type": "float"
-  },
-  "FuelPress": {
-    "name": "FuelPress",
-    "desc": "Engine fuel pressure",
-    "unit": "bar",
-    "count": 1,
-    "type": "float"
-  },
-  "OilTemp": {
-    "name": "OilTemp",
-    "desc": "Engine oil temperature",
-    "unit": "C",
-    "count": 1,
-    "type": "float"
-  },
-  "OilPress": {
-    "name": "OilPress",
-    "desc": "Engine oil pressure",
-    "unit": "bar",
-    "count": 1,
-    "type": "float"
-  },
-  "OilLevel": {
-    "name": "OilLevel",
-    "desc": "Engine oil level",
-    "unit": "l",
-    "count": 1,
-    "type": "float"
-  },
-  "ManifoldPress": {
-    "name": "ManifoldPress",
-    "desc": "Engine manifold pressure",
-    "unit": "bar",
-    "count": 1,
-    "type": "float"
-  },
-  "FuelLevel": {
-    "name": "FuelLevel",
-    "desc": "Liters of fuel remaining",
-    "unit": "l",
-    "count": 1,
-    "type": "float"
-  },
-  "Engine0_RPM": {
-    "name": "Engine0_RPM",
-    "desc": "Engine0Engine rpm",
-    "unit": "revs/min",
+  "dcThrottleShape": {
+    "name": "dcThrottleShape",
+    "desc": "In car throttle shape adjustment",
+    "unit": "",
     "count": 1,
     "type": "float"
   },
@@ -1914,6 +1942,83 @@
     "name": "LFwearR",
     "desc": "LF tire right percent tread remaining",
     "unit": "%",
+    "count": 1,
+    "type": "float"
+  },
+  "FuelUsePerHour": {
+    "name": "FuelUsePerHour",
+    "desc": "Engine fuel used instantaneous",
+    "unit": "kg/h",
+    "count": 1,
+    "type": "float"
+  },
+  "Voltage": {
+    "name": "Voltage",
+    "desc": "Engine voltage",
+    "unit": "V",
+    "count": 1,
+    "type": "float"
+  },
+  "WaterTemp": {
+    "name": "WaterTemp",
+    "desc": "Engine coolant temp",
+    "unit": "C",
+    "count": 1,
+    "type": "float"
+  },
+  "WaterLevel": {
+    "name": "WaterLevel",
+    "desc": "Engine coolant level",
+    "unit": "l",
+    "count": 1,
+    "type": "float"
+  },
+  "FuelPress": {
+    "name": "FuelPress",
+    "desc": "Engine fuel pressure",
+    "unit": "bar",
+    "count": 1,
+    "type": "float"
+  },
+  "OilTemp": {
+    "name": "OilTemp",
+    "desc": "Engine oil temperature",
+    "unit": "C",
+    "count": 1,
+    "type": "float"
+  },
+  "OilPress": {
+    "name": "OilPress",
+    "desc": "Engine oil pressure",
+    "unit": "bar",
+    "count": 1,
+    "type": "float"
+  },
+  "OilLevel": {
+    "name": "OilLevel",
+    "desc": "Engine oil level",
+    "unit": "l",
+    "count": 1,
+    "type": "float"
+  },
+  "ManifoldPress": {
+    "name": "ManifoldPress",
+    "desc": "Engine manifold pressure",
+    "unit": "bar",
+    "count": 1,
+    "type": "float"
+  },
+  "FuelLevel": {
+    "name": "FuelLevel",
+    "desc": "Liters of fuel remaining",
+    "unit": "l",
+    "count": 1,
+    "type": "float"
+  },
+  "Engine0_RPM": {
+    "name": "Engine0_RPM",
+    "desc": "Engine0Engine rpm",
+    "unit": "revs/min",
     "count": 1,
     "type": "float"
   },

@@ -1,13 +1,6 @@
 const irsdk = require('../');
 const fs = require('fs');
 
-const getTimestamp = () => {
-  const date = new Date();
-  return `${date.getFullYear()}-${
-    date.getMonth() + 1
-  }-${date.getDate()}-${date.getHours()}-${date.getMinutes()}`;
-};
-
 // enable access to raw yaml sessioninfo
 process.env.NODE_ENV = 'development';
 
@@ -30,29 +23,26 @@ iracing.on('Disconnected', function () {
 
 iracing.once('TelemetryDescription', function (data) {
   console.log('got TelemetryDescription');
-  const dateStr = getTimestamp();
-  const fileName = './sample-data/' + dateStr + '-telemetry-desc.json';
+  const fileName = './sample-data/telemetry-desc.json';
 
   fs.writeFile(fileName, JSON.stringify(data, null, 2), function (err) {
     if (err) throw err;
   });
 });
 
-iracing.on('Telemetry', function (data) {
+iracing.once('Telemetry', function (data) {
   console.log('got Telemetry');
-  const dateStr = getTimestamp();
-  const fileName = './sample-data/' + dateStr + '-telemetry.json';
+  const fileName = './sample-data/telemetry.json';
 
   fs.writeFile(fileName, JSON.stringify(data, null, 2), function (err) {
     if (err) throw err;
   });
 });
 
-iracing.on('SessionInfo', function (data) {
+iracing.once('SessionInfo', function (data) {
   console.log('got SessionInfo');
-  const dateStr = getTimestamp();
-  const jsonFileName = './sample-data/' + dateStr + '-sessioninfo.json';
-  const yamlFileName = './sample-data/' + dateStr + '-sessioninfo.yaml';
+  const jsonFileName = './sample-data/sessioninfo.json';
+  const yamlFileName = './sample-data/sessioninfo.yaml';
 
   fs.writeFile(jsonFileName, JSON.stringify(data, null, 2), function (err) {
     if (err) throw err;
