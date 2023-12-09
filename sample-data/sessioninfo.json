@@ -1,76 +1,77 @@
 {
-  "timestamp": "2023-12-03T07:03:34.592Z",
+  "timestamp": "2023-12-09T00:24:32.300Z",
   "data": {
     "WeekendInfo": {
-      "TrackName": "okayama full",
-      "TrackID": 166,
-      "TrackLength": "3.65 km",
-      "TrackLengthOfficial": "3.72 km",
-      "TrackDisplayName": "Okayama International Circuit",
-      "TrackDisplayShortName": "Okayama",
+      "TrackName": "virginia 2022 full",
+      "TrackID": 465,
+      "TrackLength": "5.22 km",
+      "TrackLengthOfficial": "5.26 km",
+      "TrackDisplayName": "Virginia International Raceway",
+      "TrackDisplayShortName": "VIR",
       "TrackConfigName": "Full Course",
-      "TrackCity": "Okayama",
-      "TrackCountry": "Japan",
-      "TrackAltitude": "265.84 m",
-      "TrackLatitude": "34.914295 m",
-      "TrackLongitude": "134.218936 m",
-      "TrackNorthOffset": "3.0612 rad",
-      "TrackNumTurns": 11,
+      "TrackCity": "Alton",
+      "TrackCountry": "USA",
+      "TrackAltitude": "166.18 m",
+      "TrackLatitude": "36.568814 m",
+      "TrackLongitude": "-79.206660 m",
+      "TrackNorthOffset": "4.2700 rad",
+      "TrackNumTurns": 20,
       "TrackPitSpeedLimit": "60.00 kph",
       "TrackType": "road course",
       "TrackDirection": "neutral",
-      "TrackWeatherType": "Specified / Dynamic Sky",
+      "TrackWeatherType": "Classic Generated / Dynamic Sky",
       "TrackSkies": "Partly Cloudy",
-      "TrackSurfaceTemp": "39.82 C",
-      "TrackAirTemp": "25.57 C",
-      "TrackAirPressure": "28.99 Hg",
-      "TrackWindVel": "0.89 m/s",
-      "TrackWindDir": "0.00 rad",
-      "TrackRelativeHumidity": "55 %",
+      "TrackSurfaceTemp": "36.15 C",
+      "TrackAirTemp": "21.90 C",
+      "TrackAirPressure": "29.35 Hg",
+      "TrackWindVel": "1.25 m/s",
+      "TrackWindDir": "4.37 rad",
+      "TrackRelativeHumidity": "56 %",
       "TrackFogLevel": "0 %",
-      "TrackCleanup": 1,
+      "TrackPrecipitation": "0 %",
+      "TrackCleanup": 0,
       "TrackDynamicTrack": 1,
-      "TrackVersion": "2023.08.25.02",
-      "SeriesID": 139,
-      "SeasonID": 4397,
-      "SessionID": 223395607,
-      "SubSessionID": 65313104,
+      "TrackVersion": "2023.11.21.03",
+      "SeriesID": 0,
+      "SeasonID": 0,
+      "SessionID": 0,
+      "SubSessionID": 0,
       "LeagueID": 0,
-      "Official": 1,
-      "RaceWeek": 11,
-      "EventType": "Race",
+      "Official": 0,
+      "RaceWeek": 0,
+      "EventType": "Test",
       "Category": "Road",
       "SimMode": "full",
       "TeamRacing": 0,
       "MinDrivers": 0,
-      "MaxDrivers": 1,
+      "MaxDrivers": 0,
       "DCRuleSet": "None",
       "QualifierMustStartRace": 0,
       "NumCarClasses": 1,
-      "NumCarTypes": 2,
+      "NumCarTypes": 1,
       "HeatRacing": 0,
       "BuildType": "Release",
       "BuildTarget": "Members",
-      "BuildVersion": "2023.11.06.02",
+      "BuildVersion": "2023.12.05.04",
       "WeekendOptions": {
-        "NumStarters": 12,
-        "StartingGrid": "2x2 inline pole on left",
+        "NumStarters": 0,
+        "StartingGrid": "single file",
         "QualifyScoring": "best lap",
-        "CourseCautions": "local",
-        "StandingStart": 1,
+        "CourseCautions": "off",
+        "StandingStart": 0,
         "ShortParadeLap": 0,
-        "Restarts": "double file lapped cars behind",
-        "WeatherType": "Specified / Dynamic Sky",
+        "Restarts": "single file",
+        "WeatherType": "Classic Generated / Dynamic Sky",
         "Skies": "Partly Cloudy",
         "WindDirection": "N",
         "WindSpeed": "3.22 km/h",
         "WeatherTemp": "25.56 C",
-        "RelativeHumidity": "55 %",
+        "RelativeHumidity": "45 %",
         "FogLevel": "0 %",
         "TimeOfDay": "12:00 pm",
-        "Date": "2023-12-02T00:00:00.000Z",
+        "Date": "2022-10-23T00:00:00.000Z",
         "EarthRotationSpeedupFactor": 1,
-        "Unofficial": 0,
+        "Unofficial": 1,
         "CommercialMode": "consumer",
         "NightMode": "variable",
         "IsFixedSetup": 0,
@@ -78,8 +79,8 @@
         "HasOpenRegistration": 0,
         "HardcoreLevel": 1,
         "NumJokerLaps": 0,
-        "IncidentLimit": 17,
-        "FastRepairsLimit": 1,
+        "IncidentLimit": "unlimited",
+        "FastRepairsLimit": "unlimited",
         "GreenWhiteCheckeredLimit": 0
       },
       "TelemetryOptions": {
@@ -91,270 +92,11 @@
         {
           "SessionNum": 0,
           "SessionLaps": "unlimited",
-          "SessionTime": "180.0000 sec",
-          "SessionNumLapsToAvg": 0,
-          "SessionType": "Practice",
-          "SessionTrackRubberState": "moderately high usage",
-          "SessionName": "PRACTICE",
-          "SessionSubType": null,
-          "SessionSkipped": 0,
-          "SessionRunGroupsUsed": 0,
-          "SessionEnforceTireCompoundChange": 0,
-          "ResultsPositions": [
-            {
-              "Position": 1,
-              "ClassPosition": 0,
-              "CarIdx": 1,
-              "Lap": 0,
-              "Time": -1,
-              "FastestLap": -1,
-              "FastestTime": -1,
-              "LastTime": -1,
-              "LapsLed": 0,
-              "LapsComplete": 0,
-              "JokerLapsComplete": 0,
-              "LapsDriven": 0,
-              "Incidents": 0,
-              "ReasonOutId": 0,
-              "ReasonOutStr": "Running"
-            },
-            {
-              "Position": 2,
-              "ClassPosition": 1,
-              "CarIdx": 2,
-              "Lap": 0,
-              "Time": -1,
-              "FastestLap": -1,
-              "FastestTime": -1,
-              "LastTime": -1,
-              "LapsLed": 0,
-              "LapsComplete": 0,
-              "JokerLapsComplete": 0,
-              "LapsDriven": 0,
-              "Incidents": 0,
-              "ReasonOutId": 0,
-              "ReasonOutStr": "Running"
-            },
-            {
-              "Position": 3,
-              "ClassPosition": 2,
-              "CarIdx": 3,
-              "Lap": 0,
-              "Time": -1,
-              "FastestLap": -1,
-              "FastestTime": -1,
-              "LastTime": -1,
-              "LapsLed": 0,
-              "LapsComplete": 0,
-              "JokerLapsComplete": 0,
-              "LapsDriven": 0.671,
-              "Incidents": 1,
-              "ReasonOutId": 0,
-              "ReasonOutStr": "Running"
-            },
-            {
-              "Position": 4,
-              "ClassPosition": 3,
-              "CarIdx": 4,
-              "Lap": 0,
-              "Time": -1,
-              "FastestLap": -1,
-              "FastestTime": -1,
-              "LastTime": -1,
-              "LapsLed": 0,
-              "LapsComplete": 0,
-              "JokerLapsComplete": 0,
-              "LapsDriven": 0,
-              "Incidents": 0,
-              "ReasonOutId": 0,
-              "ReasonOutStr": "Running"
-            },
-            {
-              "Position": 5,
-              "ClassPosition": 4,
-              "CarIdx": 5,
-              "Lap": 0,
-              "Time": -1,
-              "FastestLap": -1,
-              "FastestTime": -1,
-              "LastTime": -1,
-              "LapsLed": 0,
-              "LapsComplete": 0,
-              "JokerLapsComplete": 0,
-              "LapsDriven": 0,
-              "Incidents": 0,
-              "ReasonOutId": 0,
-              "ReasonOutStr": "Running"
-            },
-            {
-              "Position": 6,
-              "ClassPosition": 5,
-              "CarIdx": 6,
-              "Lap": 0,
-              "Time": -1,
-              "FastestLap": -1,
-              "FastestTime": -1,
-              "LastTime": -1,
-              "LapsLed": 0,
-              "LapsComplete": 0,
-              "JokerLapsComplete": 0,
-              "LapsDriven": 0,
-              "Incidents": 0,
-              "ReasonOutId": 0,
-              "ReasonOutStr": "Running"
-            },
-            {
-              "Position": 7,
-              "ClassPosition": 6,
-              "CarIdx": 7,
-              "Lap": 0,
-              "Time": -1,
-              "FastestLap": -1,
-              "FastestTime": -1,
-              "LastTime": -1,
-              "LapsLed": 0,
-              "LapsComplete": 1,
-              "JokerLapsComplete": 0,
-              "LapsDriven": 0.575,
-              "Incidents": 0,
-              "ReasonOutId": 0,
-              "ReasonOutStr": "Running"
-            },
-            {
-              "Position": 8,
-              "ClassPosition": 7,
-              "CarIdx": 8,
-              "Lap": 0,
-              "Time": -1,
-              "FastestLap": -1,
-              "FastestTime": -1,
-              "LastTime": -1,
-              "LapsLed": 0,
-              "LapsComplete": 0,
-              "JokerLapsComplete": 0,
-              "LapsDriven": 0,
-              "Incidents": 0,
-              "ReasonOutId": 0,
-              "ReasonOutStr": "Running"
-            },
-            {
-              "Position": 9,
-              "ClassPosition": 8,
-              "CarIdx": 9,
-              "Lap": 0,
-              "Time": -1,
-              "FastestLap": -1,
-              "FastestTime": -1,
-              "LastTime": -1,
-              "LapsLed": 0,
-              "LapsComplete": 1,
-              "JokerLapsComplete": 0,
-              "LapsDriven": 1.057,
-              "Incidents": 0,
-              "ReasonOutId": 0,
-              "ReasonOutStr": "Running"
-            },
-            {
-              "Position": 10,
-              "ClassPosition": 9,
-              "CarIdx": 10,
-              "Lap": 0,
-              "Time": -1,
-              "FastestLap": -1,
-              "FastestTime": -1,
-              "LastTime": -1,
-              "LapsLed": 0,
-              "LapsComplete": 0,
-              "JokerLapsComplete": 0,
-              "LapsDriven": 0.833,
-              "Incidents": 0,
-              "ReasonOutId": 0,
-              "ReasonOutStr": "Running"
-            },
-            {
-              "Position": 11,
-              "ClassPosition": 10,
-              "CarIdx": 11,
-              "Lap": 0,
-              "Time": -1,
-              "FastestLap": -1,
-              "FastestTime": -1,
-              "LastTime": -1,
-              "LapsLed": 0,
-              "LapsComplete": 0,
-              "JokerLapsComplete": 0,
-              "LapsDriven": 0.853,
-              "Incidents": 1,
-              "ReasonOutId": 0,
-              "ReasonOutStr": "Running"
-            },
-            {
-              "Position": 12,
-              "ClassPosition": 11,
-              "CarIdx": 12,
-              "Lap": 0,
-              "Time": -1,
-              "FastestLap": -1,
-              "FastestTime": -1,
-              "LastTime": -1,
-              "LapsLed": 0,
-              "LapsComplete": 0,
-              "JokerLapsComplete": 0,
-              "LapsDriven": 0,
-              "Incidents": 0,
-              "ReasonOutId": 0,
-              "ReasonOutStr": "Running"
-            }
-          ],
-          "ResultsFastestLap": [
-            {
-              "CarIdx": 255,
-              "FastestLap": 0,
-              "FastestTime": -1
-            }
-          ],
-          "ResultsAverageLapTime": -1,
-          "ResultsNumCautionFlags": 0,
-          "ResultsNumCautionLaps": 0,
-          "ResultsNumLeadChanges": 0,
-          "ResultsLapsComplete": -1,
-          "ResultsOfficial": 1
-        },
-        {
-          "SessionNum": 1,
-          "SessionLaps": 2,
-          "SessionTime": "480.0000 sec",
-          "SessionNumLapsToAvg": 0,
-          "SessionType": "Lone Qualify",
-          "SessionTrackRubberState": "carry over",
-          "SessionName": "QUALIFY",
-          "SessionSubType": null,
-          "SessionSkipped": 0,
-          "SessionRunGroupsUsed": 0,
-          "SessionEnforceTireCompoundChange": 0,
-          "ResultsPositions": null,
-          "ResultsFastestLap": [
-            {
-              "CarIdx": 255,
-              "FastestLap": 0,
-              "FastestTime": -1
-            }
-          ],
-          "ResultsAverageLapTime": -1,
-          "ResultsNumCautionFlags": 0,
-          "ResultsNumCautionLaps": 0,
-          "ResultsNumLeadChanges": 0,
-          "ResultsLapsComplete": -1,
-          "ResultsOfficial": 0
-        },
-        {
-          "SessionNum": 2,
-          "SessionLaps": 12,
           "SessionTime": "unlimited",
           "SessionNumLapsToAvg": 0,
-          "SessionType": "Race",
-          "SessionTrackRubberState": "carry over",
-          "SessionName": "RACE",
+          "SessionType": "Offline Testing",
+          "SessionTrackRubberState": "moderately low usage",
+          "SessionName": "TESTING",
           "SessionSubType": null,
           "SessionSkipped": 0,
           "SessionRunGroupsUsed": 0,
@@ -373,94 +115,6 @@
           "ResultsNumLeadChanges": 0,
           "ResultsLapsComplete": -1,
           "ResultsOfficial": 0
-        }
-      ]
-    },
-    "QualifyResultsInfo": {
-      "Results": [
-        {
-          "Position": 0,
-          "ClassPosition": 0,
-          "CarIdx": 1,
-          "FastestLap": 0,
-          "FastestTime": -1
-        },
-        {
-          "Position": 1,
-          "ClassPosition": 1,
-          "CarIdx": 2,
-          "FastestLap": 0,
-          "FastestTime": -1
-        },
-        {
-          "Position": 2,
-          "ClassPosition": 2,
-          "CarIdx": 3,
-          "FastestLap": 0,
-          "FastestTime": -1
-        },
-        {
-          "Position": 3,
-          "ClassPosition": 3,
-          "CarIdx": 4,
-          "FastestLap": 0,
-          "FastestTime": -1
-        },
-        {
-          "Position": 4,
-          "ClassPosition": 4,
-          "CarIdx": 5,
-          "FastestLap": 0,
-          "FastestTime": -1
-        },
-        {
-          "Position": 5,
-          "ClassPosition": 5,
-          "CarIdx": 6,
-          "FastestLap": 0,
-          "FastestTime": -1
-        },
-        {
-          "Position": 6,
-          "ClassPosition": 6,
-          "CarIdx": 7,
-          "FastestLap": 0,
-          "FastestTime": -1
-        },
-        {
-          "Position": 7,
-          "ClassPosition": 7,
-          "CarIdx": 8,
-          "FastestLap": 0,
-          "FastestTime": -1
-        },
-        {
-          "Position": 8,
-          "ClassPosition": 8,
-          "CarIdx": 9,
-          "FastestLap": 0,
-          "FastestTime": -1
-        },
-        {
-          "Position": 9,
-          "ClassPosition": 9,
-          "CarIdx": 10,
-          "FastestLap": 0,
-          "FastestTime": -1
-        },
-        {
-          "Position": 10,
-          "ClassPosition": 10,
-          "CarIdx": 11,
-          "FastestLap": 0,
-          "FastestTime": -1
-        },
-        {
-          "Position": 11,
-          "ClassPosition": 11,
-          "CarIdx": 12,
-          "FastestLap": 0,
-          "FastestTime": -1
         }
       ]
     },
@@ -563,39 +217,43 @@
           "Cameras": [
             {
               "CameraNum": 1,
-              "CameraName": "Scenic_00"
-            },
-            {
-              "CameraNum": 2,
-              "CameraName": "Scenic_01"
-            },
-            {
-              "CameraNum": 3,
-              "CameraName": "Scenic_03"
-            },
-            {
-              "CameraNum": 4,
-              "CameraName": "Scenic_04"
-            },
-            {
-              "CameraNum": 5,
-              "CameraName": "Scenic_05"
-            },
-            {
-              "CameraNum": 6,
-              "CameraName": "Scenic_06"
-            },
-            {
-              "CameraNum": 7,
-              "CameraName": "Scenic_10"
-            },
-            {
-              "CameraNum": 8,
               "CameraName": "Scenic_07"
             },
             {
-              "CameraNum": 9,
+              "CameraNum": 2,
+              "CameraName": "Scenic_08"
+            },
+            {
+              "CameraNum": 3,
+              "CameraName": "Scenic_09"
+            },
+            {
+              "CameraNum": 4,
+              "CameraName": "Scenic_10"
+            },
+            {
+              "CameraNum": 5,
               "CameraName": "Scenic_02"
+            },
+            {
+              "CameraNum": 6,
+              "CameraName": "Scenic_03"
+            },
+            {
+              "CameraNum": 7,
+              "CameraName": "Scenic_05"
+            },
+            {
+              "CameraNum": 8,
+              "CameraName": "Scenic_04"
+            },
+            {
+              "CameraNum": 9,
+              "CameraName": "Scenic_06"
+            },
+            {
+              "CameraNum": 10,
+              "CameraName": "Scenic_01"
             }
           ]
         },
@@ -605,11 +263,11 @@
           "Cameras": [
             {
               "CameraNum": 1,
-              "CameraName": "CamTV1_01"
+              "CameraName": "CamTV1_00"
             },
             {
               "CameraNum": 2,
-              "CameraName": "CamTV1_01b"
+              "CameraName": "CamTV1_01"
             },
             {
               "CameraNum": 3,
@@ -617,71 +275,31 @@
             },
             {
               "CameraNum": 4,
-              "CameraName": "CamTV1_02b"
-            },
-            {
-              "CameraNum": 5,
               "CameraName": "CamTV1_03"
             },
             {
-              "CameraNum": 6,
-              "CameraName": "CamTV1_03b"
-            },
-            {
-              "CameraNum": 7,
-              "CameraName": "CamTV1_04"
-            },
-            {
-              "CameraNum": 8,
-              "CameraName": "CamTV1_04b"
-            },
-            {
-              "CameraNum": 9,
-              "CameraName": "CamTV1_06"
-            },
-            {
-              "CameraNum": 10,
-              "CameraName": "CamTV1_06b"
-            },
-            {
-              "CameraNum": 11,
-              "CameraName": "CamTV1_07"
-            },
-            {
-              "CameraNum": 12,
-              "CameraName": "CamTV1_08b"
-            },
-            {
-              "CameraNum": 13,
-              "CameraName": "CamTV1_09"
-            },
-            {
-              "CameraNum": 14,
-              "CameraName": "CamTV1_10c"
-            },
-            {
-              "CameraNum": 15,
-              "CameraName": "CamTV1_10"
-            },
-            {
-              "CameraNum": 16,
-              "CameraName": "CamTV1_11"
-            },
-            {
-              "CameraNum": 17,
-              "CameraName": "CamTV1_05b"
-            },
-            {
-              "CameraNum": 18,
+              "CameraNum": 5,
               "CameraName": "CamTV1_05"
             },
             {
-              "CameraNum": 19,
-              "CameraName": "CamTV1_07b"
+              "CameraNum": 6,
+              "CameraName": "CamTV1_04"
             },
             {
-              "CameraNum": 20,
-              "CameraName": "CamTV1_11b"
+              "CameraNum": 7,
+              "CameraName": "CamTV1_06"
+            },
+            {
+              "CameraNum": 8,
+              "CameraName": "CamTV1_07"
+            },
+            {
+              "CameraNum": 9,
+              "CameraName": "CamTV1_08"
+            },
+            {
+              "CameraNum": 10,
+              "CameraName": "CamTV1_09"
             }
           ]
         },
@@ -691,7 +309,7 @@
           "Cameras": [
             {
               "CameraNum": 1,
-              "CameraName": "CamTV2_01b"
+              "CameraName": "CamTV2_04"
             },
             {
               "CameraNum": 2,
@@ -699,91 +317,55 @@
             },
             {
               "CameraNum": 3,
-              "CameraName": "CamTV2_14"
-            },
-            {
-              "CameraNum": 4,
-              "CameraName": "CamTV2_14b"
-            },
-            {
-              "CameraNum": 5,
-              "CameraName": "CamTV2_13"
-            },
-            {
-              "CameraNum": 6,
-              "CameraName": "CamTV2_12b"
-            },
-            {
-              "CameraNum": 7,
-              "CameraName": "CamTV2_12"
-            },
-            {
-              "CameraNum": 8,
-              "CameraName": "CamTV2_11"
-            },
-            {
-              "CameraNum": 9,
-              "CameraName": "CamTV2_11b"
-            },
-            {
-              "CameraNum": 10,
-              "CameraName": "CamTV2_10"
-            },
-            {
-              "CameraNum": 11,
-              "CameraName": "CamTV2_10b"
-            },
-            {
-              "CameraNum": 12,
-              "CameraName": "CamTV2_07"
-            },
-            {
-              "CameraNum": 13,
-              "CameraName": "CamTV2_08b"
-            },
-            {
-              "CameraNum": 14,
-              "CameraName": "CamTV2_09b"
-            },
-            {
-              "CameraNum": 15,
-              "CameraName": "CamTV2_08"
-            },
-            {
-              "CameraNum": 16,
-              "CameraName": "CamTV2_04"
-            },
-            {
-              "CameraNum": 17,
-              "CameraName": "CamTV2_06"
-            },
-            {
-              "CameraNum": 18,
-              "CameraName": "CamTV2_05b"
-            },
-            {
-              "CameraNum": 19,
-              "CameraName": "CamTV2_03"
-            },
-            {
-              "CameraNum": 20,
               "CameraName": "CamTV2_02"
             },
             {
-              "CameraNum": 21,
-              "CameraName": "CamTV2_00"
+              "CameraNum": 4,
+              "CameraName": "CamTV2_03"
             },
             {
-              "CameraNum": 22,
-              "CameraName": "CamTV2_00b"
+              "CameraNum": 5,
+              "CameraName": "CamTV2_05"
             },
             {
-              "CameraNum": 23,
-              "CameraName": "CamTV2_03b"
+              "CameraNum": 6,
+              "CameraName": "CamTV2_07"
             },
             {
-              "CameraNum": 24,
+              "CameraNum": 7,
+              "CameraName": "CamTV2_08"
+            },
+            {
+              "CameraNum": 8,
               "CameraName": "CamTV2_09"
+            },
+            {
+              "CameraNum": 9,
+              "CameraName": "CamTV2_10"
+            },
+            {
+              "CameraNum": 10,
+              "CameraName": "CamTV2_15"
+            },
+            {
+              "CameraNum": 11,
+              "CameraName": "CamTV2_12"
+            },
+            {
+              "CameraNum": 12,
+              "CameraName": "CamTV2_13"
+            },
+            {
+              "CameraNum": 13,
+              "CameraName": "CamTV2_14"
+            },
+            {
+              "CameraNum": 14,
+              "CameraName": "CamTV2_11"
+            },
+            {
+              "CameraNum": 15,
+              "CameraName": "CamTV2_00"
             }
           ]
         },
@@ -793,75 +375,43 @@
           "Cameras": [
             {
               "CameraNum": 1,
-              "CameraName": "CamTV3_00"
-            },
-            {
-              "CameraNum": 2,
-              "CameraName": "CamTV3_02"
-            },
-            {
-              "CameraNum": 3,
-              "CameraName": "CamTV3_02b"
-            },
-            {
-              "CameraNum": 4,
-              "CameraName": "CamTV3_01"
-            },
-            {
-              "CameraNum": 5,
-              "CameraName": "CamTV3_04b"
-            },
-            {
-              "CameraNum": 6,
               "CameraName": "CamTV3_03"
             },
             {
-              "CameraNum": 7,
-              "CameraName": "CamTV3_03st"
+              "CameraNum": 2,
+              "CameraName": "CamTV3_01"
             },
             {
-              "CameraNum": 8,
+              "CameraNum": 3,
+              "CameraName": "CamTV3_02"
+            },
+            {
+              "CameraNum": 4,
               "CameraName": "CamTV3_04"
             },
             {
-              "CameraNum": 9,
-              "CameraName": "CamTV3_06"
-            },
-            {
-              "CameraNum": 10,
+              "CameraNum": 5,
               "CameraName": "CamTV3_05"
             },
             {
-              "CameraNum": 11,
+              "CameraNum": 6,
+              "CameraName": "CamTV3_06"
+            },
+            {
+              "CameraNum": 7,
               "CameraName": "CamTV3_07"
             },
             {
-              "CameraNum": 12,
+              "CameraNum": 8,
               "CameraName": "CamTV3_08"
             },
             {
-              "CameraNum": 13,
+              "CameraNum": 9,
               "CameraName": "CamTV3_09"
             },
             {
-              "CameraNum": 14,
+              "CameraNum": 10,
               "CameraName": "CamTV3_10"
-            },
-            {
-              "CameraNum": 15,
-              "CameraName": "CamTV3_11"
-            },
-            {
-              "CameraNum": 16,
-              "CameraName": "CamTV3_06b"
-            },
-            {
-              "CameraNum": 17,
-              "CameraName": "CamTV3_12"
-            },
-            {
-              "CameraNum": 18,
-              "CameraName": "CamTV3_03b"
             }
           ]
         },
@@ -871,71 +421,75 @@
           "Cameras": [
             {
               "CameraNum": 1,
-              "CameraName": "CamTV4_07"
-            },
-            {
-              "CameraNum": 2,
-              "CameraName": "CamTV4_08"
-            },
-            {
-              "CameraNum": 3,
-              "CameraName": "CamTV4_09"
-            },
-            {
-              "CameraNum": 4,
-              "CameraName": "CamTV4_11"
-            },
-            {
-              "CameraNum": 5,
-              "CameraName": "CamTV4_12"
-            },
-            {
-              "CameraNum": 6,
-              "CameraName": "CamTV4_13"
-            },
-            {
-              "CameraNum": 7,
-              "CameraName": "CamTV4_14"
-            },
-            {
-              "CameraNum": 8,
-              "CameraName": "CamTV4_01"
-            },
-            {
-              "CameraNum": 9,
               "CameraName": "CamTV4_00"
             },
             {
-              "CameraNum": 10,
-              "CameraName": "CamTV4_15"
+              "CameraNum": 2,
+              "CameraName": "CamTV4_01"
             },
             {
-              "CameraNum": 11,
-              "CameraName": "CamTV4_16"
-            },
-            {
-              "CameraNum": 12,
+              "CameraNum": 3,
               "CameraName": "CamTV4_02"
             },
             {
-              "CameraNum": 13,
+              "CameraNum": 4,
               "CameraName": "CamTV4_03"
             },
             {
-              "CameraNum": 14,
+              "CameraNum": 5,
+              "CameraName": "CamTV4_04"
+            },
+            {
+              "CameraNum": 6,
               "CameraName": "CamTV4_05"
             },
             {
-              "CameraNum": 15,
-              "CameraName": "CamTV4_04b"
-            },
-            {
-              "CameraNum": 16,
+              "CameraNum": 7,
               "CameraName": "CamTV4_06"
             },
             {
-              "CameraNum": 17,
+              "CameraNum": 8,
+              "CameraName": "CamTV4_08"
+            },
+            {
+              "CameraNum": 9,
+              "CameraName": "CamTV4_07"
+            },
+            {
+              "CameraNum": 10,
               "CameraName": "CamTV4_10"
+            },
+            {
+              "CameraNum": 11,
+              "CameraName": "CamTV4_09"
+            },
+            {
+              "CameraNum": 12,
+              "CameraName": "CamTV4_11"
+            },
+            {
+              "CameraNum": 13,
+              "CameraName": "CamTV4_12"
+            },
+            {
+              "CameraNum": 14,
+              "CameraName": "CamTV4_13"
+            },
+            {
+              "CameraNum": 15,
+              "CameraName": "CamTV4_14"
+            },
+            {
+              "CameraNum": 16,
+              "CameraName": "CamTV4_15"
+            },
+            {
+              "CameraNum": 17,
+              "CameraName": "CamTV4_16"
+            },
+            {
+              "CameraNum": 18,
+              "CameraName": "CamTV4_17"
             }
           ]
         },
@@ -945,15 +499,15 @@
           "Cameras": [
             {
               "CameraNum": 1,
-              "CameraName": "CamTV3_01"
+              "CameraName": "CamTV3_09b"
             },
             {
               "CameraNum": 2,
-              "CameraName": "CamTV1_01"
+              "CameraName": "CamTV1_00"
             },
             {
               "CameraNum": 3,
-              "CameraName": "CamTV1_01b"
+              "CameraName": "CamTV1_01"
             },
             {
               "CameraNum": 4,
@@ -961,223 +515,135 @@
             },
             {
               "CameraNum": 5,
-              "CameraName": "CamTV1_02b"
-            },
-            {
-              "CameraNum": 6,
-              "CameraName": "CamTV1_03"
-            },
-            {
-              "CameraNum": 7,
-              "CameraName": "CamTV1_03b"
-            },
-            {
-              "CameraNum": 8,
               "CameraName": "CamTV1_04"
             },
             {
-              "CameraNum": 9,
+              "CameraNum": 6,
               "CameraName": "CamTV1_05"
             },
             {
-              "CameraNum": 10,
-              "CameraName": "CamTV1_05b"
-            },
-            {
-              "CameraNum": 11,
+              "CameraNum": 7,
               "CameraName": "CamTV1_06"
             },
             {
-              "CameraNum": 12,
-              "CameraName": "CamTV1_06b"
-            },
-            {
-              "CameraNum": 13,
+              "CameraNum": 8,
               "CameraName": "CamTV1_07"
             },
             {
-              "CameraNum": 14,
-              "CameraName": "CamTV1_07b"
-            },
-            {
-              "CameraNum": 15,
-              "CameraName": "CamTV1_08b"
-            },
-            {
-              "CameraNum": 16,
+              "CameraNum": 9,
               "CameraName": "CamTV1_09"
             },
             {
-              "CameraNum": 17,
-              "CameraName": "CamTV1_11"
-            },
-            {
-              "CameraNum": 18,
-              "CameraName": "CamTV1_11b"
-            },
-            {
-              "CameraNum": 19,
+              "CameraNum": 10,
               "CameraName": "CamTV2_00"
             },
             {
-              "CameraNum": 20,
-              "CameraName": "CamTV2_00b"
-            },
-            {
-              "CameraNum": 21,
+              "CameraNum": 11,
               "CameraName": "CamTV2_01"
             },
             {
-              "CameraNum": 22,
-              "CameraName": "CamTV2_01b"
-            },
-            {
-              "CameraNum": 23,
+              "CameraNum": 12,
               "CameraName": "CamTV2_02"
             },
             {
-              "CameraNum": 24,
+              "CameraNum": 13,
               "CameraName": "CamTV2_03"
             },
             {
-              "CameraNum": 25,
-              "CameraName": "CamTV2_03b"
-            },
-            {
-              "CameraNum": 26,
+              "CameraNum": 14,
               "CameraName": "CamTV2_04"
             },
             {
-              "CameraNum": 27,
-              "CameraName": "CamTV2_05b"
+              "CameraNum": 15,
+              "CameraName": "CamTV2_05"
             },
             {
-              "CameraNum": 28,
+              "CameraNum": 16,
               "CameraName": "CamTV2_06"
             },
             {
-              "CameraNum": 29,
+              "CameraNum": 17,
               "CameraName": "CamTV2_07"
             },
             {
-              "CameraNum": 30,
+              "CameraNum": 18,
               "CameraName": "CamTV2_08"
             },
             {
-              "CameraNum": 31,
-              "CameraName": "CamTV2_08b"
-            },
-            {
-              "CameraNum": 32,
+              "CameraNum": 19,
               "CameraName": "CamTV2_09"
             },
             {
-              "CameraNum": 33,
-              "CameraName": "CamTV2_09b"
-            },
-            {
-              "CameraNum": 34,
+              "CameraNum": 20,
               "CameraName": "CamTV2_10"
             },
             {
-              "CameraNum": 35,
-              "CameraName": "CamTV2_10b"
-            },
-            {
-              "CameraNum": 36,
+              "CameraNum": 21,
               "CameraName": "CamTV2_11"
             },
             {
-              "CameraNum": 37,
-              "CameraName": "CamTV2_11b"
-            },
-            {
-              "CameraNum": 38,
+              "CameraNum": 22,
               "CameraName": "CamTV2_12"
             },
             {
-              "CameraNum": 39,
-              "CameraName": "CamTV2_12b"
-            },
-            {
-              "CameraNum": 40,
-              "CameraName": "CamTV2_13"
-            },
-            {
-              "CameraNum": 41,
+              "CameraNum": 23,
               "CameraName": "CamTV2_14"
             },
             {
-              "CameraNum": 42,
-              "CameraName": "CamTV3_00"
+              "CameraNum": 24,
+              "CameraName": "CamTV2_15"
             },
             {
-              "CameraNum": 43,
-              "CameraName": "CamTV3_03b"
+              "CameraNum": 25,
+              "CameraName": "CamTV3_01"
             },
             {
-              "CameraNum": 44,
-              "CameraName": "CamTV3_04b"
+              "CameraNum": 26,
+              "CameraName": "CamTV3_02"
             },
             {
-              "CameraNum": 45,
-              "CameraName": "CamTV3_05"
-            },
-            {
-              "CameraNum": 46,
-              "CameraName": "CamTV3_07"
-            },
-            {
-              "CameraNum": 47,
-              "CameraName": "CamTV3_08"
-            },
-            {
-              "CameraNum": 48,
-              "CameraName": "CamTV3_09"
-            },
-            {
-              "CameraNum": 49,
-              "CameraName": "CamTV3_10"
-            },
-            {
-              "CameraNum": 50,
-              "CameraName": "CamTV3_11"
-            },
-            {
-              "CameraNum": 51,
-              "CameraName": "CamTV3_12"
-            },
-            {
-              "CameraNum": 52,
-              "CameraName": "CamTV4_13"
-            },
-            {
-              "CameraNum": 53,
-              "CameraName": "CamTV4_00"
-            },
-            {
-              "CameraNum": 54,
-              "CameraName": "CamTV4_01"
-            },
-            {
-              "CameraNum": 55,
-              "CameraName": "CamTV4_02"
-            },
-            {
-              "CameraNum": 56,
-              "CameraName": "CamTV4_12"
-            },
-            {
-              "CameraNum": 57,
-              "CameraName": "CamRoll Bar"
-            },
-            {
-              "CameraNum": 58,
+              "CameraNum": 27,
               "CameraName": "CamTV3_03"
             },
             {
-              "CameraNum": 59,
-              "CameraName": "CamTV1_04b"
+              "CameraNum": 28,
+              "CameraName": "CamTV3_04"
+            },
+            {
+              "CameraNum": 29,
+              "CameraName": "CamTV3_05"
+            },
+            {
+              "CameraNum": 30,
+              "CameraName": "CamTV3_05b"
+            },
+            {
+              "CameraNum": 31,
+              "CameraName": "CamTV3_06"
+            },
+            {
+              "CameraNum": 32,
+              "CameraName": "CamTV3_07"
+            },
+            {
+              "CameraNum": 33,
+              "CameraName": "CamTV3_07b"
+            },
+            {
+              "CameraNum": 34,
+              "CameraName": "CamTV3_08"
+            },
+            {
+              "CameraNum": 35,
+              "CameraName": "CamTV3_09"
+            },
+            {
+              "CameraNum": 36,
+              "CameraName": "CamTV3_10"
+            },
+            {
+              "CameraNum": 37,
+              "CameraName": "CamTV4_00"
             }
           ]
         },
@@ -1188,14 +654,6 @@
             {
               "CameraNum": 1,
               "CameraName": "CamPit Lane"
-            },
-            {
-              "CameraNum": 2,
-              "CameraName": "CamPit Lane 3"
-            },
-            {
-              "CameraNum": 3,
-              "CameraName": "CamPit Lane 2"
             }
           ]
         },
@@ -1205,7 +663,7 @@
           "Cameras": [
             {
               "CameraNum": 1,
-              "CameraName": "CamPit Lane 4"
+              "CameraName": "CamPit Lane 2"
             }
           ]
         },
@@ -1267,14 +725,14 @@
         {
           "RadioNum": 0,
           "HopCount": 2,
-          "NumFrequencies": 5,
+          "NumFrequencies": 7,
           "TunedToFrequencyNum": 0,
           "ScanningIsOn": 1,
           "Frequencies": [
             {
               "FrequencyNum": 0,
-              "FrequencyName": "@SPECTATORS",
-              "Priority": 0,
+              "FrequencyName": "@ALLTEAMS",
+              "Priority": 12,
               "CarIdx": -1,
               "EntryIdx": -1,
               "ClubID": 0,
@@ -1292,43 +750,69 @@
               "EntryIdx": -1,
               "ClubID": 0,
               "CanScan": 1,
-              "CanSquawk": 0,
+              "CanSquawk": 1,
               "Muted": 0,
               "IsMutable": 1,
               "IsDeletable": 0
             },
             {
               "FrequencyNum": 2,
-              "FrequencyName": "@ALLTEAMS",
-              "Priority": 12,
-              "CarIdx": -1,
+              "FrequencyName": "@TEAM",
+              "Priority": 60,
+              "CarIdx": 0,
               "EntryIdx": -1,
               "ClubID": 0,
               "CanScan": 1,
-              "CanSquawk": 0,
+              "CanSquawk": 1,
+              "Muted": 0,
+              "IsMutable": 0,
+              "IsDeletable": 0
+            },
+            {
+              "FrequencyNum": 3,
+              "FrequencyName": "@CLUB",
+              "Priority": 20,
+              "CarIdx": -1,
+              "EntryIdx": -1,
+              "ClubID": 25,
+              "CanScan": 1,
+              "CanSquawk": 1,
               "Muted": 0,
               "IsMutable": 1,
               "IsDeletable": 0
             },
             {
-              "FrequencyNum": 3,
+              "FrequencyNum": 4,
+              "FrequencyName": "@ADMIN",
+              "Priority": 90,
+              "CarIdx": -1,
+              "EntryIdx": -1,
+              "ClubID": 0,
+              "CanScan": 1,
+              "CanSquawk": 1,
+              "Muted": 0,
+              "IsMutable": 0,
+              "IsDeletable": 0
+            },
+            {
+              "FrequencyNum": 5,
               "FrequencyName": "@RACECONTROL",
               "Priority": 80,
               "CarIdx": -1,
               "EntryIdx": -1,
               "ClubID": 0,
               "CanScan": 1,
-              "CanSquawk": 0,
+              "CanSquawk": 1,
               "Muted": 0,
               "IsMutable": 0,
               "IsDeletable": 0
             },
             {
-              "FrequencyNum": 4,
+              "FrequencyNum": 6,
               "FrequencyName": "@PRIVATE",
               "Priority": 70,
               "CarIdx": -1,
-              "EntryIdx": 14,
+              "EntryIdx": 0,
               "ClubID": 0,
               "CanScan": 1,
               "CanSquawk": 1,
@@ -1341,52 +825,53 @@
       ]
     },
     "DriverInfo": {
-      "DriverCarIdx": 63,
+      "DriverCarIdx": 0,
       "DriverUserID": 697587,
-      "PaceCarIdx": 0,
-      "DriverHeadPosX": -0.416,
-      "DriverHeadPosY": 0.344,
-      "DriverHeadPosZ": 0.66,
+      "PaceCarIdx": -1,
+      "DriverHeadPosX": 0.015,
+      "DriverHeadPosY": 0.324,
+      "DriverHeadPosZ": 0.53,
       "DriverCarIsElectric": 0,
-      "DriverCarIdleRPM": 875,
-      "DriverCarRedLine": 7525,
-      "DriverCarEngCylinderCount": 4,
+      "DriverCarIdleRPM": 1100,
+      "DriverCarRedLine": 8500,
+      "DriverCarEngCylinderCount": 10,
       "DriverCarFuelKgPerLtr": 0.75,
-      "DriverCarFuelMaxLtr": 44.987,
+      "DriverCarFuelMaxLtr": 104,
       "DriverCarMaxFuelPct": 1,
       "DriverCarGearNumForward": 6,
       "DriverCarGearNeutral": 1,
       "DriverCarGearReverse": 1,
-      "DriverCarSLFirstRPM": 5600,
-      "DriverCarSLShiftRPM": 7200,
-      "DriverCarSLLastRPM": 7200,
-      "DriverCarSLBlinkRPM": 7700,
-      "DriverCarVersion": "2023.08.25.02",
-      "DriverPitTrkPct": 0.995181,
-      "DriverCarEstLapTime": 101.8986,
-      "DriverSetupName": "baseline.sto",
+      "DriverCarSLFirstRPM": 7742.5,
+      "DriverCarSLShiftRPM": 8050,
+      "DriverCarSLLastRPM": 8100,
+      "DriverCarSLBlinkRPM": 8150,
+      "DriverCarVersion": "2023.12.04.02",
+      "DriverPitTrkPct": 0.990978,
+      "DriverCarEstLapTime": 105.8137,
+      "DriverSetupName": "fixed.sto",
       "DriverSetupIsModified": 0,
-      "DriverSetupLoadTypeName": "user",
+      "DriverSetupLoadTypeName": "iracing",
       "DriverSetupPassedTech": 1,
       "DriverIncidentCount": 0,
       "Drivers": [
         {
           "CarIdx": 0,
-          "UserName": "userName",
-          "AbbrevName": "abbrevName",
-          "UserID": -1,
+          "UserName": "Zachary Friss",
+          "AbbrevName": null,
+          "Initials": null,
+          "UserID": 697587,
           "TeamID": 0,
-          "TeamName": "teamName",
-          "CarNumber": "0",
-          "CarNumberRaw": 0,
-          "CarPath": "safety pcporsche911cup",
-          "CarClassID": 11,
-          "CarID": 108,
-          "CarIsPaceCar": 1,
+          "TeamName": "Zachary Friss",
+          "CarNumber": "64",
+          "CarNumberRaw": 64,
+          "CarPath": "lamborghinievogt3",
+          "CarClassID": 0,
+          "CarID": 133,
+          "CarIsPaceCar": 0,
           "CarIsAI": 0,
           "CarIsElectric": 0,
-          "CarScreenName": "safety pcporsche911cup",
-          "CarScreenNameShort": "safety pcporsche911cup",
+          "CarScreenName": "Lamborghini Huracan GT3 EVO",
+          "CarScreenNameShort": "Lamborghini GT3",
           "CarClassShortName": null,
           "CarClassRelSpeed": 0,
           "CarClassLicenseLevel": 0,
@@ -1395,662 +880,22 @@
           "CarClassPowerAdjust": "0.000 %",
           "CarClassDryTireSetLimit": "0 %",
           "CarClassColor": 16777215,
-          "CarClassEstLapTime": 88.8436,
-          "IRating": 0,
+          "CarClassEstLapTime": 105.8137,
+          "IRating": 1,
           "LicLevel": 1,
-          "LicSubLevel": 0,
-          "LicString": "R 0.00",
-          "LicColor": 16777215,
+          "LicSubLevel": 1,
+          "LicString": "R 0.01",
+          "LicColor": "0xundefined",
           "IsSpectator": 0,
-          "CarDesignStr": "0,ffffff,ffffff,ffffff",
-          "HelmetDesignStr": "0,ffffff,ffffff,ffffff",
-          "SuitDesignStr": "0,ffffff,ffffff,ffffff",
-          "BodyType": 0,
-          "FaceType": 0,
-          "HelmetType": 0,
-          "CarNumberDesignStr": "0,0,ffffff,ffffff,ffffff",
-          "CarSponsor_1": 0,
-          "CarSponsor_2": 0,
-          "ClubName": "-none-",
-          "ClubID": 0,
-          "DivisionName": "Division 1",
-          "DivisionID": 0,
-          "CurDriverIncidentCount": -1,
-          "TeamIncidentCount": -1
-        },
-        {
-          "CarIdx": 1,
-          "UserName": "userName",
-          "AbbrevName": "abbrevName",
-          "Initials": "MC",
-          "UserID": 337677,
-          "TeamID": 0,
-          "TeamName": "teamName",
-          "CarNumber": "1",
-          "CarNumberRaw": 1,
-          "CarPath": "mx5 mx52016",
-          "CarClassID": 74,
-          "CarID": 67,
-          "CarIsPaceCar": 0,
-          "CarIsAI": 0,
-          "CarIsElectric": 0,
-          "CarScreenName": "Mazda MX-5 Cup",
-          "CarScreenNameShort": "MX-5 Cup",
-          "CarClassShortName": "MX5 Cup 2016",
-          "CarClassRelSpeed": 35,
-          "CarClassLicenseLevel": 0,
-          "CarClassMaxFuelPct": "1.000 %",
-          "CarClassWeightPenalty": "0.000 kg",
-          "CarClassPowerAdjust": "0.000 %",
-          "CarClassDryTireSetLimit": "0 %",
-          "CarClassColor": 16777215,
-          "CarClassEstLapTime": 101.8986,
-          "IRating": 3361,
-          "LicLevel": 19,
-          "LicSubLevel": 327,
-          "LicString": "A 3.27",
-          "LicColor": 87003,
-          "IsSpectator": 0,
-          "CarDesignStr": "2,ffffff,ffffff,000000.000000",
-          "HelmetDesignStr": "14,ffffff,0040ff,ebff00",
-          "SuitDesignStr": "1,032e6d,cc3c05,000000",
-          "BodyType": 0,
-          "FaceType": 8,
-          "HelmetType": 0,
-          "CarNumberDesignStr": "0,0,000000,ffffff,000000",
-          "CarSponsor_1": 169,
-          "CarSponsor_2": 172,
-          "ClubName": "Iberia",
-          "ClubID": 38,
-          "DivisionName": "Division 1",
-          "DivisionID": 0,
-          "CurDriverIncidentCount": -1,
-          "TeamIncidentCount": -1
-        },
-        {
-          "CarIdx": 2,
-          "UserName": "userName",
-          "AbbrevName": "abbrevName",
-          "Initials": "CW",
-          "UserID": 606595,
-          "TeamID": 0,
-          "TeamName": "teamName",
-          "CarNumber": "2",
-          "CarNumberRaw": 2,
-          "CarPath": "mx5 mx52016",
-          "CarClassID": 74,
-          "CarID": 67,
-          "CarIsPaceCar": 0,
-          "CarIsAI": 0,
-          "CarIsElectric": 0,
-          "CarScreenName": "Mazda MX-5 Cup",
-          "CarScreenNameShort": "MX-5 Cup",
-          "CarClassShortName": "MX5 Cup 2016",
-          "CarClassRelSpeed": 35,
-          "CarClassLicenseLevel": 0,
-          "CarClassMaxFuelPct": "1.000 %",
-          "CarClassWeightPenalty": "0.000 kg",
-          "CarClassPowerAdjust": "0.000 %",
-          "CarClassDryTireSetLimit": "0 %",
-          "CarClassColor": 16777215,
-          "CarClassEstLapTime": 101.8986,
-          "IRating": 2256,
-          "LicLevel": 6,
-          "LicSubLevel": 240,
-          "LicString": "D 2.40",
-          "LicColor": 16550439,
-          "IsSpectator": 0,
-          "CarDesignStr": "22,000000,ff0000,ff0000.000000",
-          "HelmetDesignStr": "17,090000,000000,000000",
-          "SuitDesignStr": "17,000000,000000,000000",
-          "BodyType": 0,
-          "FaceType": 0,
-          "HelmetType": 0,
-          "CarNumberDesignStr": "0,0,ff0000,e30000,000000",
-          "CarSponsor_1": 163,
-          "CarSponsor_2": 2,
-          "ClubName": "Australia/NZ",
-          "ClubID": 34,
-          "DivisionName": "Division 2",
-          "DivisionID": 1,
-          "CurDriverIncidentCount": -1,
-          "TeamIncidentCount": -1
-        },
-        {
-          "CarIdx": 3,
-          "UserName": "userName",
-          "AbbrevName": "abbrevName",
-          "Initials": "TU",
-          "UserID": 850063,
-          "TeamID": 0,
-          "TeamName": "teamName",
-          "CarNumber": "3",
-          "CarNumberRaw": 3,
-          "CarPath": "mx5 mx52016",
-          "CarClassID": 74,
-          "CarID": 67,
-          "CarIsPaceCar": 0,
-          "CarIsAI": 0,
-          "CarIsElectric": 0,
-          "CarScreenName": "Mazda MX-5 Cup",
-          "CarScreenNameShort": "MX-5 Cup",
-          "CarClassShortName": "MX5 Cup 2016",
-          "CarClassRelSpeed": 35,
-          "CarClassLicenseLevel": 0,
-          "CarClassMaxFuelPct": "1.000 %",
-          "CarClassWeightPenalty": "0.000 kg",
-          "CarClassPowerAdjust": "0.000 %",
-          "CarClassDryTireSetLimit": "0 %",
-          "CarClassColor": 16777215,
-          "CarClassEstLapTime": 101.8986,
-          "IRating": 1998,
-          "LicLevel": 10,
-          "LicSubLevel": 288,
-          "LicString": "C 2.88",
-          "LicColor": 16706564,
-          "IsSpectator": 0,
-          "CarDesignStr": "7,111111,5e5e5e,135324",
-          "HelmetDesignStr": "1,111111,5e5e5e,135324",
-          "SuitDesignStr": "1,111111,5e5e5e,135324",
-          "BodyType": 0,
-          "FaceType": 0,
-          "HelmetType": 0,
-          "CarNumberDesignStr": "0,0,ffffff,777777,000000",
-          "CarSponsor_1": 0,
-          "CarSponsor_2": 0,
-          "ClubName": "Japan",
-          "ClubID": 48,
-          "DivisionName": "Division 5",
-          "DivisionID": 4,
-          "CurDriverIncidentCount": -1,
-          "TeamIncidentCount": -1
-        },
-        {
-          "CarIdx": 4,
-          "UserName": "userName",
-          "AbbrevName": "abbrevName",
-          "Initials": "LL",
-          "UserID": 157588,
-          "TeamID": 0,
-          "TeamName": "teamName",
-          "CarNumber": "4",
-          "CarNumberRaw": 4,
-          "CarPath": "mx5 mx52016",
-          "CarClassID": 74,
-          "CarID": 67,
-          "CarIsPaceCar": 0,
-          "CarIsAI": 0,
-          "CarIsElectric": 0,
-          "CarScreenName": "Mazda MX-5 Cup",
-          "CarScreenNameShort": "MX-5 Cup",
-          "CarClassShortName": "MX5 Cup 2016",
-          "CarClassRelSpeed": 35,
-          "CarClassLicenseLevel": 0,
-          "CarClassMaxFuelPct": "1.000 %",
-          "CarClassWeightPenalty": "0.000 kg",
-          "CarClassPowerAdjust": "0.000 %",
-          "CarClassDryTireSetLimit": "0 %",
-          "CarClassColor": 16777215,
-          "CarClassEstLapTime": 101.8986,
-          "IRating": 1902,
-          "LicLevel": 11,
-          "LicSubLevel": 347,
-          "LicString": "C 3.47",
-          "LicColor": 16706564,
-          "IsSpectator": 0,
-          "CarDesignStr": "4,000000,000000,170cef",
-          "HelmetDesignStr": "3,000000,000000,000000",
-          "SuitDesignStr": "13,000000,001dfa,fffc00",
-          "BodyType": 0,
-          "FaceType": 0,
-          "HelmetType": 0,
-          "CarNumberDesignStr": "0,0,ffffff,777777,000000",
-          "CarSponsor_1": 50,
-          "CarSponsor_2": 45,
-          "ClubName": "New England",
-          "ClubID": 12,
-          "DivisionName": "Division 4",
-          "DivisionID": 3,
-          "CurDriverIncidentCount": -1,
-          "TeamIncidentCount": -1
-        },
-        {
-          "CarIdx": 5,
-          "UserName": "userName",
-          "AbbrevName": "abbrevName",
-          "Initials": "MD",
-          "UserID": 644339,
-          "TeamID": 0,
-          "TeamName": "teamName",
-          "CarNumber": "5",
-          "CarNumberRaw": 5,
-          "CarPath": "mx5 mx52016",
-          "CarClassID": 74,
-          "CarID": 67,
-          "CarIsPaceCar": 0,
-          "CarIsAI": 0,
-          "CarIsElectric": 0,
-          "CarScreenName": "Mazda MX-5 Cup",
-          "CarScreenNameShort": "MX-5 Cup",
-          "CarClassShortName": "MX5 Cup 2016",
-          "CarClassRelSpeed": 35,
-          "CarClassLicenseLevel": 0,
-          "CarClassMaxFuelPct": "1.000 %",
-          "CarClassWeightPenalty": "0.000 kg",
-          "CarClassPowerAdjust": "0.000 %",
-          "CarClassDryTireSetLimit": "0 %",
-          "CarClassColor": 16777215,
-          "CarClassEstLapTime": 101.8986,
-          "IRating": 1807,
-          "LicLevel": 13,
-          "LicSubLevel": 190,
-          "LicString": "B 1.90",
-          "LicColor": 50946,
-          "IsSpectator": 0,
-          "CarDesignStr": "22,000000,00ff00,ff47c1,ff5400",
-          "HelmetDesignStr": "50,00eefd,e8fc00,ff1700",
-          "SuitDesignStr": "28,eef211,d9981a,f308e2",
-          "BodyType": 0,
-          "FaceType": 4,
-          "HelmetType": 0,
-          "CarNumberDesignStr": "0,0,ffffff,000000,878787",
-          "CarSponsor_1": 7,
-          "CarSponsor_2": 2,
-          "ClubName": "Asia",
-          "ClubID": 47,
-          "DivisionName": "Division 5",
-          "DivisionID": 4,
-          "CurDriverIncidentCount": -1,
-          "TeamIncidentCount": -1
-        },
-        {
-          "CarIdx": 6,
-          "UserName": "userName",
-          "AbbrevName": "abbrevName",
-          "Initials": "GM",
-          "UserID": 691665,
-          "TeamID": 0,
-          "TeamName": "teamName",
-          "CarNumber": "6",
-          "CarNumberRaw": 6,
-          "CarPath": "mx5 mx52016",
-          "CarClassID": 74,
-          "CarID": 67,
-          "CarIsPaceCar": 0,
-          "CarIsAI": 0,
-          "CarIsElectric": 0,
-          "CarScreenName": "Mazda MX-5 Cup",
-          "CarScreenNameShort": "MX-5 Cup",
-          "CarClassShortName": "MX5 Cup 2016",
-          "CarClassRelSpeed": 35,
-          "CarClassLicenseLevel": 0,
-          "CarClassMaxFuelPct": "1.000 %",
-          "CarClassWeightPenalty": "0.000 kg",
-          "CarClassPowerAdjust": "0.000 %",
-          "CarClassDryTireSetLimit": "0 %",
-          "CarClassColor": 16777215,
-          "CarClassEstLapTime": 101.8986,
-          "IRating": 1748,
-          "LicLevel": 15,
-          "LicSubLevel": 317,
-          "LicString": "B 3.17",
-          "LicColor": 50946,
-          "IsSpectator": 0,
-          "CarDesignStr": "0,dbff00,e3ff00,000000,9fb700",
-          "HelmetDesignStr": "58,000000,dbff00,d4ff00",
-          "SuitDesignStr": "10,111111,e3ff00,e3ff00",
-          "BodyType": 0,
-          "FaceType": 8,
-          "HelmetType": 0,
-          "CarNumberDesignStr": "0,0,000000,fff500,fd0000",
-          "CarSponsor_1": 169,
-          "CarSponsor_2": 191,
-          "ClubName": "West",
-          "ClubID": 32,
-          "DivisionName": "Division 3",
-          "DivisionID": 2,
-          "CurDriverIncidentCount": -1,
-          "TeamIncidentCount": -1
-        },
-        {
-          "CarIdx": 7,
-          "UserName": "userName",
-          "AbbrevName": "abbrevName",
-          "Initials": "AY",
-          "UserID": 975869,
-          "TeamID": 0,
-          "TeamName": "teamName",
-          "CarNumber": "7",
-          "CarNumberRaw": 7,
-          "CarPath": "mx5 mx52016",
-          "CarClassID": 74,
-          "CarID": 67,
-          "CarIsPaceCar": 0,
-          "CarIsAI": 0,
-          "CarIsElectric": 0,
-          "CarScreenName": "Mazda MX-5 Cup",
-          "CarScreenNameShort": "MX-5 Cup",
-          "CarClassShortName": "MX5 Cup 2016",
-          "CarClassRelSpeed": 35,
-          "CarClassLicenseLevel": 0,
-          "CarClassMaxFuelPct": "1.000 %",
-          "CarClassWeightPenalty": "0.000 kg",
-          "CarClassPowerAdjust": "0.000 %",
-          "CarClassDryTireSetLimit": "0 %",
-          "CarClassColor": 16777215,
-          "CarClassEstLapTime": 101.8986,
-          "IRating": 1692,
-          "LicLevel": 6,
-          "LicSubLevel": 262,
-          "LicString": "D 2.62",
-          "LicColor": 16550439,
-          "IsSpectator": 0,
-          "CarDesignStr": "1,0300c2,ffee47,111111",
-          "HelmetDesignStr": "1,0300c2,ffee47,111111",
-          "SuitDesignStr": "1,0300c2,ffee47,111111",
-          "BodyType": 0,
-          "FaceType": 0,
-          "HelmetType": 0,
-          "CarNumberDesignStr": "0,0,ffffff,777777,000000",
-          "CarSponsor_1": 0,
-          "CarSponsor_2": 0,
-          "ClubName": "California",
-          "ClubID": 6,
-          "DivisionName": "Rookie",
-          "DivisionID": 10,
-          "CurDriverIncidentCount": -1,
-          "TeamIncidentCount": -1
-        },
-        {
-          "CarIdx": 8,
-          "UserName": "userName",
-          "AbbrevName": "abbrevName",
-          "Initials": "VW",
-          "UserID": 944951,
-          "TeamID": 0,
-          "TeamName": "teamName",
-          "CarNumber": "8",
-          "CarNumberRaw": 8,
-          "CarPath": "mx5 mx52016",
-          "CarClassID": 74,
-          "CarID": 67,
-          "CarIsPaceCar": 0,
-          "CarIsAI": 0,
-          "CarIsElectric": 0,
-          "CarScreenName": "Mazda MX-5 Cup",
-          "CarScreenNameShort": "MX-5 Cup",
-          "CarClassShortName": "MX5 Cup 2016",
-          "CarClassRelSpeed": 35,
-          "CarClassLicenseLevel": 0,
-          "CarClassMaxFuelPct": "1.000 %",
-          "CarClassWeightPenalty": "0.000 kg",
-          "CarClassPowerAdjust": "0.000 %",
-          "CarClassDryTireSetLimit": "0 %",
-          "CarClassColor": 16777215,
-          "CarClassEstLapTime": 101.8986,
-          "IRating": 1635,
-          "LicLevel": 6,
-          "LicSubLevel": 277,
-          "LicString": "D 2.77",
-          "LicColor": 16550439,
-          "IsSpectator": 0,
-          "CarDesignStr": "21,d604ef,000000,09d4e8,da00fd",
-          "HelmetDesignStr": "26,d604ef,000000,09d4e8",
-          "SuitDesignStr": "28,d604ef,000000,09d4e8",
-          "BodyType": 0,
-          "FaceType": 0,
-          "HelmetType": 0,
-          "CarNumberDesignStr": "0,0,d604ef,000000,09d4e8",
-          "CarSponsor_1": 222,
-          "CarSponsor_2": 222,
-          "ClubName": "Asia",
-          "ClubID": 47,
-          "DivisionName": "Rookie",
-          "DivisionID": 10,
-          "CurDriverIncidentCount": -1,
-          "TeamIncidentCount": -1
-        },
-        {
-          "CarIdx": 9,
-          "UserName": "userName",
-          "AbbrevName": "abbrevName",
-          "Initials": "AH",
-          "UserID": 744752,
-          "TeamID": 0,
-          "TeamName": "teamName",
-          "CarNumber": "9",
-          "CarNumberRaw": 9,
-          "CarPath": "mx5 mx52016",
-          "CarClassID": 74,
-          "CarID": 67,
-          "CarIsPaceCar": 0,
-          "CarIsAI": 0,
-          "CarIsElectric": 0,
-          "CarScreenName": "Mazda MX-5 Cup",
-          "CarScreenNameShort": "MX-5 Cup",
-          "CarClassShortName": "MX5 Cup 2016",
-          "CarClassRelSpeed": 35,
-          "CarClassLicenseLevel": 0,
-          "CarClassMaxFuelPct": "1.000 %",
-          "CarClassWeightPenalty": "0.000 kg",
-          "CarClassPowerAdjust": "0.000 %",
-          "CarClassDryTireSetLimit": "0 %",
-          "CarClassColor": 16777215,
-          "CarClassEstLapTime": 101.8986,
-          "IRating": 1593,
-          "LicLevel": 11,
-          "LicSubLevel": 363,
-          "LicString": "C 3.63",
-          "LicColor": 16706564,
-          "IsSpectator": 0,
-          "CarDesignStr": "0,090909,e7eee7,1a4b9b.767527",
-          "HelmetDesignStr": "20,000000,080807,9c8f1a",
-          "SuitDesignStr": "0,0c0c0b,4b442c,28762b",
-          "BodyType": 0,
-          "FaceType": 0,
-          "HelmetType": 0,
-          "CarNumberDesignStr": "0,0,b6a5a5,777777,000000",
-          "CarSponsor_1": 222,
-          "CarSponsor_2": 145,
-          "ClubName": "Canada",
-          "ClubID": 15,
-          "DivisionName": "Rookie",
-          "DivisionID": 10,
-          "CurDriverIncidentCount": -1,
-          "TeamIncidentCount": -1
-        },
-        {
-          "CarIdx": 10,
-          "UserName": "userName",
-          "AbbrevName": "abbrevName",
-          "Initials": "PC",
-          "UserID": 933299,
-          "TeamID": 0,
-          "TeamName": "teamName",
-          "CarNumber": "10",
-          "CarNumberRaw": 10,
-          "CarPath": "mx5 mx52016",
-          "CarClassID": 74,
-          "CarID": 67,
-          "CarIsPaceCar": 0,
-          "CarIsAI": 0,
-          "CarIsElectric": 0,
-          "CarScreenName": "Mazda MX-5 Cup",
-          "CarScreenNameShort": "MX-5 Cup",
-          "CarClassShortName": "MX5 Cup 2016",
-          "CarClassRelSpeed": 35,
-          "CarClassLicenseLevel": 0,
-          "CarClassMaxFuelPct": "1.000 %",
-          "CarClassWeightPenalty": "0.000 kg",
-          "CarClassPowerAdjust": "0.000 %",
-          "CarClassDryTireSetLimit": "0 %",
-          "CarClassColor": 16777215,
-          "CarClassEstLapTime": 101.8986,
-          "IRating": 1539,
-          "LicLevel": 11,
-          "LicSubLevel": 343,
-          "LicString": "C 3.43",
-          "LicColor": 16706564,
-          "IsSpectator": 0,
-          "CarDesignStr": "22,1a1d36,050202,090543;e9eaf2",
-          "HelmetDesignStr": "57,ffffff,070125,131631",
-          "SuitDesignStr": "13,111111,060a29,2b1f79",
-          "BodyType": 0,
-          "FaceType": 8,
-          "HelmetType": 0,
-          "CarNumberDesignStr": "0,0,000000,050202,010007",
-          "CarSponsor_1": 151,
-          "CarSponsor_2": 11,
-          "ClubName": "Australia/NZ",
-          "ClubID": 34,
-          "DivisionName": "Division 7",
-          "DivisionID": 6,
-          "CurDriverIncidentCount": -1,
-          "TeamIncidentCount": -1
-        },
-        {
-          "CarIdx": 11,
-          "UserName": "userName",
-          "AbbrevName": "abbrevName",
-          "Initials": "AT",
-          "UserID": 344772,
-          "TeamID": 0,
-          "TeamName": "teamName",
-          "CarNumber": "11",
-          "CarNumberRaw": 11,
-          "CarPath": "mx5 mx52016",
-          "CarClassID": 74,
-          "CarID": 67,
-          "CarIsPaceCar": 0,
-          "CarIsAI": 0,
-          "CarIsElectric": 0,
-          "CarScreenName": "Mazda MX-5 Cup",
-          "CarScreenNameShort": "MX-5 Cup",
-          "CarClassShortName": "MX5 Cup 2016",
-          "CarClassRelSpeed": 35,
-          "CarClassLicenseLevel": 0,
-          "CarClassMaxFuelPct": "1.000 %",
-          "CarClassWeightPenalty": "0.000 kg",
-          "CarClassPowerAdjust": "0.000 %",
-          "CarClassDryTireSetLimit": "0 %",
-          "CarClassColor": 16777215,
-          "CarClassEstLapTime": 101.8986,
-          "IRating": 1520,
-          "LicLevel": 15,
-          "LicSubLevel": 335,
-          "LicString": "B 3.35",
-          "LicColor": 50946,
-          "IsSpectator": 0,
-          "CarDesignStr": "13,030303,f7ed00,000000;ffffff",
-          "HelmetDesignStr": "65,000000,faff03,0a0a0a",
-          "SuitDesignStr": "13,000000,ebf000,000000",
-          "BodyType": 0,
-          "FaceType": 8,
-          "HelmetType": 0,
-          "CarNumberDesignStr": "0,0,ffffff,777777,000000",
-          "CarSponsor_1": 0,
-          "CarSponsor_2": 0,
-          "ClubName": "Japan",
-          "ClubID": 48,
-          "DivisionName": "Division 4",
-          "DivisionID": 3,
-          "CurDriverIncidentCount": -1,
-          "TeamIncidentCount": -1
-        },
-        {
-          "CarIdx": 12,
-          "UserName": "userName",
-          "AbbrevName": "abbrevName",
-          "Initials": "LA",
-          "UserID": 967705,
-          "TeamID": 0,
-          "TeamName": "teamName",
-          "CarNumber": "12",
-          "CarNumberRaw": 12,
-          "CarPath": "mx5 mx52016",
-          "CarClassID": 74,
-          "CarID": 67,
-          "CarIsPaceCar": 0,
-          "CarIsAI": 0,
-          "CarIsElectric": 0,
-          "CarScreenName": "Mazda MX-5 Cup",
-          "CarScreenNameShort": "MX-5 Cup",
-          "CarClassShortName": "MX5 Cup 2016",
-          "CarClassRelSpeed": 35,
-          "CarClassLicenseLevel": 0,
-          "CarClassMaxFuelPct": "1.000 %",
-          "CarClassWeightPenalty": "0.000 kg",
-          "CarClassPowerAdjust": "0.000 %",
-          "CarClassDryTireSetLimit": "0 %",
-          "CarClassColor": 16777215,
-          "CarClassEstLapTime": 101.8986,
-          "IRating": 1503,
-          "LicLevel": 6,
-          "LicSubLevel": 256,
-          "LicString": "D 2.56",
-          "LicColor": 16550439,
-          "IsSpectator": 0,
-          "CarDesignStr": "14,faff00,0d00ff,ffffff",
-          "HelmetDesignStr": "1,ed1c24,111111,cccccc",
-          "SuitDesignStr": "1,ed1c24,111111,cccccc",
-          "BodyType": 0,
-          "FaceType": 0,
-          "HelmetType": 0,
-          "CarNumberDesignStr": "0,0,ffffff,777777,000000",
-          "CarSponsor_1": 0,
-          "CarSponsor_2": 0,
-          "ClubName": "Iberia",
-          "ClubID": 38,
-          "DivisionName": "Rookie",
-          "DivisionID": 10,
-          "CurDriverIncidentCount": -1,
-          "TeamIncidentCount": -1
-        },
-        {
-          "CarIdx": 63,
-          "UserName": "userName",
-          "AbbrevName": "abbrevName",
-          "UserID": 697587,
-          "TeamID": 0,
-          "TeamName": "teamName",
-          "CarNumber": "12",
-          "CarNumberRaw": 12,
-          "CarPath": "mx5 mx52016",
-          "CarClassID": 74,
-          "CarID": 67,
-          "CarIsPaceCar": 0,
-          "CarIsAI": 0,
-          "CarIsElectric": 0,
-          "CarScreenName": "Mazda MX-5 Cup",
-          "CarScreenNameShort": "MX-5 Cup",
-          "CarClassShortName": "MX5 Cup 2016",
-          "CarClassRelSpeed": 35,
-          "CarClassLicenseLevel": 0,
-          "CarClassMaxFuelPct": "1.000 %",
-          "CarClassWeightPenalty": "0.000 kg",
-          "CarClassPowerAdjust": "0.000 %",
-          "CarClassDryTireSetLimit": "0 %",
-          "CarClassColor": 16777215,
-          "CarClassEstLapTime": 101.8986,
-          "IRating": 1505,
-          "LicLevel": 18,
-          "LicSubLevel": 215,
-          "LicString": "A 2.15",
-          "LicColor": 87003,
-          "IsSpectator": 1,
-          "CarDesignStr": "6,ffffff,ff7a59,33475b,ff7a59",
+          "CarDesignStr": "5,ffffff,ff7a59,33475b",
           "HelmetDesignStr": "7,ffffff,ff7a59,33475b",
           "SuitDesignStr": "21,ff7a59,33475b,ffffff",
           "BodyType": 0,
           "FaceType": 4,
           "HelmetType": 0,
-          "CarNumberDesignStr": "0,0,33475b,ff7a59,ffffff",
+          "CarNumberDesignStr": "0,0,ffffff,777777,000000",
           "CarSponsor_1": 0,
           "CarSponsor_2": 0,
-          "ClubName": "Carolina",
-          "ClubID": 25,
-          "DivisionName": "Division 5",
-          "DivisionID": 4,
           "CurDriverIncidentCount": 0,
           "TeamIncidentCount": 0
         }
@@ -2064,78 +909,128 @@
         },
         {
           "SectorNum": 1,
-          "SectorStartPct": 0.259885
+          "SectorStartPct": 0.184456
         },
         {
           "SectorNum": 2,
-          "SectorStartPct": 0.509689
+          "SectorStartPct": 0.337214
         },
         {
           "SectorNum": 3,
-          "SectorStartPct": 0.694809
+          "SectorStartPct": 0.504637
+        },
+        {
+          "SectorNum": 4,
+          "SectorStartPct": 0.734279
+        },
+        {
+          "SectorNum": 5,
+          "SectorStartPct": 0.829332
         }
       ]
     },
     "CarSetup": {
-      "UpdateCount": 2,
-      "Suspension": {
-        "Front": {
-          "ToeIn": "-0.8 mm",
-          "CrossWeight": "50.0%",
-          "AntiRollBar": "Firm"
-        },
+      "UpdateCount": 1,
+      "TiresAero": {
         "LeftFront": {
-          "ColdPressure": "207 kPa",
-          "LastHotPressure": "207 kPa",
-          "LastTempsOMI": "40C, 40C, 40C",
-          "TreadRemaining": "100%, 100%, 100%",
-          "CornerWeight": "2695 N",
-          "RideHeight": "115 mm",
-          "SpringPerchOffset": "72.0 mm",
-          "BumpStiffness": "+9 clicks",
-          "ReboundStiffness": "+8 clicks",
-          "Camber": "-2.9 deg"
+          "StartingPressure": "165 kPa",
+          "LastHotPressure": "165 kPa",
+          "LastTempsOMI": "44C, 44C, 44C",
+          "TreadRemaining": "100%, 100%, 100%"
         },
         "LeftRear": {
-          "ColdPressure": "207 kPa",
-          "LastHotPressure": "207 kPa",
-          "LastTempsOMI": "40C, 40C, 40C",
-          "TreadRemaining": "100%, 100%, 100%",
-          "CornerWeight": "2439 N",
-          "RideHeight": "114 mm",
-          "SpringPerchOffset": "66.0 mm",
-          "BumpStiffness": "+6 clicks",
-          "ReboundStiffness": "+5 clicks",
-          "Camber": "-2.7 deg"
+          "StartingPressure": "165 kPa",
+          "LastHotPressure": "165 kPa",
+          "LastTempsOMI": "44C, 44C, 44C",
+          "TreadRemaining": "100%, 100%, 100%"
         },
         "RightFront": {
-          "ColdPressure": "207 kPa",
-          "LastHotPressure": "207 kPa",
-          "LastTempsIMO": "40C, 40C, 40C",
-          "TreadRemaining": "100%, 100%, 100%",
-          "CornerWeight": "2462 N",
-          "RideHeight": "115 mm",
-          "SpringPerchOffset": "77.5 mm",
-          "BumpStiffness": "+9 clicks",
-          "ReboundStiffness": "+8 clicks",
-          "Camber": "-2.9 deg"
+          "StartingPressure": "165 kPa",
+          "LastHotPressure": "165 kPa",
+          "LastTempsIMO": "44C, 44C, 44C",
+          "TreadRemaining": "100%, 100%, 100%"
         },
         "RightRear": {
-          "ColdPressure": "207 kPa",
-          "LastHotPressure": "207 kPa",
-          "LastTempsIMO": "40C, 40C, 40C",
-          "TreadRemaining": "100%, 100%, 100%",
-          "CornerWeight": "2205 N",
-          "RideHeight": "115 mm",
-          "SpringPerchOffset": "70.0 mm",
-          "BumpStiffness": "+6 clicks",
-          "ReboundStiffness": "+5 clicks",
-          "Camber": "-2.8 deg"
+          "StartingPressure": "165 kPa",
+          "LastHotPressure": "165 kPa",
+          "LastTempsIMO": "44C, 44C, 44C",
+          "TreadRemaining": "100%, 100%, 100%"
+        },
+        "AeroBalanceCalc": {
+          "FrontRhAtSpeed": "48 mm",
+          "RearRhAtSpeed": "60 mm",
+          "WingSetting": "12 degrees",
+          "FrontDownforce": "38.2%"
+        }
+      },
+      "Chassis": {
+        "Front": {
+          "ArbBlades": "1-2",
+          "ToeIn": "-2.0 mm",
+          "FrontMasterCyl": "19.1 mm",
+          "RearMasterCyl": "17.8 mm",
+          "BrakePads": "Medium friction",
+          "CrossWeight": "50.0%",
+          "FWtdist": "43.9%"
+        },
+        "LeftFront": {
+          "CornerWeight": "3100 N",
+          "RideHeight": "50.1 mm",
+          "SpringPerchOffset": "38.50 mm",
+          "SpringRate": "220 N/mm",
+          "Camber": "-4.0 deg"
+        },
+        "LeftRear": {
+          "CornerWeight": "3964 N",
+          "RideHeight": "68.8 mm",
+          "SpringPerchOffset": "15.50 mm",
+          "SpringRate": "250 N/mm",
+          "Camber": "-3.5 deg",
+          "ToeIn": "+1.5 mm"
         },
         "Rear": {
-          "FuelLevel": "31.4 L",
-          "ToeIn": "+0.8 mm",
-          "AntiRollBar": "Unhooked"
+          "FuelLevel": "52.0 L",
+          "ArbBlades": "2-2",
+          "RearWingAngle": "12 degrees"
+        },
+        "InCarDials": {
+          "BrakePressureBias": "59.1%",
+          "TractionControlSetting": "3 (TC)",
+          "ThrottleShapeSetting": "3 (THR)",
+          "AbsSetting": "3 (ABS)",
+          "DisplayPage": "Night",
+          "EnduranceLightPackage": "Fitted",
+          "NightLedStrips": "Yellow"
+        },
+        "RightFront": {
+          "CornerWeight": "3100 N",
+          "RideHeight": "50.1 mm",
+          "SpringPerchOffset": "38.50 mm",
+          "SpringRate": "220 N/mm",
+          "Camber": "-4.0 deg"
+        },
+        "RightRear": {
+          "CornerWeight": "3964 N",
+          "RideHeight": "68.8 mm",
+          "SpringPerchOffset": "15.50 mm",
+          "SpringRate": "250 N/mm",
+          "Camber": "-3.5 deg",
+          "ToeIn": "+1.5 mm"
+        },
+        "GearsDifferential": {
+          "SixthGear": "FiA",
+          "FrictionFaces": 16,
+          "DiffPreload": "100 Nm"
+        }
+      },
+      "Dampers": {
+        "FrontDampers": {
+          "CompressionDamping": "0 clicks",
+          "ReboundDamping": "-20 clicks"
+        },
+        "RearDampers": {
+          "CompressionDamping": "-6 clicks",
+          "ReboundDamping": "-6 clicks"
         }
       }
     }
