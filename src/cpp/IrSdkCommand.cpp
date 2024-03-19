@@ -6,7 +6,7 @@
 
 void NodeIrSdk::broadcastCmd(int cmd, int var1, int var2)
 {
-	static unsigned int msgId = RegisterWindowMessageA(IRSDK_BROADCASTMSGNAME);
+	static unsigned int msgId = RegisterWindowMessageA((LPCSTR)IRSDK_BROADCASTMSGNAME);
 
 	if (cmd >= 0 && cmd < irsdk_BroadcastLast)
 	{
