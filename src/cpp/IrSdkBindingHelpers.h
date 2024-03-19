@@ -177,18 +177,15 @@ namespace NodeIrSdk
         MaskName((int)irsdk_PaceFlagsFreePass, "PaceFlagsFreePass"),
     };
 
-    const std::vector<MaskName> WEATHER_DYNAMICS = {
-        MaskName((int)irsdk_WeatherDynamics_Specified_FixedSky, "SpecifiedWeatherFixedSky"),
-        MaskName((int)irsdk_WeatherDynamics_Generated_SkyMoves, "GeneratedWeatherSkyMoves"),
-        MaskName((int)irsdk_WeatherDynamics_Generated_FixedSky, "GeneratedWeatherFixedSky"),
-        MaskName((int)irsdk_WeatherDynamics_Specified_SkyMoves, "SpecifiedWeatherSkyMoves"),
-    };
-
-    const std::vector<MaskName> WEATHER_VERSION = {
-        MaskName((int)irsdk_WeatherVersion_Classic, "WeatherVersionClassic"),
-        MaskName((int)irsdk_WeatherVersion_ForecastBased, "WeatherVersionForecastBased"),
-        MaskName((int)irsdk_WeatherVersion_StaticTest_Day, "WeatherVersionStaticTestDay"),
-        MaskName((int)irsdk_WeatherVersion_TimelineBased, "WeatherVersionTimelineBased"),
+    const std::vector<MaskName> TRACK_WETNESS = {
+        MaskName((int)irsdk_TrackWetness_UNKNOWN, "Unknown"),
+        MaskName((int)irsdk_TrackWetness_Dry, "Dry"),
+        MaskName((int)irsdk_TrackWetness_MostlyDry, "MostlyDry"),
+        MaskName((int)irsdk_TrackWetness_VeryLightlyWet, "VeryLightlyWet"),
+        MaskName((int)irsdk_TrackWetness_LightlyWet, "LightlyWet"),
+        MaskName((int)irsdk_TrackWetness_ModeratelyWet, "ModeratelyWet"),
+        MaskName((int)irsdk_TrackWetness_VeryWet, "VeryWet"),
+        MaskName((int)irsdk_TrackWetness_ExtremelyWet, "ExtremelyWet"),
     };
 
 }; // namespace NodeIrSdk

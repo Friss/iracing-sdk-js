@@ -1,5 +1,5 @@
 {
-  "timestamp": "2024-03-06T00:53:20.075Z",
+  "timestamp": "2024-03-19T00:07:01.118Z",
   "data": {
     "WeekendInfo": {
       "TrackName": "virginia 2022 full",
@@ -21,14 +21,14 @@
       "TrackDirection": "neutral",
       "TrackWeatherType": "Timeline",
       "TrackSkies": "Dynamic",
-      "TrackSurfaceTemp": "29.99 C",
-      "TrackAirTemp": "26.99 C",
-      "TrackAirPressure": "29.12 Hg",
-      "TrackWindVel": "4.38 m/s",
-      "TrackWindDir": "6.95 rad",
-      "TrackRelativeHumidity": "94 %",
+      "TrackSurfaceTemp": "28.00 C",
+      "TrackAirTemp": "25.00 C",
+      "TrackAirPressure": "29.09 Hg",
+      "TrackWindVel": "8.46 m/s",
+      "TrackWindDir": "4.73 rad",
+      "TrackRelativeHumidity": "96 %",
       "TrackFogLevel": "0 %",
-      "TrackPrecipitation": "94 %",
+      "TrackPrecipitation": "89 %",
       "TrackCleanup": 0,
       "TrackDynamicTrack": 1,
       "TrackVersion": "2024.03.04.03",
@@ -52,7 +52,7 @@
       "HeatRacing": 0,
       "BuildType": "Release",
       "BuildTarget": "Members",
-      "BuildVersion": "2024.03.05.02",
+      "BuildVersion": "2024.03.13.01",
       "WeekendOptions": {
         "NumStarters": 0,
         "StartingGrid": "single file",
@@ -95,7 +95,7 @@
           "SessionTime": "unlimited",
           "SessionNumLapsToAvg": 0,
           "SessionType": "Offline Testing",
-          "SessionTrackRubberState": "moderate usage",
+          "SessionTrackRubberState": "clean",
           "SessionName": "TESTING",
           "SessionSubType": null,
           "SessionSkipped": 0,
@@ -845,12 +845,12 @@
       "DriverCarSLShiftRPM": 6690,
       "DriverCarSLLastRPM": 6800,
       "DriverCarSLBlinkRPM": 7210,
-      "DriverCarVersion": "2024.03.04.03",
+      "DriverCarVersion": "2024.03.13.01",
       "DriverPitTrkPct": 0.990978,
-      "DriverCarEstLapTime": 105.8137,
+      "DriverCarEstLapTime": 156.0526,
       "DriverSetupName": "fixed.sto",
-      "DriverSetupIsModified": 0,
-      "DriverSetupLoadTypeName": "iracing",
+      "DriverSetupIsModified": 1,
+      "DriverSetupLoadTypeName": "user",
       "DriverSetupPassedTech": 1,
       "DriverIncidentCount": 0,
       "Drivers": [
@@ -880,7 +880,7 @@
           "CarClassPowerAdjust": "0.000 %",
           "CarClassDryTireSetLimit": "0 %",
           "CarClassColor": 16777215,
-          "CarClassEstLapTime": 152.265,
+          "CarClassEstLapTime": 156.0526,
           "IRating": 1,
           "LicLevel": 1,
           "LicSubLevel": 1,
@@ -930,10 +930,10 @@
       ]
     },
     "CarSetup": {
-      "UpdateCount": 2,
+      "UpdateCount": 1,
       "Tires": {
         "TireType": {
-          "TireType": "Dry"
+          "TireType": "Wet"
         },
         "LeftFront": {
           "StartingPressure": "172 kPa",
@@ -963,63 +963,63 @@
       "Chassis": {
         "Front": {
           "ArbSize": "Stiff",
-          "ArbSetting": 2,
-          "ToeIn": "-0.9 mm",
-          "BumpRubberLength": 0.005,
-          "CrossWeight": "49.8%",
-          "NoseWeight": "54.2%"
+          "ArbSetting": 3,
+          "ToeIn": "-2.2 mm",
+          "BumpRubberLength": 0.02,
+          "CrossWeight": "50.0%",
+          "NoseWeight": "54.3%"
         },
         "LeftFront": {
-          "CornerWeight": "3610 N",
-          "RideHeight": "104.1 mm",
-          "FenderHeight": "580.8 mm",
+          "CornerWeight": "3598 N",
+          "RideHeight": "107.8 mm",
+          "FenderHeight": "579.4 mm",
           "SpringRate": "61 N/mm",
-          "SpringPerchOffset": "106.5 mm",
-          "BumpStiffness": "+2 clicks",
-          "ReboundStiffness": "+2 clicks",
-          "Camber": "-3.4 deg"
+          "SpringPerchOffset": "105.0 mm",
+          "BumpStiffness": "+3 clicks",
+          "ReboundStiffness": "+22 clicks",
+          "Camber": "-4.0 deg"
         },
         "LeftRear": {
-          "CornerWeight": "3036 N",
-          "RideHeight": "117.1 mm",
-          "FenderHeight": "597.1 mm",
-          "SpringRate": "61 N/mm",
-          "SpringPerchOffset": "98.0 mm",
-          "BumpStiffness": "+4 clicks",
+          "CornerWeight": "3033 N",
+          "RideHeight": "125.8 mm",
+          "FenderHeight": "602.4 mm",
+          "SpringRate": "53 N/mm",
+          "SpringPerchOffset": "84.0 mm",
+          "BumpStiffness": "+3 clicks",
           "ReboundStiffness": "+10 clicks",
-          "ToeIn": "-0.4 mm"
+          "ToeIn": "+0.4 mm"
         },
         "InCarDials": {
           "BrakePressureBias": "50.0%",
           "BrakePads": "Medium friction",
-          "AbsSetting": "1 (ABS)",
-          "TcSetting": "0 (TC)"
+          "AbsSetting": "2 (ABS)",
+          "TcSetting": "1 (TC)"
         },
         "RightFront": {
-          "CornerWeight": "3411 N",
-          "RideHeight": "106.4 mm",
-          "FenderHeight": "582.9 mm",
+          "CornerWeight": "3420 N",
+          "RideHeight": "107.6 mm",
+          "FenderHeight": "579.0 mm",
           "SpringRate": "61 N/mm",
-          "SpringPerchOffset": "106.5 mm",
-          "BumpStiffness": "+2 clicks",
-          "ReboundStiffness": "+2 clicks",
-          "Camber": "-3.4 deg"
+          "SpringPerchOffset": "109.0 mm",
+          "BumpStiffness": "+3 clicks",
+          "ReboundStiffness": "+22 clicks",
+          "Camber": "-4.0 deg"
         },
         "RightRear": {
-          "CornerWeight": "2886 N",
-          "RideHeight": "119.4 mm",
-          "FenderHeight": "599.0 mm",
-          "SpringRate": "61 N/mm",
-          "SpringPerchOffset": "98.0 mm",
-          "BumpStiffness": "+4 clicks",
+          "CornerWeight": "2863 N",
+          "RideHeight": "125.7 mm",
+          "FenderHeight": "602.2 mm",
+          "SpringRate": "53 N/mm",
+          "SpringPerchOffset": "88.5 mm",
+          "BumpStiffness": "+3 clicks",
           "ReboundStiffness": "+10 clicks",
-          "ToeIn": "-0.3 mm"
+          "ToeIn": "+0.4 mm"
         },
         "Rear": {
-          "FuelLevel": "31.0 L",
+          "FuelLevel": "27.0 L",
           "ArbSize": "Soft",
-          "ArbSetting": 2,
-          "WingSetting": 10
+          "ArbSetting": 1,
+          "WingSetting": 15
         }
       }
     }

@@ -916,17 +916,10 @@
     "count": 1,
     "type": "float"
   },
-  "WeatherType": {
-    "name": "WeatherType",
-    "desc": "Weather dynamics type",
-    "unit": "irsdk_WeatherDynamics",
-    "count": 1,
-    "type": "int"
-  },
-  "WeatherVersion": {
-    "name": "WeatherVersion",
-    "desc": "Weather version",
-    "unit": "irsdk_WeatherVersion",
+  "TrackWetness": {
+    "name": "TrackWetness",
+    "desc": "How wet is the average track surface",
+    "unit": "irsdk_TrackWetness",
     "count": 1,
     "type": "int"
   },
@@ -999,6 +992,13 @@
     "unit": "rad",
     "count": 1,
     "type": "float"
+  },
+  "WeatherDeclaredWet": {
+    "name": "WeatherDeclaredWet",
+    "desc": "The steward says rain tires can be used",
+    "unit": "",
+    "count": 1,
+    "type": "bool"
   },
   "DCLapStatus": {
     "name": "DCLapStatus",

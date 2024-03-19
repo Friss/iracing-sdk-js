@@ -230,20 +230,16 @@ enum irsdk_PaceMode
 	irsdk_PaceModeNotPacing,
 };
 
-enum irsdk_WeatherDynamics
+enum irsdk_TrackWetness
 {
-	irsdk_WeatherDynamics_Specified_FixedSky = 0, // specified  weather / fixed sky
-	irsdk_WeatherDynamics_Generated_SkyMoves,			// generated weather / dynamic sky
-	irsdk_WeatherDynamics_Generated_FixedSky,			// generated weather / fixed sky
-	irsdk_WeatherDynamics_Specified_SkyMoves,			// constant  weather / dynamic sky
-};
-
-enum irsdk_WeatherVersion
-{
-	irsdk_WeatherVersion_Classic,				 // 0 : default init in replays prior to W2 being rolled out (no rain)
-	irsdk_WeatherVersion_ForecastBased,	 // 1 : usual way to handle realistic weather in W2
-	irsdk_WeatherVersion_StaticTest_Day, // 2 : W2 version of "WEATHER_DYNAMICS_GENERATED_FIXEDSKY" that adds possibility of track water
-	irsdk_WeatherVersion_TimelineBased,	 // 3 : a timeline of desired specific events in W2
+	irsdk_TrackWetness_UNKNOWN = 0,
+	irsdk_TrackWetness_Dry,
+	irsdk_TrackWetness_MostlyDry,
+	irsdk_TrackWetness_VeryLightlyWet,
+	irsdk_TrackWetness_LightlyWet,
+	irsdk_TrackWetness_ModeratelyWet,
+	irsdk_TrackWetness_VeryWet,
+	irsdk_TrackWetness_ExtremelyWet
 };
 
 //---
@@ -466,6 +462,7 @@ enum irsdk_PitCommandMode // this only works when the driver is in the car
 	irsdk_PitCommand_ClearWS,		 // Uncheck Clean the winshield checkbox
 	irsdk_PitCommand_ClearFR,		 // Uncheck request a fast repair
 	irsdk_PitCommand_ClearFuel,	 // Uncheck add fuel
+	irsdk_PitCommand_TC,				 // Change tire compound
 };
 
 enum irsdk_TelemCommandMode // You can call this any time, but telemtry only records when driver is in there car

@@ -38,13 +38,9 @@ Local<Value> NodeIrSdk::convertTelemetryValueToObject(IRSDKWrapper::TelemetryVar
     {
       return getStringValue(var.intValue[index], CAR_BESIDE);
     }
-    if (strcmp(var.header->unit, "irsdk_WeatherDynamics") == 0)
+    if (strcmp(var.header->unit, "irsdk_TrackWetness") == 0)
     {
-      return getStringValue(var.intValue[index], WEATHER_DYNAMICS);
-    }
-    if (strcmp(var.header->unit, "irsdk_WeatherVersion") == 0)
-    {
-      return getStringValue(var.intValue[index], WEATHER_VERSION);
+      return getStringValue(var.intValue[index], TRACK_WETNESS);
     }
     return Nan::New(static_cast<int32_t>(var.intValue[index]));
   case irsdk_bitField:
