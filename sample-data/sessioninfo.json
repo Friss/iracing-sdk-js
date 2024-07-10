@@ -1,5 +1,5 @@
 {
-  "timestamp": "2024-03-19T00:07:01.118Z",
+  "timestamp": "2024-07-10T22:46:49.149Z",
   "data": {
     "WeekendInfo": {
       "TrackName": "virginia 2022 full",
@@ -19,19 +19,19 @@
       "TrackPitSpeedLimit": "60.00 kph",
       "TrackType": "road course",
       "TrackDirection": "neutral",
-      "TrackWeatherType": "Timeline",
+      "TrackWeatherType": "Realistic",
       "TrackSkies": "Dynamic",
-      "TrackSurfaceTemp": "28.00 C",
-      "TrackAirTemp": "25.00 C",
-      "TrackAirPressure": "29.09 Hg",
-      "TrackWindVel": "8.46 m/s",
-      "TrackWindDir": "4.73 rad",
-      "TrackRelativeHumidity": "96 %",
-      "TrackFogLevel": "0 %",
-      "TrackPrecipitation": "89 %",
+      "TrackSurfaceTemp": "22.47 C",
+      "TrackAirTemp": "19.47 C",
+      "TrackAirPressure": "29.10 Hg",
+      "TrackWindVel": "7.19 m/s",
+      "TrackWindDir": "2.20 rad",
+      "TrackRelativeHumidity": "98 %",
+      "TrackFogLevel": "1 %",
+      "TrackPrecipitation": "70 %",
       "TrackCleanup": 0,
       "TrackDynamicTrack": 1,
-      "TrackVersion": "2024.03.04.03",
+      "TrackVersion": "2024.05.22.01",
       "SeriesID": 0,
       "SeasonID": 0,
       "SessionID": 0,
@@ -52,7 +52,8 @@
       "HeatRacing": 0,
       "BuildType": "Release",
       "BuildTarget": "Members",
-      "BuildVersion": "2024.03.13.01",
+      "BuildVersion": "2024.06.28.01",
+      "RaceFarm": null,
       "WeekendOptions": {
         "NumStarters": 0,
         "StartingGrid": "single file",
@@ -61,7 +62,7 @@
         "StandingStart": 0,
         "ShortParadeLap": 0,
         "Restarts": "single file",
-        "WeatherType": "Timeline",
+        "WeatherType": "Realistic",
         "Skies": "Dynamic",
         "WindDirection": "N",
         "WindSpeed": "3.22 km/h",
@@ -95,7 +96,7 @@
           "SessionTime": "unlimited",
           "SessionNumLapsToAvg": 0,
           "SessionType": "Offline Testing",
-          "SessionTrackRubberState": "clean",
+          "SessionTrackRubberState": "slight usage",
           "SessionName": "TESTING",
           "SessionSubType": null,
           "SessionSkipped": 0,
@@ -828,29 +829,29 @@
       "DriverCarIdx": 0,
       "DriverUserID": 697587,
       "PaceCarIdx": -1,
-      "DriverHeadPosX": -0.221,
-      "DriverHeadPosY": 0.35,
-      "DriverHeadPosZ": 0.66,
+      "DriverHeadPosX": -0.105,
+      "DriverHeadPosY": 0.325,
+      "DriverHeadPosZ": 0.535,
       "DriverCarIsElectric": 0,
-      "DriverCarIdleRPM": 1000,
-      "DriverCarRedLine": 7500,
-      "DriverCarEngCylinderCount": 4,
+      "DriverCarIdleRPM": 1950,
+      "DriverCarRedLine": 8000,
+      "DriverCarEngCylinderCount": 8,
       "DriverCarFuelKgPerLtr": 0.75,
-      "DriverCarFuelMaxLtr": 83.333,
+      "DriverCarFuelMaxLtr": 104,
       "DriverCarMaxFuelPct": 1,
       "DriverCarGearNumForward": 6,
       "DriverCarGearNeutral": 1,
       "DriverCarGearReverse": 1,
-      "DriverCarSLFirstRPM": 6130,
-      "DriverCarSLShiftRPM": 6690,
-      "DriverCarSLLastRPM": 6800,
-      "DriverCarSLBlinkRPM": 7210,
-      "DriverCarVersion": "2024.03.13.01",
+      "DriverCarSLFirstRPM": 7000,
+      "DriverCarSLShiftRPM": 7700,
+      "DriverCarSLLastRPM": 7600,
+      "DriverCarSLBlinkRPM": 7950,
+      "DriverCarVersion": "2024.06.24.02",
       "DriverPitTrkPct": 0.990978,
-      "DriverCarEstLapTime": 156.0526,
-      "DriverSetupName": "fixed.sto",
-      "DriverSetupIsModified": 1,
-      "DriverSetupLoadTypeName": "user",
+      "DriverCarEstLapTime": 126.8422,
+      "DriverSetupName": "baseline.sto",
+      "DriverSetupIsModified": 0,
+      "DriverSetupLoadTypeName": "baseline",
       "DriverSetupPassedTech": 1,
       "DriverIncidentCount": 0,
       "Drivers": [
@@ -864,14 +865,14 @@
           "TeamName": "Zachary Friss",
           "CarNumber": "64",
           "CarNumberRaw": 64,
-          "CarPath": "toyotagr86",
+          "CarPath": "chevyvettez06rgt3",
           "CarClassID": 0,
-          "CarID": 160,
+          "CarID": 184,
           "CarIsPaceCar": 0,
           "CarIsAI": 0,
           "CarIsElectric": 0,
-          "CarScreenName": "Toyota GR86",
-          "CarScreenNameShort": "Toyota GR86",
+          "CarScreenName": "Chevrolet Corvette Z06 GT3.R",
+          "CarScreenNameShort": "Corvette GT3.R",
           "CarClassShortName": null,
           "CarClassRelSpeed": 0,
           "CarClassLicenseLevel": 0,
@@ -880,14 +881,14 @@
           "CarClassPowerAdjust": "0.000 %",
           "CarClassDryTireSetLimit": "0 %",
           "CarClassColor": 16777215,
-          "CarClassEstLapTime": 156.0526,
+          "CarClassEstLapTime": 126.8422,
           "IRating": 1,
           "LicLevel": 1,
           "LicSubLevel": 1,
           "LicString": "R 0.01",
           "LicColor": "0xundefined",
           "IsSpectator": 0,
-          "CarDesignStr": "7,ffffff,33475b,33475b",
+          "CarDesignStr": "10,FFFFFF,FF7A59,33475B",
           "HelmetDesignStr": "7,ffffff,ff7a59,33475b",
           "SuitDesignStr": "21,ff7a59,33475b,ffffff",
           "BodyType": 0,
@@ -930,96 +931,109 @@
       ]
     },
     "CarSetup": {
-      "UpdateCount": 1,
-      "Tires": {
+      "UpdateCount": 2,
+      "TiresAero": {
         "TireType": {
-          "TireType": "Wet"
+          "TireType": "Dry"
         },
         "LeftFront": {
-          "StartingPressure": "172 kPa",
-          "LastHotPressure": "172 kPa",
-          "LastTempsOMI": "47C, 47C, 47C",
+          "StartingPressure": "165 kPa",
+          "LastHotPressure": "165 kPa",
+          "LastTempsOMI": "44C, 44C, 44C",
           "TreadRemaining": "100%, 100%, 100%"
         },
         "LeftRear": {
-          "StartingPressure": "172 kPa",
-          "LastHotPressure": "172 kPa",
-          "LastTempsOMI": "47C, 47C, 47C",
+          "StartingPressure": "165 kPa",
+          "LastHotPressure": "165 kPa",
+          "LastTempsOMI": "44C, 44C, 44C",
           "TreadRemaining": "100%, 100%, 100%"
         },
         "RightFront": {
-          "StartingPressure": "172 kPa",
-          "LastHotPressure": "172 kPa",
-          "LastTempsIMO": "47C, 47C, 47C",
+          "StartingPressure": "165 kPa",
+          "LastHotPressure": "165 kPa",
+          "LastTempsIMO": "44C, 44C, 44C",
           "TreadRemaining": "100%, 100%, 100%"
         },
         "RightRear": {
-          "StartingPressure": "172 kPa",
-          "LastHotPressure": "172 kPa",
-          "LastTempsIMO": "47C, 47C, 47C",
+          "StartingPressure": "165 kPa",
+          "LastHotPressure": "165 kPa",
+          "LastTempsIMO": "44C, 44C, 44C",
           "TreadRemaining": "100%, 100%, 100%"
+        },
+        "AeroBalanceCalc": {
+          "FrontRhAtSpeed": "43 mm",
+          "RearRhAtSpeed": "45 mm",
+          "RearWingAngle": "6.5 degrees",
+          "FrontDownforce": "38.8%"
         }
       },
       "Chassis": {
-        "Front": {
-          "ArbSize": "Stiff",
-          "ArbSetting": 3,
-          "ToeIn": "-2.2 mm",
-          "BumpRubberLength": 0.02,
-          "CrossWeight": "50.0%",
-          "NoseWeight": "54.3%"
+        "FrontBrakes": {
+          "ArbBlades": 4,
+          "TotalToeIn": "-3.1 mm",
+          "BrakePedalRatio": 4.67,
+          "BrakePads": "Medium friction"
         },
         "LeftFront": {
-          "CornerWeight": "3598 N",
-          "RideHeight": "107.8 mm",
-          "FenderHeight": "579.4 mm",
-          "SpringRate": "61 N/mm",
-          "SpringPerchOffset": "105.0 mm",
-          "BumpStiffness": "+3 clicks",
-          "ReboundStiffness": "+22 clicks",
-          "Camber": "-4.0 deg"
+          "CornerWeight": "3163 N",
+          "RideHeight": "51.0 mm",
+          "BumpRubberGap": "10 mm",
+          "SpringRate": "105 N/mm",
+          "Camber": "-3.9 deg"
         },
         "LeftRear": {
-          "CornerWeight": "3033 N",
-          "RideHeight": "125.8 mm",
-          "FenderHeight": "602.4 mm",
-          "SpringRate": "53 N/mm",
-          "SpringPerchOffset": "84.0 mm",
-          "BumpStiffness": "+3 clicks",
-          "ReboundStiffness": "+10 clicks",
-          "ToeIn": "+0.4 mm"
-        },
-        "InCarDials": {
-          "BrakePressureBias": "50.0%",
-          "BrakePads": "Medium friction",
-          "AbsSetting": "2 (ABS)",
-          "TcSetting": "1 (TC)"
-        },
-        "RightFront": {
-          "CornerWeight": "3420 N",
-          "RideHeight": "107.6 mm",
-          "FenderHeight": "579.0 mm",
-          "SpringRate": "61 N/mm",
-          "SpringPerchOffset": "109.0 mm",
-          "BumpStiffness": "+3 clicks",
-          "ReboundStiffness": "+22 clicks",
-          "Camber": "-4.0 deg"
-        },
-        "RightRear": {
-          "CornerWeight": "2863 N",
-          "RideHeight": "125.7 mm",
-          "FenderHeight": "602.2 mm",
-          "SpringRate": "53 N/mm",
-          "SpringPerchOffset": "88.5 mm",
-          "BumpStiffness": "+3 clicks",
-          "ReboundStiffness": "+10 clicks",
-          "ToeIn": "+0.4 mm"
+          "CornerWeight": "3972 N",
+          "RideHeight": "61.4 mm",
+          "BumpRubberGap": "53 mm",
+          "SpringRate": "200 N/mm",
+          "Camber": "-3.5 deg",
+          "ToeIn": "+1.6 mm"
         },
         "Rear": {
-          "FuelLevel": "27.0 L",
-          "ArbSize": "Soft",
-          "ArbSetting": 1,
-          "WingSetting": 15
+          "FuelLevel": "52.0 L",
+          "ArbBlades": 2,
+          "RearWingAngle": "6.5 degrees"
+        },
+        "InCarAdjustments": {
+          "BrakePressureBias": "54.0%",
+          "AbsSetting": "3 (ABS)",
+          "TractionControlSetting": "3 (T/C)",
+          "DisplayPage": "Race",
+          "CrossWeight": "50.0%"
+        },
+        "RightFront": {
+          "CornerWeight": "3163 N",
+          "RideHeight": "51.0 mm",
+          "BumpRubberGap": "10 mm",
+          "SpringRate": "105 N/mm",
+          "Camber": "-3.9 deg"
+        },
+        "RightRear": {
+          "CornerWeight": "3972 N",
+          "RideHeight": "61.4 mm",
+          "BumpRubberGap": "53 mm",
+          "SpringRate": "200 N/mm",
+          "Camber": "-3.5 deg",
+          "ToeIn": "+1.6 mm"
+        },
+        "GearsDifferential": {
+          "GearStack": "FIA",
+          "FrictionFaces": 8,
+          "DiffPreload": "100 Nm"
+        }
+      },
+      "Dampers": {
+        "FrontDampers": {
+          "LowSpeedCompressionDamping": "5 clicks",
+          "HighSpeedCompressionDamping": "0 clicks",
+          "LowSpeedReboundDamping": "5 clicks",
+          "HighSpeedReboundDamping": "5 clicks"
+        },
+        "RearDampers": {
+          "LowSpeedCompressionDamping": "5 clicks",
+          "HighSpeedCompressionDamping": "0 clicks",
+          "LowSpeedReboundDamping": "5 clicks",
+          "HighSpeedReboundDamping": "7 clicks"
         }
       }
     }
