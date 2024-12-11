@@ -6,7 +6,7 @@ describe('stringToEnum', function () {
   const TEST_ENUM = {
     FIRST_VALUE: 1,
     SECOND_VALUE: 2,
-    THIRD_VALUE: 3
+    THIRD_VALUE: 3,
   };
 
   it('converts matching string to enum value', function () {
@@ -29,7 +29,7 @@ describe('stringToEnum', function () {
   it('handles special characters correctly', function () {
     const SPECIAL_ENUM = {
       'SPECIAL-VALUE': 1,
-      'ANOTHER.VALUE': 2
+      'ANOTHER.VALUE': 2,
     };
     assert.strictEqual(stringToEnum('SPECIAL-VALUE', SPECIAL_ENUM), 1);
     assert.strictEqual(stringToEnum('special-value', SPECIAL_ENUM), 1);
