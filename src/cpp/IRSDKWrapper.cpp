@@ -122,13 +122,6 @@ bool NodeIrSdk::IRSDKWrapper::updateTelemetry()
       return false;
     }
 
-    // Wait for new data
-    if (!dataEvent_.wait(0))
-    {
-      debug("IRSDKWrapper: no new data event");
-      return false;
-    }
-
     debug("IRSDKWrapper: finding latest buffer");
     int latest = 0;
     for (int i = 1; i < pHeader->numBuf; i++)
