@@ -32,7 +32,7 @@ bool NodeIrSdk::IRSDKWrapper::startup()
     {
       return false;
     }
-    pHeader = (irsdk_header*)sharedMem_.getData();
+    pHeader = (irsdk_header *)sharedMem_.getData();
     lastTickCount = INT_MIN;
 
     if (!dataEvent_.create(IRSDK_DATAVALIDEVENTNAME))
@@ -66,10 +66,10 @@ bool NodeIrSdk::IRSDKWrapper::isConnected() const
 void NodeIrSdk::IRSDKWrapper::shutdown()
 {
   debug("IRSDKWrapper: shutting down...");
-  
+
   sharedMem_.close();
   dataEvent_.close();
-  
+
   pHeader = NULL;
   lastTickCount = INT_MIN;
   lastSessionInfoUpdate = INT_MIN;
@@ -165,7 +165,7 @@ bool NodeIrSdk::IRSDKWrapper::updateTelemetry()
       {
         debug("IRSDKWrapper: copy attempt " << count);
         int curTickCount = pHeader->varBuf[latest].tickCount;
-        const char* sharedData = static_cast<const char*>(sharedMem_.getData());
+        const char *sharedData = static_cast<const char *>(sharedMem_.getData());
         memcpy(data, sharedData + pHeader->varBuf[latest].bufOffset, pHeader->bufLen);
         if (curTickCount == pHeader->varBuf[latest].tickCount)
         {
@@ -202,7 +202,7 @@ const char *NodeIrSdk::IRSDKWrapper::getSessionInfoStr() const
   debug("IRSDKWrapper: getSessionInfoStr");
   if (isInitialized() && pHeader)
   {
-    return static_cast<const char*>(sharedMem_.getData()) + pHeader->sessionInfoOffset;
+    return static_cast<const char *>(sharedMem_.getData()) + pHeader->sessionInfoOffset;
   }
 
   return NULL;
@@ -213,9 +213,10 @@ void NodeIrSdk::IRSDKWrapper::updateVarHeaders()
   debug("IRSDKWrapper: updating varHeaders...");
   varHeadersArr.clear();
 
-  if (!pHeader) return;
+  if (!pHeader)
+    return;
 
-  const char* sharedData = static_cast<const char*>(sharedMem_.getData());
+  const char *sharedData = static_cast<const char *>(sharedMem_.getData());
   for (int index = 0; index < pHeader->numVars; ++index)
   {
     irsdk_varHeader *pVarHeader = &((irsdk_varHeader *)(sharedData + pHeader->varHeaderOffset))[index];

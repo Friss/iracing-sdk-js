@@ -84,9 +84,19 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 // Constant Definitions
 
-static const char* IRSDK_DATAVALIDEVENTNAME = "Local\\IRSDKDataValidEvent";
-static const char* IRSDK_MEMMAPFILENAME = "Local\\IRSDKMemMapFileName";
-static const char* IRSDK_BROADCASTMSGNAME = "IRSDK_BROADCASTMSG";
+#ifdef _WIN32
+#include <tchar.h>
+
+static const _TCHAR IRSDK_DATAVALIDEVENTNAME[] = _T("Local\\IRSDKDataValidEvent");
+static const _TCHAR IRSDK_MEMMAPFILENAME[] = _T("Local\\IRSDKMemMapFileName");
+static const _TCHAR IRSDK_BROADCASTMSGNAME[] = _T("IRSDK_BROADCASTMSG");
+
+#else
+
+static const char *IRSDK_DATAVALIDEVENTNAME = "Local\\IRSDKDataValidEvent";
+static const char *IRSDK_MEMMAPFILENAME = "Local\\IRSDKMemMapFileName";
+static const char *IRSDK_BROADCASTMSGNAME = "IRSDK_BROADCASTMSG";
+#endif
 
 static const int IRSDK_MAX_BUFS = 4;
 static const int IRSDK_MAX_STRING = 32;
@@ -124,15 +134,15 @@ enum irsdk_VarType
 };
 
 static const int irsdk_VarTypeBytes[irsdk_ETCount] =
-                {
-                                1, // irsdk_char
-                                1, // irsdk_bool
+    {
+        1, // irsdk_char
+        1, // irsdk_bool
 
-                                4, // irsdk_int
-                                4, // irsdk_bitField
-                                4, // irsdk_float
+        4, // irsdk_int
+        4, // irsdk_bitField
+        4, // irsdk_float
 
-                                8 // irsdk_double
+        8 // irsdk_double
 };
 
 //---
@@ -198,12 +208,12 @@ enum irsdk_SessionState
 enum irsdk_CarLeftRight
 {
         irsdk_LROff = 0,
-        irsdk_LRClear,                          // no cars around us.
-        irsdk_LRCarLeft,                        // there is a car to our left.
-        irsdk_LRCarRight,                       // there is a car to our right.
+        irsdk_LRClear,        // no cars around us.
+        irsdk_LRCarLeft,      // there is a car to our left.
+        irsdk_LRCarRight,     // there is a car to our right.
         irsdk_LRCarLeftRight, // there are cars on each side.
-        irsdk_LR2CarsLeft,              // there are two cars to our left.
-        irsdk_LR2CarsRight              // there are two cars to our right.
+        irsdk_LR2CarsLeft,    // there are two cars to our left.
+        irsdk_LR2CarsRight    // there are two cars to our right.
 };
 
 enum irsdk_PitSvStatus
@@ -331,10 +341,10 @@ enum irsdk_PaceFlags
 
 struct irsdk_varHeader
 {
-        int type;               // irsdk_VarType
+        int type;   // irsdk_VarType
         int offset; // offset fron start of buffer row
-        int count;      // number of entrys (array)
-                                                        // so length in bytes would be irsdk_VarTypeBytes[type] * count
+        int count;  // number of entrys (array)
+                    // so length in bytes would be irsdk_VarTypeBytes[type] * count
         bool countAsTime;
         char pad[3]; // (16 byte align)
 
@@ -358,23 +368,23 @@ struct irsdk_varBuf
 {
         int tickCount; // used to detect changes in data
         int bufOffset; // offset from header
-        int pad[2];              // (16 byte align)
+        int pad[2];    // (16 byte align)
 };
 
 struct irsdk_header
 {
-        int ver;                        // this api header version, see IRSDK_VER
-        int status;             // bitfield using irsdk_StatusField
+        int ver;      // this api header version, see IRSDK_VER
+        int status;   // bitfield using irsdk_StatusField
         int tickRate; // ticks per second (60 or 360 etc)
 
         // session information, updated periodicaly
         int sessionInfoUpdate; // Incremented when session info changes
-        int sessionInfoLen;              // Length in bytes of session info string
+        int sessionInfoLen;    // Length in bytes of session info string
         int sessionInfoOffset; // Session info, encoded in YAML format
 
         // State data, output at tickRate
 
-        int numVars;                             // length of arra pointed to by varHeaderOffset
+        int numVars;         // length of arra pointed to by varHeaderOffset
         int varHeaderOffset; // offset to irsdk_varHeader[numVars] array, Describes the variables received in varBuf
 
         int numBuf; // <= IRSDK_MAX_BUFS (3 for now)
@@ -383,7 +393,7 @@ struct irsdk_header
         // int curBufTickCount; // stashed copy of the current tickCount, can read this to see if new data is available
         // byte curBuf;                 // index of the most recently written buffer (0 to IRSDK_MAX_BUFS-1)
         // byte pad1[3];                        // 16 byte align
-        int pad1[2];                                                                                             // (16 byte align)
+        int pad1[2];                         // (16 byte align)
         irsdk_varBuf varBuf[IRSDK_MAX_BUFS]; // buffers of data being written to
 };
 
@@ -424,65 +434,65 @@ int irsdk_varNameToOffset(const char *name);
 // pit commands only work when in your car
 enum irsdk_BroadcastMsg
 {
-        irsdk_BroadcastCamSwitchPos = 0,                                // car position, group, camera
-        irsdk_BroadcastCamSwitchNum,                                            // driver #, group, camera
-        irsdk_BroadcastCamSetState,                                                     // irsdk_CameraState, unused, unused
-        irsdk_BroadcastReplaySetPlaySpeed,                      // speed, slowMotion, unused
-        irskd_BroadcastReplaySetPlayPosition,           // irsdk_RpyPosMode, Frame Number (high, low)
-        irsdk_BroadcastReplaySearch,                                            // irsdk_RpySrchMode, unused, unused
-        irsdk_BroadcastReplaySetState,                                  // irsdk_RpyStateMode, unused, unused
-        irsdk_BroadcastReloadTextures,                                  // irsdk_ReloadTexturesMode, carIdx, unused
-        irsdk_BroadcastChatComand,                                                      // irsdk_ChatCommandMode, subCommand, unused
-        irsdk_BroadcastPitCommand,                                                      // irsdk_PitCommandMode, parameter
-        irsdk_BroadcastTelemCommand,                                            // irsdk_TelemCommandMode, unused, unused
-        irsdk_BroadcastFFBCommand,                                                      // irsdk_FFBCommandMode, value (float, high, low)
+        irsdk_BroadcastCamSwitchPos = 0,        // car position, group, camera
+        irsdk_BroadcastCamSwitchNum,            // driver #, group, camera
+        irsdk_BroadcastCamSetState,             // irsdk_CameraState, unused, unused
+        irsdk_BroadcastReplaySetPlaySpeed,      // speed, slowMotion, unused
+        irskd_BroadcastReplaySetPlayPosition,   // irsdk_RpyPosMode, Frame Number (high, low)
+        irsdk_BroadcastReplaySearch,            // irsdk_RpySrchMode, unused, unused
+        irsdk_BroadcastReplaySetState,          // irsdk_RpyStateMode, unused, unused
+        irsdk_BroadcastReloadTextures,          // irsdk_ReloadTexturesMode, carIdx, unused
+        irsdk_BroadcastChatComand,              // irsdk_ChatCommandMode, subCommand, unused
+        irsdk_BroadcastPitCommand,              // irsdk_PitCommandMode, parameter
+        irsdk_BroadcastTelemCommand,            // irsdk_TelemCommandMode, unused, unused
+        irsdk_BroadcastFFBCommand,              // irsdk_FFBCommandMode, value (float, high, low)
         irsdk_BroadcastReplaySearchSessionTime, // sessionNum, sessionTimeMS (high, low)
-        irsdk_BroadcastVideoCapture,                                            // irsdk_VideoCaptureMode, unused, unused
-        irsdk_BroadcastLast                                                                                     // unused placeholder
+        irsdk_BroadcastVideoCapture,            // irsdk_VideoCaptureMode, unused, unused
+        irsdk_BroadcastLast                     // unused placeholder
 };
 
 enum irsdk_ChatCommandMode
 {
         irsdk_ChatCommand_Macro = 0, // pass in a number from 1-15 representing the chat macro to launch
         irsdk_ChatCommand_BeginChat, // Open up a new chat window
-        irsdk_ChatCommand_Reply,                 // Reply to last private chat
-        irsdk_ChatCommand_Cancel                 // Close chat window
+        irsdk_ChatCommand_Reply,     // Reply to last private chat
+        irsdk_ChatCommand_Cancel     // Close chat window
 };
 
 enum irsdk_PitCommandMode // this only works when the driver is in the car
 {
-        irsdk_PitCommand_Clear = 0,      // Clear all pit checkboxes
-        irsdk_PitCommand_WS,                             // Clean the winshield, using one tear off
-        irsdk_PitCommand_Fuel,                   // Add fuel, optionally specify the amount to add in liters or pass '0' to use existing amount
-        irsdk_PitCommand_LF,                             // Change the left front tire, optionally specifying the pressure in KPa or pass '0' to use existing pressure
-        irsdk_PitCommand_RF,                             // right front
-        irsdk_PitCommand_LR,                             // left rear
-        irsdk_PitCommand_RR,                             // right rear
+        irsdk_PitCommand_Clear = 0,  // Clear all pit checkboxes
+        irsdk_PitCommand_WS,         // Clean the winshield, using one tear off
+        irsdk_PitCommand_Fuel,       // Add fuel, optionally specify the amount to add in liters or pass '0' to use existing amount
+        irsdk_PitCommand_LF,         // Change the left front tire, optionally specifying the pressure in KPa or pass '0' to use existing pressure
+        irsdk_PitCommand_RF,         // right front
+        irsdk_PitCommand_LR,         // left rear
+        irsdk_PitCommand_RR,         // right rear
         irsdk_PitCommand_ClearTires, // Clear tire pit checkboxes
-        irsdk_PitCommand_FR,                             // Request a fast repair
-        irsdk_PitCommand_ClearWS,                // Uncheck Clean the winshield checkbox
-        irsdk_PitCommand_ClearFR,                // Uncheck request a fast repair
-        irsdk_PitCommand_ClearFuel,      // Uncheck add fuel
-        irsdk_PitCommand_TC,                             // Change tire compound
+        irsdk_PitCommand_FR,         // Request a fast repair
+        irsdk_PitCommand_ClearWS,    // Uncheck Clean the winshield checkbox
+        irsdk_PitCommand_ClearFR,    // Uncheck request a fast repair
+        irsdk_PitCommand_ClearFuel,  // Uncheck add fuel
+        irsdk_PitCommand_TC,         // Change tire compound
 };
 
 enum irsdk_TelemCommandMode // You can call this any time, but telemtry only records when driver is in there car
 {
         irsdk_TelemCommand_Stop = 0, // Turn telemetry recording off
-        irsdk_TelemCommand_Start,                // Turn telemetry recording on
-        irsdk_TelemCommand_Restart,      // Write current file to disk and start a new one
+        irsdk_TelemCommand_Start,    // Turn telemetry recording on
+        irsdk_TelemCommand_Restart,  // Write current file to disk and start a new one
 };
 
 enum irsdk_RpyStateMode
 {
         irsdk_RpyState_EraseTape = 0, // clear any data in the replay tape
-        irsdk_RpyState_Last                                             // unused place holder
+        irsdk_RpyState_Last           // unused place holder
 };
 
 enum irsdk_ReloadTexturesMode
 {
         irsdk_ReloadTextures_All = 0, // reload all textuers
-        irsdk_ReloadTextures_CarIdx             // reload only textures for the specific carIdx
+        irsdk_ReloadTextures_CarIdx   // reload only textures for the specific carIdx
 };
 
 // Search replay tape for events
@@ -512,7 +522,7 @@ enum irsdk_RpyPosMode
 enum irsdk_FFBCommandMode // You can call this any time
 {
         irsdk_FFBCommand_MaxForce = 0, // Set the maximum force when mapping steering torque force to direct input units (float in Nm)
-        irsdk_FFBCommand_Last                                    // unused placeholder
+        irsdk_FFBCommand_Last          // unused placeholder
 };
 
 // irsdk_BroadcastCamSwitchPos or irsdk_BroadcastCamSwitchNum camera focus defines
@@ -529,11 +539,11 @@ enum irsdk_csMode
 enum irsdk_VideoCaptureMode
 {
         irsdk_VideoCapture_TriggerScreenShot = 0, // save a screenshot to disk
-        irsdk_VideoCaptuer_StartVideoCapture,                   // start capturing video
-        irsdk_VideoCaptuer_EndVideoCapture,                             // stop capturing video
-        irsdk_VideoCaptuer_ToggleVideoCapture,          // toggle video capture on/off
-        irsdk_VideoCaptuer_ShowVideoTimer,                              // show video timer in upper left corner of display
-        irsdk_VideoCaptuer_HideVideoTimer,                              // hide video timer
+        irsdk_VideoCaptuer_StartVideoCapture,     // start capturing video
+        irsdk_VideoCaptuer_EndVideoCapture,       // stop capturing video
+        irsdk_VideoCaptuer_ToggleVideoCapture,    // toggle video capture on/off
+        irsdk_VideoCaptuer_ShowVideoTimer,        // show video timer in upper left corner of display
+        irsdk_VideoCaptuer_HideVideoTimer,        // hide video timer
 };
 
 // send a remote controll message to the sim

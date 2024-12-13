@@ -6,9 +6,7 @@
         "-Wall",
         "-std=c++17"
       ],
-      "defines": [
-        "NODE_MAJOR_VERSION=<!(node -v | cut -d. -f1 | tr -d 'v')"
-      ],
+
       "sources": [
         "src/cpp/IrSdkNodeBindings.cpp",
         "src/cpp/IrSdkCommand.cpp",
