@@ -1,5 +1,6 @@
 #include "IRSDKWrapper.h"
 #include <iostream>
+#include <climits>
 
 // npm install --debug enables debug prints
 #ifdef _DEBUG
@@ -8,7 +9,7 @@
 #define debug(x)
 #endif
 
-NodeIrSdk::IRSDKWrapper::IRSDKWrapper() : hMemMapFile(NULL), pSharedMem(NULL), pHeader(NULL), lastTickCount(INT_MIN), lastSessionInfoUpdate(INT_MIN),
+NodeIrSdk::IRSDKWrapper::IRSDKWrapper() : pHeader(NULL), lastTickCount(INT_MIN), lastSessionInfoUpdate(INT_MIN),
                                           data(NULL), dataLen(-1), sessionInfoStr()
 {
   debug("IRSDKWrapper: constructing...");
@@ -17,23 +18,28 @@ NodeIrSdk::IRSDKWrapper::IRSDKWrapper() : hMemMapFile(NULL), pSharedMem(NULL), p
 NodeIrSdk::IRSDKWrapper::~IRSDKWrapper()
 {
   debug("IRSDKWrapper: deconstructing...");
+  shutdown();
 }
 
 bool NodeIrSdk::IRSDKWrapper::startup()
 {
   debug("IRSDKWrapper: starting up...");
 
-  if (!hMemMapFile)
+  if (!sharedMem_.isOpen())
   {
     debug("IRSDKWrapper: opening mem map...");
-    hMemMapFile = OpenFileMapping(FILE_MAP_READ, FALSE, IRSDK_MEMMAPFILENAME);
-    if (hMemMapFile == NULL)
+    if (!sharedMem_.open(IRSDK_MEMMAPFILENAME))
     {
       return false;
     }
-    pSharedMem = (const char *)MapViewOfFile(hMemMapFile, FILE_MAP_READ, 0, 0, 0);
-    pHeader = (irsdk_header *)pSharedMem;
+    pHeader = (irsdk_header *)sharedMem_.getData();
     lastTickCount = INT_MIN;
+
+    if (!dataEvent_.create(IRSDK_DATAVALIDEVENTNAME))
+    {
+      shutdown();
+      return false;
+    }
   }
   debug("IRSDKWrapper: start up ready.");
   return true;
@@ -41,7 +47,7 @@ bool NodeIrSdk::IRSDKWrapper::startup()
 
 bool NodeIrSdk::IRSDKWrapper::isInitialized() const
 {
-  if (!hMemMapFile)
+  if (!sharedMem_.isOpen())
   {
     debug("IRSDKWrapper: not initialized...");
     return false;
@@ -52,7 +58,7 @@ bool NodeIrSdk::IRSDKWrapper::isInitialized() const
 
 bool NodeIrSdk::IRSDKWrapper::isConnected() const
 {
-  bool status = pHeader->status == irsdk_stConnected;
+  bool status = pHeader && pHeader->status == irsdk_stConnected;
   debug("IRSDKWrapper: sim status: " << status);
   return status;
 }
@@ -60,16 +66,11 @@ bool NodeIrSdk::IRSDKWrapper::isConnected() const
 void NodeIrSdk::IRSDKWrapper::shutdown()
 {
   debug("IRSDKWrapper: shutting down...");
-  if (pSharedMem)
-    UnmapViewOfFile(pSharedMem);
 
-  if (hMemMapFile)
-    CloseHandle(hMemMapFile);
+  sharedMem_.close();
+  dataEvent_.close();
 
-  hMemMapFile = NULL;
-  pSharedMem = NULL;
   pHeader = NULL;
-
   lastTickCount = INT_MIN;
   lastSessionInfoUpdate = INT_MIN;
   delete[] data;
@@ -121,15 +122,15 @@ bool NodeIrSdk::IRSDKWrapper::updateTelemetry()
       return false;
     }
 
-    debug("IRSDKWrapper: finding lastest buffer");
+    debug("IRSDKWrapper: finding latest buffer");
     int latest = 0;
     for (int i = 1; i < pHeader->numBuf; i++)
       if (pHeader->varBuf[latest].tickCount < pHeader->varBuf[i].tickCount)
         latest = i;
 
-    debug("IRSDKWrapper: lastest buffer " << latest);
+    debug("IRSDKWrapper: latest buffer " << latest);
 
-    // if newer than last recieved, than report new data
+    // if newer than last received, then report new data
     if (lastTickCount < pHeader->varBuf[latest].tickCount)
     {
       debug("IRSDKWrapper: new data, attempting to copy");
@@ -157,7 +158,8 @@ bool NodeIrSdk::IRSDKWrapper::updateTelemetry()
       {
         debug("IRSDKWrapper: copy attempt " << count);
         int curTickCount = pHeader->varBuf[latest].tickCount;
-        memcpy(data, pSharedMem + pHeader->varBuf[latest].bufOffset, pHeader->bufLen);
+        const char *sharedData = static_cast<const char *>(sharedMem_.getData());
+        memcpy(data, sharedData + pHeader->varBuf[latest].bufOffset, pHeader->bufLen);
         if (curTickCount == pHeader->varBuf[latest].tickCount)
         {
           lastTickCount = curTickCount;
@@ -170,7 +172,7 @@ bool NodeIrSdk::IRSDKWrapper::updateTelemetry()
       debug("IRSDKWrapper: copy failed");
       return false;
     }
-    // if older than last recieved, than reset, we probably disconnected
+    // if older than last received, then reset, we probably disconnected
     else if (lastTickCount > pHeader->varBuf[latest].tickCount)
     {
       debug("IRSDKWrapper: ???");
@@ -183,7 +185,7 @@ bool NodeIrSdk::IRSDKWrapper::updateTelemetry()
   return false;
 }
 
-const double NodeIrSdk::IRSDKWrapper::getLastTelemetryUpdateTS() const
+double NodeIrSdk::IRSDKWrapper::getLastTelemetryUpdateTS() const
 {
   return 1000.0f * lastValidTime;
 }
@@ -191,9 +193,9 @@ const double NodeIrSdk::IRSDKWrapper::getLastTelemetryUpdateTS() const
 const char *NodeIrSdk::IRSDKWrapper::getSessionInfoStr() const
 {
   debug("IRSDKWrapper: getSessionInfoStr");
-  if (isInitialized())
+  if (isInitialized() && pHeader)
   {
-    return pSharedMem + pHeader->sessionInfoOffset;
+    return static_cast<const char *>(sharedMem_.getData()) + pHeader->sessionInfoOffset;
   }
 
   return NULL;
@@ -204,9 +206,13 @@ void NodeIrSdk::IRSDKWrapper::updateVarHeaders()
   debug("IRSDKWrapper: updating varHeaders...");
   varHeadersArr.clear();
 
+  if (!pHeader)
+    return;
+
+  const char *sharedData = static_cast<const char *>(sharedMem_.getData());
   for (int index = 0; index < pHeader->numVars; ++index)
   {
-    irsdk_varHeader *pVarHeader = &((irsdk_varHeader *)(pSharedMem + pHeader->varHeaderOffset))[index];
+    irsdk_varHeader *pVarHeader = &((irsdk_varHeader *)(sharedData + pHeader->varHeaderOffset))[index];
     varHeadersArr.push_back(pVarHeader);
   }
   debug("IRSDKWrapper: varHeaders update done.");

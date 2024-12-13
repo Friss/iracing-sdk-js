@@ -1,10 +1,8 @@
 #pragma once
 
 #include "irsdk/irsdk_defines.h"
+#include "platform/platform.h"
 #include <time.h>
-#define WIN32_LEAN_AND_MEAN
-#include <windows.h>
-
 #include <map>
 #include <string>
 #include <vector>
@@ -51,11 +49,11 @@ namespace NodeIrSdk
 
     bool getVarVal(TelemetryVar &var) const;
 
-    const double getLastTelemetryUpdateTS() const; // returns JS compatible TS
+    double getLastTelemetryUpdateTS() const; // returns JS compatible TS
 
   private:
-    HANDLE hMemMapFile;
-    const char *pSharedMem;
+    platform::SharedMemory sharedMem_;
+    platform::Event dataEvent_;
     const irsdk_header *pHeader;
     int lastTickCount;
     int lastSessionInfoUpdate;

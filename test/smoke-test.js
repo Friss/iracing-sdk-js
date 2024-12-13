@@ -132,6 +132,6 @@ iracing.once('Connected', function () {
 });
 
 setTimeout(function () {
-  console.log('no iRacing detected, skipping telemetry checks.');
+  console.log(`Test hasn't finished in 3 seconds, exiting..`);
   process.exit(0);
 }, 3000);

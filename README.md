@@ -68,6 +68,7 @@ JsIrSdk is javascript implementation of iRacing SDK.
 **See**: [EventEmitter API](https://nodejs.org/api/events.html#events_class_eventemitter)  
 
 * [iracing](#iracing) ⇐ <code>events.EventEmitter</code>
+    * [new JsIrSdk()](#new_iracing_new)
     * _instance_
         * [.telemetry](#iracing+telemetry)
         * [.telemetryDescription](#iracing+telemetryDescription)
@@ -91,6 +92,13 @@ JsIrSdk is javascript implementation of iRacing SDK.
     * _inner_
         * [~sessionInfoParser](#iracing..sessionInfoParser) ⇒ <code>Object</code>
 
+<a name="new_iracing_new"></a>
+
+#### new JsIrSdk()
+  
+```js
+const iracing = require('iracing-sdk-js').getInstance()
+```
 <a name="iracing+telemetry"></a>
 
 #### iracing.telemetry
