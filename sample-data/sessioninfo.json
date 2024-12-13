@@ -1,5 +1,5 @@
 {
-  "timestamp": "2024-07-10T22:46:49.149Z",
+  "timestamp": "2024-12-13T01:47:04.527Z",
   "data": {
     "WeekendInfo": {
       "TrackName": "virginia 2022 full",
@@ -19,19 +19,19 @@
       "TrackPitSpeedLimit": "60.00 kph",
       "TrackType": "road course",
       "TrackDirection": "neutral",
-      "TrackWeatherType": "Realistic",
-      "TrackSkies": "Dynamic",
-      "TrackSurfaceTemp": "22.47 C",
-      "TrackAirTemp": "19.47 C",
-      "TrackAirPressure": "29.10 Hg",
-      "TrackWindVel": "7.19 m/s",
-      "TrackWindDir": "2.20 rad",
-      "TrackRelativeHumidity": "98 %",
-      "TrackFogLevel": "1 %",
-      "TrackPrecipitation": "70 %",
+      "TrackWeatherType": "Static",
+      "TrackSkies": "Partly Cloudy",
+      "TrackSurfaceTemp": "39.81 C",
+      "TrackAirTemp": "25.56 C",
+      "TrackAirPressure": "29.36 Hg",
+      "TrackWindVel": "0.89 m/s",
+      "TrackWindDir": "0.00 rad",
+      "TrackRelativeHumidity": "45 %",
+      "TrackFogLevel": "0 %",
+      "TrackPrecipitation": "0 %",
       "TrackCleanup": 0,
       "TrackDynamicTrack": 1,
-      "TrackVersion": "2024.05.22.01",
+      "TrackVersion": "2024.11.26.01",
       "SeriesID": 0,
       "SeasonID": 0,
       "SessionID": 0,
@@ -52,7 +52,7 @@
       "HeatRacing": 0,
       "BuildType": "Release",
       "BuildTarget": "Members",
-      "BuildVersion": "2024.06.28.01",
+      "BuildVersion": "2024.12.11.01",
       "RaceFarm": null,
       "WeekendOptions": {
         "NumStarters": 0,
@@ -62,14 +62,14 @@
         "StandingStart": 0,
         "ShortParadeLap": 0,
         "Restarts": "single file",
-        "WeatherType": "Realistic",
-        "Skies": "Dynamic",
+        "WeatherType": "Static",
+        "Skies": "Partly Cloudy",
         "WindDirection": "N",
         "WindSpeed": "3.22 km/h",
         "WeatherTemp": "25.56 C",
         "RelativeHumidity": "45 %",
         "FogLevel": "0 %",
-        "TimeOfDay": "3:16 pm",
+        "TimeOfDay": "12:00 pm",
         "Date": "2024-05-15T00:00:00.000Z",
         "EarthRotationSpeedupFactor": 1,
         "Unofficial": 1,
@@ -96,7 +96,7 @@
           "SessionTime": "unlimited",
           "SessionNumLapsToAvg": 0,
           "SessionType": "Offline Testing",
-          "SessionTrackRubberState": "slight usage",
+          "SessionTrackRubberState": "moderately low usage",
           "SessionName": "TESTING",
           "SessionSubType": null,
           "SessionSkipped": 0,
@@ -846,9 +846,9 @@
       "DriverCarSLShiftRPM": 7700,
       "DriverCarSLLastRPM": 7600,
       "DriverCarSLBlinkRPM": 7950,
-      "DriverCarVersion": "2024.06.24.02",
+      "DriverCarVersion": "2024.11.26.01",
       "DriverPitTrkPct": 0.990978,
-      "DriverCarEstLapTime": 126.8422,
+      "DriverCarEstLapTime": 105.0762,
       "DriverSetupName": "baseline.sto",
       "DriverSetupIsModified": 0,
       "DriverSetupLoadTypeName": "baseline",
@@ -881,7 +881,7 @@
           "CarClassPowerAdjust": "0.000 %",
           "CarClassDryTireSetLimit": "0 %",
           "CarClassColor": 16777215,
-          "CarClassEstLapTime": 126.8422,
+          "CarClassEstLapTime": 105.0762,
           "IRating": 1,
           "LicLevel": 1,
           "LicSubLevel": 1,
@@ -931,7 +931,7 @@
       ]
     },
     "CarSetup": {
-      "UpdateCount": 2,
+      "UpdateCount": 1,
       "TiresAero": {
         "TireType": {
           "TireType": "Dry"
@@ -962,28 +962,28 @@
         },
         "AeroBalanceCalc": {
           "FrontRhAtSpeed": "43 mm",
-          "RearRhAtSpeed": "45 mm",
-          "RearWingAngle": "6.5 degrees",
-          "FrontDownforce": "38.8%"
+          "RearRhAtSpeed": "53 mm",
+          "RearWingAngle": "9.5 degrees",
+          "FrontDownforce": "38.1%"
         }
       },
       "Chassis": {
         "FrontBrakes": {
-          "ArbBlades": 4,
+          "ArbBlades": 3,
           "TotalToeIn": "-3.1 mm",
           "BrakePedalRatio": 4.67,
           "BrakePads": "Medium friction"
         },
         "LeftFront": {
-          "CornerWeight": "3163 N",
+          "CornerWeight": "3162 N",
           "RideHeight": "51.0 mm",
-          "BumpRubberGap": "10 mm",
+          "BumpRubberGap": "12 mm",
           "SpringRate": "105 N/mm",
           "Camber": "-3.9 deg"
         },
         "LeftRear": {
-          "CornerWeight": "3972 N",
-          "RideHeight": "61.4 mm",
+          "CornerWeight": "3973 N",
+          "RideHeight": "71.3 mm",
           "BumpRubberGap": "53 mm",
           "SpringRate": "200 N/mm",
           "Camber": "-3.5 deg",
@@ -991,26 +991,26 @@
         },
         "Rear": {
           "FuelLevel": "52.0 L",
-          "ArbBlades": 2,
-          "RearWingAngle": "6.5 degrees"
+          "ArbBlades": 0,
+          "RearWingAngle": "9.5 degrees"
         },
         "InCarAdjustments": {
-          "BrakePressureBias": "54.0%",
+          "BrakePressureBias": "55.0%",
           "AbsSetting": "3 (ABS)",
           "TractionControlSetting": "3 (T/C)",
           "DisplayPage": "Race",
           "CrossWeight": "50.0%"
         },
         "RightFront": {
-          "CornerWeight": "3163 N",
+          "CornerWeight": "3162 N",
           "RideHeight": "51.0 mm",
-          "BumpRubberGap": "10 mm",
+          "BumpRubberGap": "12 mm",
           "SpringRate": "105 N/mm",
           "Camber": "-3.9 deg"
         },
         "RightRear": {
-          "CornerWeight": "3972 N",
-          "RideHeight": "61.4 mm",
+          "CornerWeight": "3973 N",
+          "RideHeight": "71.3 mm",
           "BumpRubberGap": "53 mm",
           "SpringRate": "200 N/mm",
           "Camber": "-3.5 deg",

@@ -692,6 +692,20 @@
     "count": 1,
     "type": "int"
   },
+  "CarDistAhead": {
+    "name": "CarDistAhead",
+    "desc": "Distance to first car in front of player in meters",
+    "unit": "m",
+    "count": 1,
+    "type": "float"
+  },
+  "CarDistBehind": {
+    "name": "CarDistBehind",
+    "desc": "Distance to first car behind player in meters",
+    "unit": "m",
+    "count": 1,
+    "type": "float"
+  },
   "LapBestLap": {
     "name": "LapBestLap",
     "desc": "Players best lap number",
@@ -1390,6 +1404,20 @@
     "desc": "Push2Pass count of usage (or remaining in Race)",
     "unit": "",
     "count": 64,
+    "type": "int"
+  },
+  "P2P_Status": {
+    "name": "P2P_Status",
+    "desc": "Push2Pass active or not on your car",
+    "unit": "",
+    "count": 1,
+    "type": "bool"
+  },
+  "P2P_Count": {
+    "name": "P2P_Count",
+    "desc": "Push2Pass count of usage (or remaining in Race) on your car",
+    "unit": "",
+    "count": 1,
     "type": "int"
   },
   "SteeringWheelPctTorque": {
