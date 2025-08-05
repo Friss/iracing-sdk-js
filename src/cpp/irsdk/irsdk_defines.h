@@ -265,6 +265,8 @@ enum irsdk_EngineWarnings
         irsdk_pitSpeedLimiter = 0x0010,
         irsdk_revLimiterActive = 0x0020,
         irsdk_oilTempWarning = 0x0040,
+        irsdk_mandRepNeeded = 0x0080, // car needs mandatory repairs
+        irsdk_optRepNeeded = 0x0100,  // car needs optional repairs
 };
 
 // global flags
@@ -334,6 +336,35 @@ enum irsdk_PaceFlags
         irsdk_PaceFlagsEndOfLine = 0x0001,
         irsdk_PaceFlagsFreePass = 0x0002,
         irsdk_PaceFlagsWavedAround = 0x0004,
+};
+
+enum irsdk_IncidentFlags
+{
+        // first byte is incident report flag
+        // only one of these will be used
+
+        irsdk_Incident_RepNoReport = 0x0000,                  // no penalty
+        irsdk_Incident_RepOutOfControl = 0x0001,              // "Loss of Control (2x)"
+        irsdk_Incident_RepOffTrack = 0x0002,                  // "Off Track (1x)"
+        irsdk_Incident_RepOffTrackOngoing = 0x0003,           // not currently sent
+        irsdk_Incident_RepContactWithWorld = 0x0004,          // "Contact (0x)"
+        irsdk_Incident_RepCollisionWithWorld = 0x0005,        // "Contact (2x)"
+        irsdk_Incident_RepCollisionWithWorldOngoing = 0x0006, // not currently sent
+        irsdk_Incident_RepContactWithCar = 0x0007,            // "Car Contact (0x)"
+        irsdk_Incident_RepCollisionWithCar = 0x0008,          // "Car Contact (4x)"
+
+        // second byte is incident penalty
+        // only one of these will be used
+        irsdk_Incident_PenNoReport = 0x0000, // no penalty
+        irsdk_Incident_PenZeroX = 0x0100,    // 0x
+        irsdk_Incident_PenOneX = 0x0200,     // 1x
+        irsdk_Incident_PenTwoX = 0x0300,     // 2x
+        irsdk_Incident_PenFourX = 0x0400,    // 4x
+
+        // not enums, used to seperate the above incident report field
+        // from the incident penalty field
+        IRSKD_INCIDENT_REP_MASK = 0x000000FF,
+        IRSKD_INCIDENT_PEN_MASK = 0x0000FF00,
 };
 
 //----
