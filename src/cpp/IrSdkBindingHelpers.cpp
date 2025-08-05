@@ -42,6 +42,10 @@ Local<Value> NodeIrSdk::convertTelemetryValueToObject(IRSDKWrapper::TelemetryVar
     {
       return getStringValue(var.intValue[index], TRACK_WETNESS);
     }
+    if (strcmp(var.header->unit, "irsdk_IncidentFlags") == 0)
+    {
+      return getStringValue(var.intValue[index], INCIDENT_FLAGS);
+    }
     return Nan::New(static_cast<int32_t>(var.intValue[index]));
   case irsdk_bitField:
     return getMaskedValues(var.intValue[index], var.header->unit);

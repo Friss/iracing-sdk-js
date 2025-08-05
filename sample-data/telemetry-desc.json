@@ -1014,6 +1014,13 @@
     "count": 1,
     "type": "bool"
   },
+  "SteeringFFBEnabled": {
+    "name": "SteeringFFBEnabled",
+    "desc": "Force feedback is enabled",
+    "unit": "",
+    "count": 1,
+    "type": "bool"
+  },
   "DCLapStatus": {
     "name": "DCLapStatus",
     "desc": "Status of driver change lap requirements",
@@ -1069,6 +1076,13 @@
     "unit": "",
     "count": 1,
     "type": "bool"
+  },
+  "PlayerIncidents": {
+    "name": "PlayerIncidents",
+    "desc": "Log incidents that the player recieved",
+    "unit": "irsdk_IncidentFlags",
+    "count": 1,
+    "type": "int"
   },
   "PitRepairLeft": {
     "name": "PitRepairLeft",
@@ -1328,6 +1342,13 @@
     "unit": "",
     "count": 1,
     "type": "bool"
+  },
+  "Shifter": {
+    "name": "Shifter",
+    "desc": "Log inputs from the players shifter control",
+    "unit": "",
+    "count": 1,
+    "type": "int"
   },
   "EngineWarnings": {
     "name": "EngineWarnings",
@@ -1709,7 +1730,7 @@
   },
   "dcPitSpeedLimiterToggle": {
     "name": "dcPitSpeedLimiterToggle",
-    "desc": "In car traction control active",
+    "desc": "Track if pit speed limiter system is enabled",
     "unit": "",
     "count": 1,
     "type": "bool"
@@ -1889,6 +1910,13 @@
     "count": 1,
     "type": "float"
   },
+  "RFodometer": {
+    "name": "RFodometer",
+    "desc": "RF distance tire traveled since being placed on car",
+    "unit": "m",
+    "count": 1,
+    "type": "float"
+  },
   "RFtempCL": {
     "name": "RFtempCL",
     "desc": "RF tire left carcass temperature",
@@ -1942,6 +1970,13 @@
     "name": "LFcoldPressure",
     "desc": "LF tire cold pressure  as set in the garage",
     "unit": "kPa",
+    "count": 1,
+    "type": "float"
+  },
+  "LFodometer": {
+    "name": "LFodometer",
+    "desc": "LF distance tire traveled since being placed on car",
+    "unit": "m",
     "count": 1,
     "type": "float"
   },
@@ -2078,6 +2113,13 @@
     "count": 1,
     "type": "float"
   },
+  "RRodometer": {
+    "name": "RRodometer",
+    "desc": "RR distance tire traveled since being placed on car",
+    "unit": "m",
+    "count": 1,
+    "type": "float"
+  },
   "RRtempCL": {
     "name": "RRtempCL",
     "desc": "RR tire left carcass temperature",
@@ -2131,6 +2173,13 @@
     "name": "LRcoldPressure",
     "desc": "LR tire cold pressure  as set in the garage",
     "unit": "kPa",
+    "count": 1,
+    "type": "float"
+  },
+  "LRodometer": {
+    "name": "LRodometer",
+    "desc": "LR distance tire traveled since being placed on car",
+    "unit": "m",
     "count": 1,
     "type": "float"
   },

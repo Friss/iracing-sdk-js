@@ -1,15 +1,16 @@
 {
-  "timestamp": "2024-12-13T01:47:04.527Z",
+  "timestamp": "2025-08-05T02:18:40.795Z",
   "data": {
     "WeekendInfo": {
       "TrackName": "virginia 2022 full",
       "TrackID": 465,
-      "TrackLength": "5.22 km",
+      "TrackLength": "5.2169 km",
       "TrackLengthOfficial": "5.26 km",
       "TrackDisplayName": "Virginia International Raceway",
       "TrackDisplayShortName": "VIR",
       "TrackConfigName": "Full Course",
       "TrackCity": "Alton",
+      "TrackState": "VA",
       "TrackCountry": "USA",
       "TrackAltitude": "166.18 m",
       "TrackLatitude": "36.568814 m",
@@ -17,21 +18,25 @@
       "TrackNorthOffset": "4.2700 rad",
       "TrackNumTurns": 20,
       "TrackPitSpeedLimit": "60.00 kph",
+      "TrackPaceSpeed": "23.61 kph",
+      "TrackNumPitStalls": 27,
       "TrackType": "road course",
       "TrackDirection": "neutral",
-      "TrackWeatherType": "Static",
-      "TrackSkies": "Partly Cloudy",
-      "TrackSurfaceTemp": "39.81 C",
-      "TrackAirTemp": "25.56 C",
-      "TrackAirPressure": "29.36 Hg",
-      "TrackWindVel": "0.89 m/s",
-      "TrackWindDir": "0.00 rad",
-      "TrackRelativeHumidity": "45 %",
+      "TrackWeatherType": "Realistic",
+      "TrackSkies": "Dynamic",
+      "TrackSurfaceTemp": "26.26 C",
+      "TrackSurfaceTempCrew": "22.22 C",
+      "TrackAirTemp": "20.26 C",
+      "TrackAirPressure": "29.01 Hg",
+      "TrackAirDensity": "1.16 kg/m^3",
+      "TrackWindVel": "7.35 m/s",
+      "TrackWindDir": "3.86 rad",
+      "TrackRelativeHumidity": "94 %",
       "TrackFogLevel": "0 %",
-      "TrackPrecipitation": "0 %",
+      "TrackPrecipitation": "6 %",
       "TrackCleanup": 0,
       "TrackDynamicTrack": 1,
-      "TrackVersion": "2024.11.26.01",
+      "TrackVersion": "2025.06.18.02",
       "SeriesID": 0,
       "SeasonID": 0,
       "SessionID": 0,
@@ -52,7 +57,7 @@
       "HeatRacing": 0,
       "BuildType": "Release",
       "BuildTarget": "Members",
-      "BuildVersion": "2024.12.11.01",
+      "BuildVersion": "2025.07.25.02",
       "RaceFarm": null,
       "WeekendOptions": {
         "NumStarters": 0,
@@ -62,15 +67,15 @@
         "StandingStart": 0,
         "ShortParadeLap": 0,
         "Restarts": "single file",
-        "WeatherType": "Static",
-        "Skies": "Partly Cloudy",
+        "WeatherType": "Realistic",
+        "Skies": "Dynamic",
         "WindDirection": "N",
         "WindSpeed": "3.22 km/h",
         "WeatherTemp": "25.56 C",
         "RelativeHumidity": "45 %",
         "FogLevel": "0 %",
-        "TimeOfDay": "12:00 pm",
-        "Date": "2024-05-15T00:00:00.000Z",
+        "TimeOfDay": "3:16 pm",
+        "Date": "2025-05-15T00:00:00.000Z",
         "EarthRotationSpeedupFactor": 1,
         "Unofficial": 1,
         "CommercialMode": "consumer",
@@ -85,10 +90,11 @@
         "GreenWhiteCheckeredLimit": 0
       },
       "TelemetryOptions": {
-        "TelemetryDiskFile": ""
+        "TelemetryDiskFile": "C /Users/friss/Documents/iRacing/telemetry/chevyvettez06rgt3_virginia 2022 full 2025-08-04 22-18-16.ibt"
       }
     },
     "SessionInfo": {
+      "CurrentSessionNum": 0,
       "Sessions": [
         {
           "SessionNum": 0,
@@ -96,7 +102,7 @@
           "SessionTime": "unlimited",
           "SessionNumLapsToAvg": 0,
           "SessionType": "Offline Testing",
-          "SessionTrackRubberState": "moderately low usage",
+          "SessionTrackRubberState": "slight usage",
           "SessionName": "TESTING",
           "SessionSubType": null,
           "SessionSkipped": 0,
@@ -725,8 +731,8 @@
       "Radios": [
         {
           "RadioNum": 0,
-          "HopCount": 2,
-          "NumFrequencies": 7,
+          "HopCount": 1,
+          "NumFrequencies": 6,
           "TunedToFrequencyNum": 0,
           "ScanningIsOn": 1,
           "Frequencies": [
@@ -771,19 +777,6 @@
             },
             {
               "FrequencyNum": 3,
-              "FrequencyName": "@CLUB",
-              "Priority": 20,
-              "CarIdx": -1,
-              "EntryIdx": -1,
-              "ClubID": 25,
-              "CanScan": 1,
-              "CanSquawk": 1,
-              "Muted": 0,
-              "IsMutable": 1,
-              "IsDeletable": 0
-            },
-            {
-              "FrequencyNum": 4,
               "FrequencyName": "@ADMIN",
               "Priority": 90,
               "CarIdx": -1,
@@ -796,7 +789,7 @@
               "IsDeletable": 0
             },
             {
-              "FrequencyNum": 5,
+              "FrequencyNum": 4,
               "FrequencyName": "@RACECONTROL",
               "Priority": 80,
               "CarIdx": -1,
@@ -809,7 +802,7 @@
               "IsDeletable": 0
             },
             {
-              "FrequencyNum": 6,
+              "FrequencyNum": 5,
               "FrequencyName": "@PRIVATE",
               "Priority": 70,
               "CarIdx": -1,
@@ -842,18 +835,32 @@
       "DriverCarGearNumForward": 6,
       "DriverCarGearNeutral": 1,
       "DriverCarGearReverse": 1,
+      "DriverGearboxType": "Sequential",
+      "DriverGearboxControlType": "Sequential",
+      "DriverCarShiftAid": "Automatic",
       "DriverCarSLFirstRPM": 7000,
       "DriverCarSLShiftRPM": 7700,
       "DriverCarSLLastRPM": 7600,
       "DriverCarSLBlinkRPM": 7950,
-      "DriverCarVersion": "2024.11.26.01",
+      "DriverCarVersion": "2025.06.27.02",
       "DriverPitTrkPct": 0.990978,
-      "DriverCarEstLapTime": 105.0762,
+      "DriverCarEstLapTime": 103.1748,
       "DriverSetupName": "baseline.sto",
       "DriverSetupIsModified": 0,
       "DriverSetupLoadTypeName": "baseline",
       "DriverSetupPassedTech": 1,
       "DriverIncidentCount": 0,
+      "DriverBrakeCurvingFactor": 0.001,
+      "DriverTires": [
+        {
+          "TireIndex": 0,
+          "TireCompoundType": "Hard"
+        },
+        {
+          "TireIndex": 1,
+          "TireCompoundType": "Wet"
+        }
+      ],
       "Drivers": [
         {
           "CarIdx": 0,
@@ -873,6 +880,9 @@
           "CarIsElectric": 0,
           "CarScreenName": "Chevrolet Corvette Z06 GT3.R",
           "CarScreenNameShort": "Corvette GT3.R",
+          "CarCfg": -1,
+          "CarCfgName": null,
+          "CarCfgCustomPaintExt": null,
           "CarClassShortName": null,
           "CarClassRelSpeed": 0,
           "CarClassLicenseLevel": 0,
@@ -881,7 +891,7 @@
           "CarClassPowerAdjust": "0.000 %",
           "CarClassDryTireSetLimit": "0 %",
           "CarClassColor": 16777215,
-          "CarClassEstLapTime": 105.0762,
+          "CarClassEstLapTime": 103.1748,
           "IRating": 1,
           "LicLevel": 1,
           "LicSubLevel": 1,
@@ -931,40 +941,40 @@
       ]
     },
     "CarSetup": {
-      "UpdateCount": 1,
+      "UpdateCount": 2,
       "TiresAero": {
         "TireType": {
           "TireType": "Dry"
         },
         "LeftFront": {
-          "StartingPressure": "165 kPa",
-          "LastHotPressure": "165 kPa",
-          "LastTempsOMI": "44C, 44C, 44C",
+          "StartingPressure": "159 kPa",
+          "LastHotPressure": "159 kPa",
+          "LastTempsOMI": "35C, 35C, 35C",
           "TreadRemaining": "100%, 100%, 100%"
         },
         "LeftRear": {
-          "StartingPressure": "165 kPa",
-          "LastHotPressure": "165 kPa",
-          "LastTempsOMI": "44C, 44C, 44C",
+          "StartingPressure": "159 kPa",
+          "LastHotPressure": "159 kPa",
+          "LastTempsOMI": "35C, 35C, 35C",
           "TreadRemaining": "100%, 100%, 100%"
         },
         "RightFront": {
-          "StartingPressure": "165 kPa",
-          "LastHotPressure": "165 kPa",
-          "LastTempsIMO": "44C, 44C, 44C",
+          "StartingPressure": "159 kPa",
+          "LastHotPressure": "159 kPa",
+          "LastTempsIMO": "35C, 35C, 35C",
           "TreadRemaining": "100%, 100%, 100%"
         },
         "RightRear": {
-          "StartingPressure": "165 kPa",
-          "LastHotPressure": "165 kPa",
-          "LastTempsIMO": "44C, 44C, 44C",
+          "StartingPressure": "159 kPa",
+          "LastHotPressure": "159 kPa",
+          "LastTempsIMO": "35C, 35C, 35C",
           "TreadRemaining": "100%, 100%, 100%"
         },
         "AeroBalanceCalc": {
-          "FrontRhAtSpeed": "43 mm",
+          "FrontRhAtSpeed": "45 mm",
           "RearRhAtSpeed": "53 mm",
           "RearWingAngle": "9.5 degrees",
-          "FrontDownforce": "38.1%"
+          "FrontDownforce": "38.7%"
         }
       },
       "Chassis": {
@@ -972,54 +982,56 @@
           "ArbBlades": 3,
           "TotalToeIn": "-3.1 mm",
           "BrakePedalRatio": 4.67,
-          "BrakePads": "Medium friction"
+          "BrakePads": "Medium friction",
+          "FWtdist": "44.3%",
+          "CenterFrontSplitterHeight": "50.8 mm"
         },
         "LeftFront": {
-          "CornerWeight": "3162 N",
-          "RideHeight": "51.0 mm",
-          "BumpRubberGap": "12 mm",
+          "CornerWeight": "3161 N",
+          "RideHeight": "53.0 mm",
+          "BumpRubberGap": "11 mm",
           "SpringRate": "105 N/mm",
-          "Camber": "-3.9 deg"
+          "Camber": "-4.0 deg"
         },
         "LeftRear": {
           "CornerWeight": "3973 N",
-          "RideHeight": "71.3 mm",
+          "RideHeight": "69.0 mm",
           "BumpRubberGap": "53 mm",
           "SpringRate": "200 N/mm",
-          "Camber": "-3.5 deg",
+          "Camber": "-3.3 deg",
           "ToeIn": "+1.6 mm"
         },
         "Rear": {
           "FuelLevel": "52.0 L",
-          "ArbBlades": 0,
+          "ArbBlades": 1,
           "RearWingAngle": "9.5 degrees"
         },
         "InCarAdjustments": {
-          "BrakePressureBias": "55.0%",
+          "BrakePressureBias": "55.2%",
           "AbsSetting": "3 (ABS)",
-          "TractionControlSetting": "3 (T/C)",
-          "DisplayPage": "Race",
+          "TcSetting": "3 (T/C)",
+          "DashDisplayPage": "Race",
           "CrossWeight": "50.0%"
         },
         "RightFront": {
-          "CornerWeight": "3162 N",
-          "RideHeight": "51.0 mm",
-          "BumpRubberGap": "12 mm",
+          "CornerWeight": "3161 N",
+          "RideHeight": "53.0 mm",
+          "BumpRubberGap": "11 mm",
           "SpringRate": "105 N/mm",
-          "Camber": "-3.9 deg"
+          "Camber": "-4.0 deg"
         },
         "RightRear": {
           "CornerWeight": "3973 N",
-          "RideHeight": "71.3 mm",
+          "RideHeight": "69.0 mm",
           "BumpRubberGap": "53 mm",
           "SpringRate": "200 N/mm",
-          "Camber": "-3.5 deg",
+          "Camber": "-3.3 deg",
           "ToeIn": "+1.6 mm"
         },
         "GearsDifferential": {
           "GearStack": "FIA",
           "FrictionFaces": 8,
-          "DiffPreload": "100 Nm"
+          "DiffPreload": "110 Nm"
         }
       },
       "Dampers": {

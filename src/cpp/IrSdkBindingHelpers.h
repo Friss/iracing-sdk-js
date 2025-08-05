@@ -101,7 +101,8 @@ namespace NodeIrSdk
         MaskName((int)irsdk_pitSpeedLimiter, "PitSpeedLimiter"),
         MaskName((int)irsdk_revLimiterActive, "RevLimiterActive"),
         MaskName((int)irsdk_oilTempWarning, "OilTempWarning"),
-    };
+        MaskName((int)irsdk_mandRepNeeded, "MandatoryRepairNeeded"),
+        MaskName((int)irsdk_optRepNeeded, "OptionalRepairNeeded")};
 
     const std::vector<MaskName> SESSION_STATES = {
         MaskName((int)irsdk_StateInvalid, "Invalid"),
@@ -186,6 +187,18 @@ namespace NodeIrSdk
         MaskName((int)irsdk_TrackWetness_ModeratelyWet, "ModeratelyWet"),
         MaskName((int)irsdk_TrackWetness_VeryWet, "VeryWet"),
         MaskName((int)irsdk_TrackWetness_ExtremelyWet, "ExtremelyWet"),
+    };
+
+    const std::vector<MaskName> INCIDENT_FLAGS = {
+        MaskName((int)irsdk_Incident_RepNoReport, "NoPenalty(0x)"),                // no penalty
+        MaskName((int)irsdk_Incident_RepOutOfControl, "LossOfControll(2x)"),       // "Loss of Control (2x)"
+        MaskName((int)irsdk_Incident_RepOffTrack, "OffTrack(1x)"),                 // "Off Track (1x)"
+        MaskName((int)irsdk_Incident_RepOffTrackOngoing, "OffTrackOngoing(0x)"),   // not currently sent
+        MaskName((int)irsdk_Incident_RepContactWithWorld, "Contact(0x)"),          // "Contact (0x)"
+        MaskName((int)irsdk_Incident_RepCollisionWithWorld, "Contact(2x)"),        // "Contact (2x)"
+        MaskName((int)irsdk_Incident_RepCollisionWithWorldOngoing, "Contact(0x)"), // not currently sent
+        MaskName((int)irsdk_Incident_RepContactWithCar, "CarContact(0x)"),         // "Car Contact (0x)"
+        MaskName((int)irsdk_Incident_RepCollisionWithCar, "CarContact(4x)"),       // "Car Contact (4x)"
     };
 
 }; // namespace NodeIrSdk
