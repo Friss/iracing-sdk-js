@@ -3,6 +3,7 @@
   "version": "1.5.0",
   "description": "iRacing SDK implementation for Node.js",
   "main": "src/iracing-sdk-js.js",
+  "types": "index.d.ts",
   "scripts": {
     "install": "yarn rebuild",
     "rebuild": "node-gyp rebuild",
@@ -25,6 +26,7 @@
     "node": ">=21"
   },
   "dependencies": {
+    "@types/node": "24.2.0",
     "js-yaml": "4.1.0",
     "nan": "2.23.0"
   },
