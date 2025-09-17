@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-08-05T02:18:40.795Z",
+  "timestamp": "2025-09-17T22:39:38.501Z",
   "data": {
     "WeekendInfo": {
       "TrackName": "virginia 2022 full",
@@ -24,19 +24,19 @@
       "TrackDirection": "neutral",
       "TrackWeatherType": "Realistic",
       "TrackSkies": "Dynamic",
-      "TrackSurfaceTemp": "26.26 C",
+      "TrackSurfaceTemp": "23.49 C",
       "TrackSurfaceTempCrew": "22.22 C",
-      "TrackAirTemp": "20.26 C",
-      "TrackAirPressure": "29.01 Hg",
+      "TrackAirTemp": "20.49 C",
+      "TrackAirPressure": "29.14 Hg",
       "TrackAirDensity": "1.16 kg/m^3",
-      "TrackWindVel": "7.35 m/s",
-      "TrackWindDir": "3.86 rad",
-      "TrackRelativeHumidity": "94 %",
+      "TrackWindVel": "4.80 m/s",
+      "TrackWindDir": "3.26 rad",
+      "TrackRelativeHumidity": "97 %",
       "TrackFogLevel": "0 %",
-      "TrackPrecipitation": "6 %",
+      "TrackPrecipitation": "58 %",
       "TrackCleanup": 0,
       "TrackDynamicTrack": 1,
-      "TrackVersion": "2025.06.18.02",
+      "TrackVersion": "2025.09.05.02",
       "SeriesID": 0,
       "SeasonID": 0,
       "SessionID": 0,
@@ -57,7 +57,7 @@
       "HeatRacing": 0,
       "BuildType": "Release",
       "BuildTarget": "Members",
-      "BuildVersion": "2025.07.25.02",
+      "BuildVersion": "2025.09.12.01",
       "RaceFarm": null,
       "WeekendOptions": {
         "NumStarters": 0,
@@ -90,7 +90,7 @@
         "GreenWhiteCheckeredLimit": 0
       },
       "TelemetryOptions": {
-        "TelemetryDiskFile": "C /Users/friss/Documents/iRacing/telemetry/chevyvettez06rgt3_virginia 2022 full 2025-08-04 22-18-16.ibt"
+        "TelemetryDiskFile": "C /Users/friss/Documents/iRacing/telemetry/chevyvettez06rgt3_virginia 2022 full 2025-09-17 18-39-18.ibt"
       }
     },
     "SessionInfo": {
@@ -102,7 +102,7 @@
           "SessionTime": "unlimited",
           "SessionNumLapsToAvg": 0,
           "SessionType": "Offline Testing",
-          "SessionTrackRubberState": "slight usage",
+          "SessionTrackRubberState": "moderately low usage",
           "SessionName": "TESTING",
           "SessionSubType": null,
           "SessionSkipped": 0,
@@ -731,7 +731,7 @@
       "Radios": [
         {
           "RadioNum": 0,
-          "HopCount": 1,
+          "HopCount": 2,
           "NumFrequencies": 6,
           "TunedToFrequencyNum": 0,
           "ScanningIsOn": 1,
@@ -822,6 +822,7 @@
       "DriverCarIdx": 0,
       "DriverUserID": 697587,
       "PaceCarIdx": -1,
+      "DriverIsAdmin": 1,
       "DriverHeadPosX": -0.105,
       "DriverHeadPosY": 0.325,
       "DriverHeadPosZ": 0.535,
@@ -842,9 +843,9 @@
       "DriverCarSLShiftRPM": 7700,
       "DriverCarSLLastRPM": 7600,
       "DriverCarSLBlinkRPM": 7950,
-      "DriverCarVersion": "2025.06.27.02",
+      "DriverCarVersion": "2025.09.08.01",
       "DriverPitTrkPct": 0.990978,
-      "DriverCarEstLapTime": 103.1748,
+      "DriverCarEstLapTime": 113.4305,
       "DriverSetupName": "baseline.sto",
       "DriverSetupIsModified": 0,
       "DriverSetupLoadTypeName": "baseline",
@@ -891,7 +892,7 @@
           "CarClassPowerAdjust": "0.000 %",
           "CarClassDryTireSetLimit": "0 %",
           "CarClassColor": 16777215,
-          "CarClassEstLapTime": 103.1748,
+          "CarClassEstLapTime": 113.4305,
           "IRating": 1,
           "LicLevel": 1,
           "LicSubLevel": 1,
@@ -971,39 +972,39 @@
           "TreadRemaining": "100%, 100%, 100%"
         },
         "AeroBalanceCalc": {
-          "FrontRhAtSpeed": "45 mm",
-          "RearRhAtSpeed": "53 mm",
+          "FrontRhAtSpeed": "41 mm",
+          "RearRhAtSpeed": "47 mm",
           "RearWingAngle": "9.5 degrees",
-          "FrontDownforce": "38.7%"
+          "FrontDownforce": "39.6%"
         }
       },
       "Chassis": {
         "FrontBrakes": {
-          "ArbBlades": 3,
-          "TotalToeIn": "-3.1 mm",
+          "ArbBlades": 5,
+          "TotalToeIn": "-3.0 mm",
           "BrakePedalRatio": 4.67,
           "BrakePads": "Medium friction",
           "FWtdist": "44.3%",
-          "CenterFrontSplitterHeight": "50.8 mm"
+          "CenterFrontSplitterHeight": "52.3 mm"
         },
         "LeftFront": {
-          "CornerWeight": "3161 N",
-          "RideHeight": "53.0 mm",
-          "BumpRubberGap": "11 mm",
-          "SpringRate": "105 N/mm",
+          "CornerWeight": "3163 N",
+          "RideHeight": "51.0 mm",
+          "BumpRubberGap": "15 mm",
+          "SpringRate": "120 N/mm",
           "Camber": "-4.0 deg"
         },
         "LeftRear": {
-          "CornerWeight": "3973 N",
-          "RideHeight": "69.0 mm",
-          "BumpRubberGap": "53 mm",
-          "SpringRate": "200 N/mm",
+          "CornerWeight": "3972 N",
+          "RideHeight": "58.0 mm",
+          "BumpRubberGap": "40 mm",
+          "SpringRate": "325 N/mm",
           "Camber": "-3.3 deg",
-          "ToeIn": "+1.6 mm"
+          "ToeIn": "+1.5 mm"
         },
         "Rear": {
           "FuelLevel": "52.0 L",
-          "ArbBlades": 1,
+          "ArbBlades": 2,
           "RearWingAngle": "9.5 degrees"
         },
         "InCarAdjustments": {
@@ -1014,24 +1015,24 @@
           "CrossWeight": "50.0%"
         },
         "RightFront": {
-          "CornerWeight": "3161 N",
-          "RideHeight": "53.0 mm",
-          "BumpRubberGap": "11 mm",
-          "SpringRate": "105 N/mm",
+          "CornerWeight": "3163 N",
+          "RideHeight": "51.0 mm",
+          "BumpRubberGap": "15 mm",
+          "SpringRate": "120 N/mm",
           "Camber": "-4.0 deg"
         },
         "RightRear": {
-          "CornerWeight": "3973 N",
-          "RideHeight": "69.0 mm",
-          "BumpRubberGap": "53 mm",
-          "SpringRate": "200 N/mm",
+          "CornerWeight": "3972 N",
+          "RideHeight": "58.0 mm",
+          "BumpRubberGap": "40 mm",
+          "SpringRate": "325 N/mm",
           "Camber": "-3.3 deg",
-          "ToeIn": "+1.6 mm"
+          "ToeIn": "+1.5 mm"
         },
         "GearsDifferential": {
           "GearStack": "FIA",
           "FrictionFaces": 8,
-          "DiffPreload": "110 Nm"
+          "DiffPreload": "100 Nm"
         }
       },
       "Dampers": {

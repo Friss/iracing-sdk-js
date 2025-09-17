@@ -6,6 +6,8 @@
 
 **iracing-sdk-js** provides data access (live telemetry and session info) and most of the available commands. You can find some usage examples in the [examples](https://github.com/friss/iracing-sdk-js/tree/main/examples) directory, and there are some [data samples](https://github.com/friss/iracing-sdk-js/tree/main/sample-data) too.
 
+Latest tested iRacing version: *2025 Season 4*
+
 ## Installing
 
 Make sure you are running [Node.js](https://nodejs.org/) v21 x64 or later. (Currently requires Node 21 for latest node test runner implementation, but should work with Node 20 too.)
@@ -13,7 +15,6 @@ Make sure you are running [Node.js](https://nodejs.org/) v21 x64 or later. (Curr
 `npm install --save iracing-sdk-js`
 
 `yarn add iracing-sdk-js --save`
-
 
 ## API documentation
 
@@ -681,7 +682,6 @@ Go to frame. Frame counting can be relative to begin, end or current.
 iracing.playbackControls.searchFrame(1, 'current') // go to 1 frame forward
 ```
 
-
 ## Development
 
 To develop `iracing-sdk-js` itself, you need working working installation of [node-gyp](https://github.com/nodejs/node-gyp#on-windows).
@@ -696,7 +696,6 @@ Useful commands:
 ## License
 
 Released under the [MIT License](https://github.com/friss/iracing-sdk-js/blob/main/LICENSE.md).
-
 
 ## Credits
 Originally based on [node-irsdk](https://github.com/apihlaja/node-irsdk) by [apihlaja](https://github.com/apihlaja).
