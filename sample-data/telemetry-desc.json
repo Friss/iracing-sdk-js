@@ -211,14 +211,14 @@
   },
   "CpuUsageFG": {
     "name": "CpuUsageFG",
-    "desc": "Percent of available tim fg thread took with a 1 sec avg",
+    "desc": "Percent of available time fg thread took with a 1 sec avg",
     "unit": "%",
     "count": 1,
     "type": "float"
   },
   "GpuUsage": {
     "name": "GpuUsage",
-    "desc": "Percent of available tim gpu took with a 1 sec avg",
+    "desc": "Percent of available time gpu took with a 1 sec avg",
     "unit": "%",
     "count": 1,
     "type": "float"
@@ -253,7 +253,7 @@
   },
   "CpuUsageBG": {
     "name": "CpuUsageBG",
-    "desc": "Percent of available tim bg thread took with a 1 sec avg",
+    "desc": "Percent of available time bg thread took with a 1 sec avg",
     "unit": "%",
     "count": 1,
     "type": "float"
@@ -1518,6 +1518,13 @@
     "count": 1,
     "type": "float"
   },
+  "IsGarageVisible": {
+    "name": "IsGarageVisible",
+    "desc": "1=Garage screen is visible",
+    "unit": "",
+    "count": 1,
+    "type": "bool"
+  },
   "ReplayPlaySpeed": {
     "name": "ReplayPlaySpeed",
     "desc": "Replay playback speed",
@@ -1573,13 +1580,6 @@
     "unit": "Hz",
     "count": 1,
     "type": "float"
-  },
-  "IsGarageVisible": {
-    "name": "IsGarageVisible",
-    "desc": "1=Garage screen is visible",
-    "unit": "",
-    "count": 1,
-    "type": "bool"
   },
   "SteeringWheelTorque_ST": {
     "name": "SteeringWheelTorque_ST",
