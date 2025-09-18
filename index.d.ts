@@ -83,7 +83,7 @@ declare module 'iracing-sdk-js' {
     | 'StartSet'
     | 'StartGo';
 
-  export type PitServiceStatus = 
+  export type PitServiceStatus =
     | 'PitSvNone'
     | 'PitSvInProgress'
     | 'PitSvComplete'
@@ -124,14 +124,32 @@ declare module 'iracing-sdk-js' {
     | 'UseKey10xAcceleration'
     | 'UseMouseAimMode';
 
-  export type EngineWarning = 
+  export type EngineWarning =
     | 'WaterTempWarning'
     | 'FuelPressureWarning'
     | 'OilPressureWarning'
     | 'EngineStalled'
     | 'PitSpeedLimiter'
     | 'RevLimiterActive'
-    | 'OilTempWarning';
+    | 'OilTempWarning'
+    | 'MandRepNeeded'
+    | 'OptRepNeeded';
+
+  export type PaceMode =
+    | 'PaceModeSingleFileStart'
+    | 'PaceModeDoubleFileStart'
+    | 'PaceModeSingleFileRestart'
+    | 'PaceModeDoubleFileRestart'
+    | 'PaceModeNotPacing';
+
+  export type IncidentType =
+    | 'NoPenalty(0x)'
+    | 'OutOfControl(2x)'
+    | 'OffTrack(1x)'
+    | 'Contact(0x)'
+    | 'Contact(2x)'
+    | 'CarContact(0x)'
+    | 'CarContact(4x)';
 
   export interface TelemetryValues {
     // Session Data
@@ -140,7 +158,7 @@ declare module 'iracing-sdk-js' {
     SessionNum: number;
     SessionState: SessionState;
     SessionUniqueID: number;
-    SessionFlags: string[];
+    SessionFlags: SessionFlag[];
 
     // Player Data
     PlayerCarPosition: number;
@@ -224,7 +242,7 @@ declare module 'iracing-sdk-js' {
     CarIdxLapCompleted: number[];
     CarIdxLapDistPct: number[];
     CarIdxTrackSurface: TrackSurface[];
-    CarIdxTrackSurfaceMaterial: any[];
+    CarIdxTrackSurfaceMaterial: TrackSurfaceMaterial[];
     CarIdxOnPitRoad: boolean[];
     CarIdxPosition: number[];
     CarIdxClassPosition: number[];
@@ -238,11 +256,11 @@ declare module 'iracing-sdk-js' {
     CarIdxQualTireCompound: number[];
     CarIdxQualTireCompoundLocked: boolean[];
     CarIdxFastRepairsUsed: number[];
-    CarIdxSessionFlags: any[];
-    PaceMode: string;
+    CarIdxSessionFlags: SessionFlag[][];
+    PaceMode: PaceMode;
     CarIdxPaceLine: number[];
     CarIdxPaceRow: number[];
-    CarIdxPaceFlags: any[][];
+    CarIdxPaceFlags: string[][];
     OnPitRoad: boolean;
     CarIdxSteer: number[];
     CarIdxRPM: number[];
@@ -302,7 +320,7 @@ declare module 'iracing-sdk-js' {
     PitsOpen: boolean;
     VidCapEnabled: boolean;
     VidCapActive: boolean;
-    PlayerIncidents: string;
+    PlayerIncidents: IncidentType;
     PitRepairLeft: number;
     PitOptRepairLeft: number;
     PitstopActive: boolean;
@@ -329,7 +347,7 @@ declare module 'iracing-sdk-js' {
     CamCarIdx: number;
     CamCameraNumber: number;
     CamGroupNumber: number;
-    CamCameraState: string[];
+    CamCameraState: CameraState[];
     IsOnTrackCar: boolean;
     IsInGarage: boolean;
     SteeringWheelAngleMax: number;
@@ -341,9 +359,9 @@ declare module 'iracing-sdk-js' {
     HandbrakeRaw: number;
     BrakeABSactive: boolean;
     Shifter: number;
-    EngineWarnings: string[];
+    EngineWarnings: EngineWarning[];
     FuelLevelPct: number;
-    PitSvFlags: any[];
+    PitSvFlags: string[];
     PitSvLFP: number;
     PitSvRFP: number;
     PitSvLRP: number;
@@ -631,6 +649,7 @@ declare module 'iracing-sdk-js' {
     DriverCarIdx: number;
     DriverUserID: number;
     PaceCarIdx: number;
+    DriverIsAdmin?: number;
     DriverHeadPosX: number;
     DriverHeadPosY: number;
     DriverHeadPosZ: number;
@@ -746,6 +765,7 @@ declare module 'iracing-sdk-js' {
   export interface SessionInfoDataCameraInfoGroupsItem {
     GroupNum: number;
     GroupName: string;
+    IsScenic?: boolean;
     Cameras: SessionInfoDataCameraInfoGroupsItemCamerasItem[];
   }
   export interface SessionInfoDataCameraInfoGroupsItemCamerasItem {
