@@ -9,14 +9,14 @@ declare module 'iracing-sdk-js' {
   }
 
   // String literal types for various enums
-  export type TrackSurface = 
+  export type TrackSurface =
     | 'NotInWorld'
-    | 'OffTrack' 
+    | 'OffTrack'
     | 'InPitStall'
     | 'AproachingPits'
     | 'OnTrack';
 
-  export type TrackSurfaceMaterial = 
+  export type TrackSurfaceMaterial =
     | 'SurfaceNotInWorld'
     | 'UndefinedMaterial'
     | 'Asphalt1Material'
@@ -47,7 +47,7 @@ declare module 'iracing-sdk-js' {
     | 'GrasscreteMaterial'
     | 'AstroturfMaterial';
 
-  export type SessionState = 
+  export type SessionState =
     | 'Invalid'
     | 'GetInCar'
     | 'Warmup'
@@ -56,7 +56,7 @@ declare module 'iracing-sdk-js' {
     | 'Checkered'
     | 'CoolDown';
 
-  export type SessionFlag = 
+  export type SessionFlag =
     | 'OneLapToGreen'
     | 'Servicible'
     | 'StartHidden'
@@ -78,6 +78,7 @@ declare module 'iracing-sdk-js' {
     | 'Black'
     | 'Disqualify'
     | 'Furled'
+    | 'DQScoringInvalid'
     | 'Repair'
     | 'StartReady'
     | 'StartSet'
@@ -94,7 +95,7 @@ declare module 'iracing-sdk-js' {
     | 'PitSvBadAngle'
     | 'PitSvCantFixThat';
 
-  export type CarLeftRight = 
+  export type CarLeftRight =
     | 'LROff'
     | 'LRClear'
     | 'LRCarLeft'
@@ -103,7 +104,7 @@ declare module 'iracing-sdk-js' {
     | 'LR2CarsLeft'
     | 'LR2CarsRight';
 
-  export type TrackWetness = 
+  export type TrackWetness =
     | 'UNKNOWN'
     | 'Dry'
     | 'MostlyDry'
@@ -113,7 +114,7 @@ declare module 'iracing-sdk-js' {
     | 'VeryWet'
     | 'ExtremelyWet';
 
-  export type CameraState = 
+  export type CameraState =
     | 'IsSessionScreen'
     | 'IsScenicActive'
     | 'CamToolActive'
@@ -897,7 +898,6 @@ declare module 'iracing-sdk-js' {
     GreenWhiteCheckeredLimit: number;
   }
 
-
   export interface TelemetryEvent {
     timestamp: Date;
     values: TelemetryValues;
@@ -909,15 +909,28 @@ declare module 'iracing-sdk-js' {
   }
 
   export interface UpdateEvent {
-    type: 'Connected' | 'Disconnected' | 'Telemetry' | 'TelemetryDescription' | 'SessionInfo';
+    type:
+      | 'Connected'
+      | 'Disconnected'
+      | 'Telemetry'
+      | 'TelemetryDescription'
+      | 'SessionInfo';
     data?: any;
     timestamp: Date;
   }
 
   export interface CameraControls {
     setState(state: number): void;
-    switchToCar(carNum: number | string, camGroupNum?: number, camNum?: number): void;
-    switchToPos(position: number | string, camGroupNum?: number, camNum?: number): void;
+    switchToCar(
+      carNum: number | string,
+      camGroupNum?: number,
+      camNum?: number
+    ): void;
+    switchToPos(
+      position: number | string,
+      camGroupNum?: number,
+      camNum?: number
+    ): void;
   }
 
   export interface PlaybackControls {

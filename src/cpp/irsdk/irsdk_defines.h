@@ -4,14 +4,14 @@ All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions are met:
-                * Redistributions of source code must retain the above copyright
-                        notice, this list of conditions and the following disclaimer.
-                * Redistributions in binary form must reproduce the above copyright
-                        notice, this list of conditions and the following disclaimer in the
-                        documentation and/or other materials provided with the distribution.
-                * Neither the name of iRacing.com Motorsport Simulations nor the
-                        names of its contributors may be used to endorse or promote products
-                        derived from this software without specific prior written permission.
+    * Redistributions of source code must retain the above copyright
+      notice, this list of conditions and the following disclaimer.
+    * Redistributions in binary form must reproduce the above copyright
+      notice, this list of conditions and the following disclaimer in the
+      documentation and/or other materials provided with the distribution.
+    * Neither the name of iRacing.com Motorsport Simulations nor the
+      names of its contributors may be used to endorse or promote products
+      derived from this software without specific prior written permission.
 
 THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
 ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
@@ -36,50 +36,50 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  iRacing simulator. It is broken down into several parts:
 
  - Live data
-         Live data is output from the sim into a shared memory mapped file.  Any
-         application can open this memory mapped file and read the telemetry data
-         out.  The format of this data was laid out in such a way that it should be
-         possible to access from any language that can open a windows memory mapped
-         file, without needing an external api.
+   Live data is output from the sim into a shared memory mapped file.  Any
+   application can open this memory mapped file and read the telemetry data
+   out.  The format of this data was laid out in such a way that it should be
+   possible to access from any language that can open a windows memory mapped
+   file, without needing an external api.
 
-         There are two different types of data that the telemetry outputs,
-         sessionInfo and variables:
+   There are two different types of data that the telemetry outputs,
+   sessionInfo and variables:
 
-         Session info is for data that only needs to be updated every once in a
-         while.  This data is output as a YAML formatted string.
+   Session info is for data that only needs to be updated every once in a
+   while.  This data is output as a YAML formatted string.
 
-         Variables, on the other hand, are output at a rate of 60 times a second.
-         The varHeader struct defines each variable that the sim will output, while
-         the varData struct gives details about the current line buffer that the vars
-         are being written into.  Each variable is packed into a binary array with
-         an offset and length stored in the varHeader.  The number of variables
-         available can change depending on the car or session loaded.  But once the
-         sim is running the variable list is locked down and will not change during a
-         session.
+   Variables, on the other hand, are output at a rate of 60 times a second.
+   The varHeader struct defines each variable that the sim will output, while
+   the varData struct gives details about the current line buffer that the vars
+   are being written into.  Each variable is packed into a binary array with
+   an offset and length stored in the varHeader.  The number of variables
+   available can change depending on the car or session loaded.  But once the
+   sim is running the variable list is locked down and will not change during a
+   session.
 
-         The sim writes a new line of variables every 16 ms, and then signals any
-         listeners in order to wake them up to read the data.  Because the sim has no
-         way of knowing when a listener is done reading the data, we triple buffer
-         it in order to give all the clients enough time to read the data out.  This
-         gives you a minimum of 16 ms to read the data out and process it.  So it is
-         best to copy the data out before processing it.  You can use the function
-         irsdk_waitForDataReady() to both wait for new data and copy the data to a
-         local buffer.
+   The sim writes a new line of variables every 16 ms, and then signals any
+   listeners in order to wake them up to read the data.  Because the sim has no
+   way of knowing when a listener is done reading the data, we triple buffer
+   it in order to give all the clients enough time to read the data out.  This
+   gives you a minimum of 16 ms to read the data out and process it.  So it is
+   best to copy the data out before processing it.  You can use the function
+   irsdk_waitForDataReady() to both wait for new data and copy the data to a
+   local buffer.
 
  - Logged data
-         Detailed information about the local drivers car can be logged to disk in
-         the form of an ibt binary file.  This logging is enabled in the sim by
-         typing alt-L at any time.  The ibt file format directly mirrors the format
-         of the live data.
+   Detailed information about the local drivers car can be logged to disk in
+   the form of an ibt binary file.  This logging is enabled in the sim by
+   typing alt-L at any time.  The ibt file format directly mirrors the format
+   of the live data.
 
-         It is stored as an irsdk_header followed immediately by an irsdk_diskSubHeader.
-         After that the offsets in the irsdk_header point to the sessionInfo string,
-         the varHeader, and the varBuffer.
+   It is stored as an irsdk_header followed immediately by an irsdk_diskSubHeader.
+   After that the offsets in the irsdk_header point to the sessionInfo string,
+   the varHeader, and the varBuffer.
 
  - Remote Conrol
-         You can control the camera selections and playback of a replay tape, from
-         any external application by sending a windows message with the
-         irsdk_broadcastMsg() function.
+   You can control the camera selections and playback of a replay tape, from
+   any external application by sending a windows message with the
+   irsdk_broadcastMsg() function.
 */
 
 // Constant Definitions
@@ -253,6 +253,34 @@ enum irsdk_TrackWetness
         irsdk_TrackWetness_ExtremelyWet
 };
 
+enum irsdk_IncidentFlags
+{
+        // first byte is incident report flag
+        // only one of these will be used
+        irsdk_Incident_RepNoReport = 0x0000,                  // no penalty
+        irsdk_Incident_RepOutOfControl = 0x0001,              // "Loss of Control (2x)"
+        irsdk_Incident_RepOffTrack = 0x0002,                  // "Off Track (1x)"
+        irsdk_Incident_RepOffTrackOngoing = 0x0003,           // not currently sent
+        irsdk_Incident_RepContactWithWorld = 0x0004,          // "Contact (0x)"
+        irsdk_Incident_RepCollisionWithWorld = 0x0005,        // "Contact (2x)"
+        irsdk_Incident_RepCollisionWithWorldOngoing = 0x0006, // not currently sent
+        irsdk_Incident_RepContactWithCar = 0x0007,            // "Car Contact (0x)"
+        irsdk_Incident_RepCollisionWithCar = 0x0008,          // "Car Contact (4x)"
+
+        // second byte is incident penalty
+        // only one of these will be used
+        irsdk_Incident_PenNoReport = 0x0000, // no penalty
+        irsdk_Incident_PenZeroX = 0x0100,    // 0x
+        irsdk_Incident_PenOneX = 0x0200,     // 1x
+        irsdk_Incident_PenTwoX = 0x0300,     // 2x
+        irsdk_Incident_PenFourX = 0x0400,    // 4x
+
+        // not enums, used to seperate the above incident report field
+        // from the incident penalty field
+        IRSDK_INCIDENT_REP_MASK = 0x000000FF,
+        IRSDK_INCIDENT_PEN_MASK = 0x0000FF00,
+};
+
 //---
 
 // bit fields
@@ -296,6 +324,7 @@ enum irsdk_Flags
         irsdk_servicible = 0x00040000, // car is allowed service (not a flag)
         irsdk_furled = 0x00080000,
         irsdk_repair = 0x00100000,
+        irsdk_dqScoringInvalid = 0x00200000, // car is disqualified and scoring is disabled
 
         // start lights
         irsdk_startHidden = 0x10000000,
@@ -336,35 +365,6 @@ enum irsdk_PaceFlags
         irsdk_PaceFlagsEndOfLine = 0x0001,
         irsdk_PaceFlagsFreePass = 0x0002,
         irsdk_PaceFlagsWavedAround = 0x0004,
-};
-
-enum irsdk_IncidentFlags
-{
-        // first byte is incident report flag
-        // only one of these will be used
-
-        irsdk_Incident_RepNoReport = 0x0000,                  // no penalty
-        irsdk_Incident_RepOutOfControl = 0x0001,              // "Loss of Control (2x)"
-        irsdk_Incident_RepOffTrack = 0x0002,                  // "Off Track (1x)"
-        irsdk_Incident_RepOffTrackOngoing = 0x0003,           // not currently sent
-        irsdk_Incident_RepContactWithWorld = 0x0004,          // "Contact (0x)"
-        irsdk_Incident_RepCollisionWithWorld = 0x0005,        // "Contact (2x)"
-        irsdk_Incident_RepCollisionWithWorldOngoing = 0x0006, // not currently sent
-        irsdk_Incident_RepContactWithCar = 0x0007,            // "Car Contact (0x)"
-        irsdk_Incident_RepCollisionWithCar = 0x0008,          // "Car Contact (4x)"
-
-        // second byte is incident penalty
-        // only one of these will be used
-        irsdk_Incident_PenNoReport = 0x0000, // no penalty
-        irsdk_Incident_PenZeroX = 0x0100,    // 0x
-        irsdk_Incident_PenOneX = 0x0200,     // 1x
-        irsdk_Incident_PenTwoX = 0x0300,     // 2x
-        irsdk_Incident_PenFourX = 0x0400,    // 4x
-
-        // not enums, used to seperate the above incident report field
-        // from the incident penalty field
-        IRSKD_INCIDENT_REP_MASK = 0x000000FF,
-        IRSKD_INCIDENT_PEN_MASK = 0x0000FF00,
 };
 
 //----
@@ -421,9 +421,9 @@ struct irsdk_header
         int numBuf; // <= IRSDK_MAX_BUFS (3 for now)
         int bufLen; // length in bytes for one line
         //****ToDo, add these in
-        // int curBufTickCount; // stashed copy of the current tickCount, can read this to see if new data is available
-        // byte curBuf;                 // index of the most recently written buffer (0 to IRSDK_MAX_BUFS-1)
-        // byte pad1[3];                        // 16 byte align
+        // int curBufTickCount;	// stashed copy of the current tickCount, can read this to see if new data is available
+        // byte curBuf;			// index of the most recently written buffer (0 to IRSDK_MAX_BUFS-1)
+        // byte pad1[3];			// 16 byte align
         int pad1[2];                         // (16 byte align)
         irsdk_varBuf varBuf[IRSDK_MAX_BUFS]; // buffers of data being written to
 };
@@ -469,7 +469,7 @@ enum irsdk_BroadcastMsg
         irsdk_BroadcastCamSwitchNum,            // driver #, group, camera
         irsdk_BroadcastCamSetState,             // irsdk_CameraState, unused, unused
         irsdk_BroadcastReplaySetPlaySpeed,      // speed, slowMotion, unused
-        irskd_BroadcastReplaySetPlayPosition,   // irsdk_RpyPosMode, Frame Number (high, low)
+        irsdk_BroadcastReplaySetPlayPosition,   // irsdk_RpyPosMode, Frame Number (high, low)
         irsdk_BroadcastReplaySearch,            // irsdk_RpySrchMode, unused, unused
         irsdk_BroadcastReplaySetState,          // irsdk_RpyStateMode, unused, unused
         irsdk_BroadcastReloadTextures,          // irsdk_ReloadTexturesMode, carIdx, unused
