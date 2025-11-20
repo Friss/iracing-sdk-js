@@ -51,6 +51,7 @@ namespace NodeIrSdk
         MaskName((int)irsdk_servicible, "Servicible"),
         MaskName((int)irsdk_furled, "Furled"),
         MaskName((int)irsdk_repair, "Repair"),
+        MaskName((int)irsdk_dqScoringInvalid, "DQScoringInvalid"),
 
         // start lights
         MaskName((int)irsdk_startHidden, "StartHidden"),
